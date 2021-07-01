@@ -41,6 +41,19 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "kiranbeeyes",
+      "name": "Kiran Suresh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/55537079?v=4",
+      "profile": "https://github.com/kiranbeeyes",
+      "contributions": [
+        "eventOrganizing",
+        "maintenance",
+        "review",
+        "doc",
+        "code"
+      ]
     }
   ],
   "contributorsPerLine": 7,
