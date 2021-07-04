@@ -1,0 +1,24 @@
+{
+  "name": "Meet Up",
+  "version": "1.0",
+  "description": "Stores all Links for Future Meetings",
+  "browser_action": {
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["./background.js"]
+  },
+  "permissions": ["storage"],
+  "commands": {
+    "_execute_browser_action": {
+      "suggested_key": {
+        "default": "Alt+L",
+        "linux": "Alt+L",
+        "windows": "Alt+L",
+        "mac": "Alt+L"
+      }
+    }
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://cdn.jsdelivr.net; object-src 'self';"
+}
