@@ -54,6 +54,17 @@
         "doc",
         "code"
       ]
+    },
+    {
+      "login": "theAdityaNVS",
+      "name": "Nadamuni Venkata Sai Aditya",
+      "avatar_url": "https://avatars.githubusercontent.com/u/46414203?v=4",
+      "profile": "http://linkedin.com/in/theadityanvs",
+      "contributions": [
+        "code",
+        "design",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
