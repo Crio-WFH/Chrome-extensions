@@ -1,0 +1,15 @@
+{
+    "name": "Download Gif's",
+    "description": "Save Gif's on local machine using Giphy API",
+    "manifest_version": 2,
+    "version": "1.0",
+     "icons": {
+      "128": "icon.png"
+   },
+    "browser_action": {
+        "default_popup": "main.html"
+    },
+    "permissions": [
+        "downloads"
+    ]
+}
