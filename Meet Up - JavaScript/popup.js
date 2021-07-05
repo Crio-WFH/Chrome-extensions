@@ -72,6 +72,7 @@ const renamer1 = (e, toR)=>{
       localStorage.clear()
       localStorage.setItem('prevTodos',JSON.stringify(meetlist))
       generatemeetsTemplate(l);
+      self.location.reload()
       popUp.style.display= "none";
     });
     
