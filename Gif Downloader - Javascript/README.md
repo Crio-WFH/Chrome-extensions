@@ -4,7 +4,7 @@ This extension allows a user to search and download GIF's on a local machine.
 
 - This Extension is Built using Javascript and follows all Chrome's **Content Security Policy** Restrictions.
 
-- For Demo Video, [Click Here]().
+- For Demo Video, [Click Here](https://youtu.be/esa4Y3n3DdA).
 
 ![](capture.jpeg)
 ![](capture2.jpeg)
