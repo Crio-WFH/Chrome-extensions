@@ -1,7 +1,7 @@
 { 
     "name": "com.hksm.vscode.native", 
     "description": "Starts VS Code", 
-    "path": "start.bat", 
+    "path": "vs.bat", 
     "type": "stdio", 
     "allowed_origins": [ 
         "chrome-extension://hgdgipknagnpfiaogdigeoljcfahggbj/" 
