@@ -1,0 +1,3 @@
+[submodule "Edit with VS Code"]
+	path = Edit with VS Code
+	url = git@github.com:Apprentice76/edit-with-vs.git
