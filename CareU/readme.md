@@ -13,6 +13,7 @@ This Extension provides various feature like Todo List with progress tracking Fu
 ## ScreenShots :camera_flash:
 
 
+
 ## How to Use :computer:
 1. Download or clone the repo.
 2. Go to chrome://extensions/
@@ -24,3 +25,6 @@ This Extension provides various feature like Todo List with progress tracking Fu
 1. HTML.
 2. CSS.
 3. JavaScript & Jquery.
+
+## Contribute 
+-:earth_asia: Feel Free to Contribute to the Project with extra functionalities .
