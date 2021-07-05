@@ -7,6 +7,7 @@ This extension allows a user to search and download GIF's on a local machine.
 - For Demo Video, [Click Here]().
 
 ![](capture.jpeg)
+![](capture2.jpeg)
 
 
 
@@ -17,4 +18,5 @@ This extension allows a user to search and download GIF's on a local machine.
 - Voila ! There's your Chrome Extension Up and Running.
 
 ## Any Type of Suggestion is welcome
-- Made by Ravit Garg
+
+Made by Ravit Garg  ❤️️ for #IBD
