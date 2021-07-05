@@ -8,7 +8,9 @@ cd ..
 
 @REM generates JSON file
 
-set /p id="Enter ID: "
+powershell Get-Clipboard>tmp.txt
+set /p id=<tmp.txt
+del tmp.txt
 echo { > clients/vscode.json
 echo     "name": "com.hksm.vscode.native", >> clients/vscode.json
 echo     "description": "Starts VS Code", >> clients/vscode.json
