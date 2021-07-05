@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <style>
+            html, body {
+                font-family:'Poppins',sans-serif;
+                margin: 0;
+                padding:0;
+                width: 384px;
+                min-height: 167px;
+            }
+
+            h1{
+                font-size:22px;
+                margin:0;
+                color: rgb(47, 100, 160);
+            }
+
+            .model-header{
+                align-items: center;
+                border-bottom: 0.5px solid #dadada;
+            }
+
+            .logo{
+                padding:16px;
+            }
+
+            .logo-icon{
+                vertical-align: text-bottom;
+                margin-right: 12px;
+            }
+
+            .version{
+                color: rgb(109, 109, 109);
+                font-size: 18px;
+            }
+
+            .model-content{
+               padding: 0 22px; 
+            }
+            
+            .wrapper{
+                display:flex;
+                justify-content:space-between;
+                align-items: center;
+            }
+            
+            .switch{
+                position: relative;
+                display: inline-block;
+                width:40px;
+                height:20px;
+            }
+
+            .switch input{
+                display: none;
+            }
+
+            .slider{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color:#ccc;
+                border-radius:34px;
+                transition: 0.4s;
+            }
+
+            .slider:before{
+                position: absolute;
+                content:"";
+                width:16px;
+                height:16px;
+                left:2px;
+                bottom:2px;
+                border-radius: 50%;
+                background-color:#fff;
+                transition:0.4s;
+            }
+
+            input:checked + .slider{
+                background-color: rgb(8, 153, 20);
+            }
+
+            input:checked + .slider:before{
+                transform: translateX(20px);
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-header">
+            <h1 class="logo">
+                <img src="./images/TrueNote_logo_198x198.jpg" alt="True Note" class="logo-icon" width="50">True Note
+                <span class="version">(1.0)</span>
+            </h1>
+        </div>
+        <div class="model-content">
+            <p class="description">Take your notes most effectively</p>
+            <div class="wrapper">
+                <span class="enable-text">Enable note taking</span>
+                <label class="switch">
+                    <input type="checkbox" id="checkbox">
+                    <span class="slider"></span> 
+                </label>
+            </div>
+        </div>
+        <script src="./popup.js"></script>
+    </body>
+</html>

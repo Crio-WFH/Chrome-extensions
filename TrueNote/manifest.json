@@ -1,0 +1,37 @@
+{
+    "name":"True Note",
+    "description":"You can add sticky notes to the focused page",
+    "version":"1.0",
+    "manifest_version": 3,
+    "icons":{
+        "16":"./images/TrueNote_logo_16x16.png",
+        "32":"./images/TrueNote_logo_32x32.png",
+        "48":"./images/TrueNote_logo_48x48.png",
+        "128":"./images/TrueNote_logo_128x128.png"
+    },
+
+    "background":{
+        "service_worker":"background.js"
+    },
+
+    "action":{
+        "default_popup":"./popup.html",
+        "default_icons":{
+            "16":"./images/TrueNote_logo_16x16.png",
+            "32":"./images/TrueNote_logo_32x32.png",
+            "48":"./images/TrueNote_logo_48x48.png",
+            "128":"./images/TrueNote_logo_128x128.png"
+        }
+    },
+
+    "permissions":[
+        "activeTab",
+        "tabs",
+        "scripting",
+        "storage"
+    ],
+
+    "host_permissions":[
+        "<all_urls>"
+    ]
+}

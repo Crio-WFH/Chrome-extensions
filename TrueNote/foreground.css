@@ -1,0 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap');
+
+.note, #noteForm{
+    max-width: 300px;
+    min-width: 250px;
+    padding: 15px 20px 20px 20px; 
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: rgba(255, 255, 255, 0.459);
+    border: 1px solid #B1B1B1;
+    box-sizing: border-box;
+    backdrop-filter: blur(11px);
+    border-radius: 7px;
+    z-index: 9999;
+}
+
+#noteForm{
+    visibility: hidden;
+    z-index: 999999;
+}
+
+.noteTitle, #formTitle{
+    padding-bottom: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 19px;
+    letter-spacing: 0.045em;
+    font-family: 'Poppins', sans-serif;
+    border-bottom: 0.7px solid rgb(167, 167, 167);
+    margin-top: 0;
+    padding-top:0;
+}
+
+#formTitle{
+    color: #124b8b;
+}
+
+.noteDescription{
+    font-family: 'Poppins', sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 12px;
+    letter-spacing: 0.045em;
+    line-height: 20px;
+    color: #000000;
+    margin-top: 12px;
+}
+
+.discardBtn, #discardCreateNoteBtn, #addNoteBtn{
+    width:max-content;
+    padding:8px 20px;
+    margin-top: 12px;
+    font-size: 13px;
+    font-weight: 500;
+    letter-spacing: 0.045em;
+    border-radius: 50px;
+    color:white;
+    /* box-shadow: 0 0 20px 1px rgb(139, 139, 139); */
+    cursor: pointer;
+}
+
+#noteFormBtnGrp{
+    display:flex;
+    margin-top:15px;
+}
+
+#discardCreateNoteBtn{
+    background-color: #1193DC;
+}
+
+#addNoteBtn{
+    background-color: #11DC6E;
+    margin-right: 20px;
+}
+
+.input-box {
+    position: relative;
+    display: block;
+    padding-top: 10px;
+    margin-bottom: 12px;
+    margin-top: 12px;
+    /* background-color: aqua; */
+}
+
+.input-box input{
+    border-bottom: 1px solid #7a7a7a;
+    border-top: transparent;
+    border-left: none;
+    border-right: none;
+    outline: none;
+    width: 100%;
+    padding: 6px 0px 3px 1px;
+    background: transparent;
+    font-size: 12.5px;
+    color: #494949;
+    /* background-color: rgb(202, 202, 202); */
+}
+
+.placeholder {
+    position: absolute;
+    top: 5px;
+    left: 0px;
+    transform: translateY(-55%);
+    font-size: 11px;
+    padding-left: 3px;
+    padding-right: 3px;
+    font-weight: 600;
+    font-family: 'Poppins', sans-serif;
+}
+
+.asterics{
+    color: rgb(197, 23, 0);
+}
