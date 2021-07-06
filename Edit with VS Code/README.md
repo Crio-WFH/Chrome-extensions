@@ -29,6 +29,7 @@ Demo video link (https://vimeo.com/570875673)
 
 ## ⚙ Installation
 
+>   Refer this: (https://vimeo.com/571618622)
 -   Open extensions tab in Chrome, turn developer mode on
 -   Select `LOAD UNPACKED`, then select the extension folder in dialog box
 
