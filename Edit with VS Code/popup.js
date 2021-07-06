@@ -5,10 +5,6 @@ const note = document.querySelector('.note')
 const npp = document.querySelector('.npp')
 const span = document.querySelector('span')
 
-// chrome.runtime.onInstalled.addListener(() => {
-//     vs.style.background = '#efefef'
-// })
-
 vs.addEventListener('click', () => {
 	chrome.storage.sync.set(
 		{

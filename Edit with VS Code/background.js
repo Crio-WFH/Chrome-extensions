@@ -50,10 +50,8 @@ function doThis(_, tab) {
 						break
 				}
             })
-			
-			// console.log(resp.q)
         } else {
-            // console.log('can\'t connect!')
+            console.error('can\'t connect!')
         }
 	})
 }
