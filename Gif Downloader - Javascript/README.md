@@ -12,7 +12,7 @@ This extension allows a user to search and download GIF's on a local machine.
 
 
 ## Procedure to Install
-- You Can donwload th root folder or fork it and clone to your local machine.
+- You Can donwload the root folder or fork it and clone to your local machine.
 - Sign Up on  [developers.giphy.com](https://developers.giphy.com/docs/sdk).
 - Then Click on Create an app.
 - After Entering necessaery details generate an API KEY.
