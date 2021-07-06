@@ -1,7 +1,11 @@
 chrome.runtime.onInstalled.addListener(() => {
+    chrome.storage.sync.set({
+        editor: 'vs'
+    })
+
 	let contextProperties = {
 		contexts: ['selection'],
-		title: 'Edit with VS Code',
+		title: 'Open with Editor',
 		visible: true,
 		id: 'main',
 	}
@@ -11,8 +15,42 @@ chrome.runtime.onInstalled.addListener(() => {
 
 function doThis(_, tab) {
 	chrome.tabs.sendMessage(tab.id, { q: 'getSelection' }, (resp) => {
-		if (resp?.q === 'success') {
-			chrome.runtime.sendNativeMessage('com.hksm.vscode.native', {})
+        if (resp?.q === 'success') {
+            chrome.storage.sync.get(['editor'], (res) => {
+                switch (res.editor) {
+					case "'Atom'":
+						chrome.runtime.sendNativeMessage(
+							'com.hksm.atom.native',
+							{}
+						)
+						break
+					case "'Sublime'":
+						chrome.runtime.sendNativeMessage(
+							'com.hksm.sublime.native',
+							{}
+						)
+						break
+					case "'Np'":
+						chrome.runtime.sendNativeMessage(
+							'com.hksm.notepad.native',
+							{}
+						)
+						break
+					case "'Np++'":
+						chrome.runtime.sendNativeMessage(
+							'com.hksm.npp.native',
+							{}
+						)
+						break
+					default:
+						chrome.runtime.sendNativeMessage(
+							'com.hksm.vscode.native',
+							{}
+						)
+						break
+				}
+            })
+			
 			// console.log(resp.q)
         } else {
             // console.log('can\'t connect!')
