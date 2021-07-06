@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/tasks.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet">
+        <script src="js/jquery.js"></script>
+        <script src="js/tasks.js"></script>
+        <title>ToDo</title>        
+    </head>
+
+    <body>
+        
+      <div class="container__buttons">
+        <div class="buttons__icons">
+          <a href="break.html"><img src="icons/quote.png" /></a>
+        </div>
+        <div class="buttons__icons">
+          <a href="music.html"><img src="icons/music.png" /></a>
+        </div>
+        <div class="buttons__icons">
+          <a href="popup.html"><img src="icons/todo.png" /></a>
+        </div>
+        <div class="buttons__icons">
+          <a href="yoga.html"><img src="icons/yoga.png" /></a>
+        </div>
+      </div>
+      
+        <div class="container"> 
+        <section class="wrapper">
+            <br>
+            <h1 >Task manager</h1>
+        <br>
+        <br>
+
+            <div class="ToDo">
+                <form action="#" spellcheck='false'>
+                    <input type="text" id="task-input" placeholder='Add Your Task' class="add" />
+                    <input type="submit" id="task-submit" value="+" class="add-btn"/>
+                </form>
+                <ul class='task-list'></ul>
+                <div class="bottom">
+                    <div class="progress-bar">
+                        <div class="progress-status">
+                            <p><span class='tasks-left'>0</span> of <span class='tasks-total'>0</span> </p>
+                        </div>
+                    </div>
+                    <a href='#' class="remove-checked"><span>Remove checked</span></a>
+                </div>
+              </div>
+            
+        </section>
+    </body>
+    
+</html>
