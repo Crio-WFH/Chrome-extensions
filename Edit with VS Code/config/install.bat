@@ -47,7 +47,7 @@ echo } >> clients/atom.json
 
 @echo @echo off> clients/atom.bat
 @echo powershell Get-Clipboard -TextFormatType UnicodeText^>Tmp.txt>> clients/atom.bat
-@echo atom Tmp.txt>> clients/atom.bat
+@echo %localappdata%\atom\atom.exe %localappdata%\clients\Tmp.txt>> clients/atom.bat
 
 @REM -----------Sublime-------------
 
@@ -63,8 +63,9 @@ echo } >> clients/sublime.json
 
 
 @echo @echo off> clients/sublime.bat
-@echo powershell Get-Clipboard -TextFormatType UnicodeText^>Tmp.txt>> clients/sublime.bat
-@echo start "" subl.exe Tmp.txt>> clients/sublime.bat
+@echo cd %localappdata%\clients>> clients/sublime.bat
+@echo powershell Get-Clipboard ^>Tmp.txt>> clients/sublime.bat
+@echo subl %localappdata%\clients\Tmp.txt>> clients/sublime.bat
 
 @REM -----------Notepad-------------
 

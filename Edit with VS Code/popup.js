@@ -12,7 +12,7 @@ vs.addEventListener('click', () => {
 		},
 		() => {
 			span.innerText = "'Code'"
-			vs.style.background = '#f3f3f3'
+			vs.style.background = '#efefef'
 			atom.style.background = '#fefefe'
 			subl.style.background = '#fefefe'
 			note.style.background = '#fefefe'
@@ -27,7 +27,7 @@ atom.addEventListener('click', () => {
 		},
 		() => {
 			span.innerText = "'Atom'"
-			atom.style.background = '#f3f3f3'
+			atom.style.background = '#efefef'
 			vs.style.background = '#fefefe'
 			subl.style.background = '#fefefe'
 			note.style.background = '#fefefe'
@@ -42,7 +42,7 @@ subl.addEventListener('click', () => {
 		},
 		() => {
 			span.innerText = "'Sublime'"
-			subl.style.background = '#f3f3f3'
+			subl.style.background = '#efefef'
 			atom.style.background = '#fefefe'
 			vs.style.background = '#fefefe'
 			note.style.background = '#fefefe'
@@ -57,7 +57,7 @@ note.addEventListener('click', () => {
 		},
 		() => {
 			span.innerText = "'Np'"
-			note.style.background = '#f3f3f3'
+			note.style.background = '#efefef'
 			atom.style.background = '#fefefe'
 			subl.style.background = '#fefefe'
 			vs.style.background = '#fefefe'
@@ -72,7 +72,7 @@ npp.addEventListener('click', () => {
 		},
 		() => {
 			span.innerText = "'Np++'"
-			npp.style.background = '#f3f3f3'
+			npp.style.background = '#efefef'
 			atom.style.background = '#fefefe'
 			subl.style.background = '#fefefe'
 			note.style.background = '#fefefe'
@@ -82,5 +82,22 @@ npp.addEventListener('click', () => {
 })
 
 chrome.storage.sync.get(['editor'], (resp) => {
-	span.innerHTML = resp.editor
+    span.innerHTML = resp.editor
+    switch (resp.editor) {
+		case "'Atom'":
+			atom.style.background = '#efefef'
+			break
+		case "'Sublime'":
+			subl.style.background = '#efefef'
+			break
+		case "'Np'":
+			note.style.background = '#efefef'
+			break
+		case "'Np++'":
+			npp.style.background = '#efefef'
+			break
+		default:
+			vs.style.background = '#efefef'
+			break
+	}
 })

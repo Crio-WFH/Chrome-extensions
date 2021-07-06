@@ -1,7 +1,7 @@
 chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.sync.set({
-        editor: 'vs'
-    })
+		editor: "'Code'",
+	})
 
 	let contextProperties = {
 		contexts: ['selection'],
@@ -50,10 +50,8 @@ function doThis(_, tab) {
 						break
 				}
             })
-			
-			// console.log(resp.q)
         } else {
-            // console.log('can\'t connect!')
+            console.error('can\'t connect!')
         }
 	})
 }

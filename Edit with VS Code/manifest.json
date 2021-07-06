@@ -1,7 +1,7 @@
 {
 	"name": "quick Edits",
 	"description": "Opens the selected text in VS Code",
-	"version": "1.5.0",
+	"version": "1.5.2",
 	"manifest_version": 3,
 	"background": {
 		"service_worker": "background.js"
