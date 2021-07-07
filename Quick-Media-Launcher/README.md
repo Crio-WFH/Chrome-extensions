@@ -6,15 +6,15 @@ Chrome Extension for Launching Social Media Platforms and Meeting applications T
 
 **1.Download the zip file from the repository**
 
-**2.Save it on your Computer in a Folder
+**2.Save it on your Computer in a Folder**
 
-**3.Open Chrome browser and go to https://chrome://extensions/
+**3.Open Chrome browser and go to https://chrome://extensions/**
 
-**4.Enable the Developer mode option
+**4.Enable the Developer mode option**
 
-**5.Click on Load Unpacked option
+**5.Click on Load Unpacked option**
 
-**6.Select the saved Folder and enable it to use on your browser.
+**6.Select the saved Folder and enable it to use on your browser.**
 
 
 In the HTML code link to particular media application can be changed to users personal login link which will further ease in navigating.
