@@ -2,7 +2,6 @@
 
 This extension is used to extract useful information from the webpages in the form of notes and then download the notes to your local machine for future use.
 
-- This Extension is Built using Javascript and follows all Chrome's **Content Security Policy** Restrictions.
 
 ## Demo Video
 - For Demo Video, [Click Here](https://youtu.be/PWAq1EMiMPM).
