@@ -20,5 +20,5 @@ This chrome extension is developed using HTML and CSS - Refer to the code from p
 In the HTML code link to particular media application can be changed to users personal login link which will further ease in navigating.
 
 Below are the attached Screenshot of the extension.
-![1625232891967](https://user-images.githubusercontent.com/59816379/124418616-83fb5500-dd79-11eb-872f-cbeb0f469031.jpg)
-![1625232891975](https://user-images.githubusercontent.com/59816379/124418637-907fad80-dd79-11eb-9fbe-ff9eb8ed64b8.jpg)
+![1625668439834](https://user-images.githubusercontent.com/59816379/124778641-bca85380-df5e-11eb-8df6-70ab67a98b71.jpg)
+![1625668439829](https://user-images.githubusercontent.com/59816379/124778666-c2059e00-df5e-11eb-8f7b-51ccd4d075f4.jpg)
