@@ -24,6 +24,8 @@
         min-height: 180px;
         padding: 0;
         width: 384px;
+        color: #222;
+          background: #fff;
       }
 
       h1 {
@@ -93,17 +95,31 @@
       .flex .fa {
         font-size: 40px;
         color: #2f5876;
+      
           
-          .btn-group button{
+      .btn-group button{
               border: 1 px solid green;
               padding: 10px 24px;
               cursor: pointer;
               float:center;
-              
+              height: 100%;
+              width: 100px;
           }
+          body.dark-theme{
+              background-color: #121212;
+              color: #eee;
+          }
+          
       }
     </style>
-    <script src="popup.js"></script>
+    <script>
+        function myFunction(){
+            const btn = document.querySelector(".btn-toggle");
+            btn.addEventListener("click",function(){
+                                 document.body.classList.toggle("dark-theme");
+                                 })
+        }
+      </script>
   </head>
 
   <body>
@@ -111,17 +127,19 @@
       <h1 class="logo">
         <img class="logo-icon" src="1625203966100.jpg" />AZR
         Launcher
-        
+             <!-- <button class="btn-toggle" style="float: right "onclick="myFunction()">Dark Mode</button> -->
+
       </h1>
     </div>
+      
     <div class="modal-content">
       <p>Easy Access to all your Media content</p>
     </div>
     <div class="modal-icons">
       <div class="flex-container">
         <div class="flex">
-          <a href="https://www.google.com" target="_blank">
-            <i class="fa fa-google" style="color:darkcyan"></i>
+          <a href="https://www.pinterest.com" target="_blank">
+            <i class="fa fa-pinterest" style="color:darkcyan"></i>
           </a>
           </div>
         
@@ -165,22 +183,30 @@
       <br>
     <div class="btn-group">
           <a href="https://meet.google.com" target="_blank">
-            <button style="color: darkgoldenrod">GoogleMeet</button></a>
+              <button style="color: darkgoldenrod"><img src="1625662722735.jpg" height="50px" width="90px"></img></button></a>
           
     
           <a href="https://teams.microsoft.com" target="_blank">
-            <button style="color: darkgoldenrod" style="vertical-align: bottom">Teams</button></a>
+            <button style="color: darkgoldenrod"><img src="1625662722729.png" height="50px" width="90px"></img></button></a>
           
     
           <a href="https://www.zoom.us" target="_blank">
-            <button style="color: darkgoldenrod">Zoom</button></a>
+              <button style="color: darkgoldenrod"><img src="1625662722750.png" height="50px" width="90px"></img></button></a>
           
       
           <a href="https://www.webex.com" target="_blank">
-            <button style="color: darkgoldenrod">Cisco WebEx</button></a>
+              <button style="color: darkgoldenrod"><img src="1625662722745.png" height="50px" width="90px"></img></button></a>
           
           <a href="https://www.slack.com" target="_blank">
-            <button style="color: darkgoldenrod">Slack</button></a>
+              <button style="color: darkgoldenrod"><img src="1625662722740.jpg" height="50px" width="90px"></img></button></a>
+          
+          <a href="https://www.yahoo.com" target="_blank">
+              <button style="color: darkgoldenrod"><img src="1625666276949.png" height="50px" width="90px"></img></button></a>
+
+          <a href="https://www.reddit.com" target="_blank">
+              <button style="color: darkgoldenrod"><img src="1625666276943.png" height="50px" width="90px"></img></button></a>
+         
           </div>
   </body>
 </html>
+     
