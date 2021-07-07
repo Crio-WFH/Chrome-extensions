@@ -1,4 +1,4 @@
-# Chrome-Extension-NotesTAker
+# Chrome-Extension-NotesTaker
 
 This extension is used to extract useful information from the webpages in the form of notes and then download the notes to your local machine for future use.
 
@@ -26,3 +26,6 @@ This extension is used to extract useful information from the webpages in the fo
 
 ## Author
 - Made by Ravit Garg
+
+## Contribute
+- Feel free to contribute in the project.
