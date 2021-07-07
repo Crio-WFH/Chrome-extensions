@@ -2,6 +2,7 @@
 Introducing a very handy extension which can be used to take that little break which everyone craves about during our hectic schedule.
 Its a simple extension which gives you a place to find some interesting stress busting activities to begin your next phase of work with greater sense of enthusiasm.
 
+
 🎯Features
 
 ✅The extension has two main sections. One is a fun section and other is social media.
@@ -15,13 +16,18 @@ Its a simple extension which gives you a place to find some interesting stress b
 ✅Another important highlight of the extension is that it follows the Content Security Policy of Google Chrome.
 
 
+
 🎥Demo Video
 https://www.youtube.com/watch?v=jt3OUDsFVGE
+
+
 
 💻Technologies Stack
 - HTML
 - CSS
 - JavaScript
+
+
 
 🔨How to use it?
 - The repo can be cloned or downloaded
@@ -30,5 +36,8 @@ https://www.youtube.com/watch?v=jt3OUDsFVGE
 - Click on 'Load Unpacked'
 - Select the files which have been downloaded.
 You must find Onestop-manager extension ready to be used in your browser🎉🎉
+
+
+
 
 Suggestions and contributions to the project are most Welcome!
