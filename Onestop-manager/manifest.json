@@ -1,6 +1,6 @@
 {
-  "name": "Getting Started Example",
-  "description": "Build an Extension!",
+  "name": "Onestop-manager",
+  "description": "Bust all your stress!",
   "manifest_version": 2,
   "version": "1.0.0",
   "minimum_chrome_version": "46",
