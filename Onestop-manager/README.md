@@ -4,15 +4,18 @@ Its a simple extension which gives you a place to find some interesting stress b
 
 🎯Features
 ✅The extension has two main sections. One is a fun section and other is social media.
-    -A user can have a peek at the fun section and explore various funny and stress busting activities. 
-    -The user can also select the social media section which gives him/her the links to his social media platforms
+-A user can have a peek at the fun section and explore various funny and stress busting activities. 
+ -The user can also select the social media section which gives him/her the links to his social media platforms
+    
 ✅It has a very sleek design with a crisp UI which makes it soothing to explore the extension
+
 ✅It is a quick⏰ and easy tool to use.
+
 ✅Another important highlight of the extension is that it follows the Content Security Policy of Google Chrome.
 
 
 🎥Demo Video
---- Add the link over here------
+https://www.youtube.com/watch?v=jt3OUDsFVGE
 
 💻Technologies Stack
 - HTML
