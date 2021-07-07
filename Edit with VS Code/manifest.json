@@ -1,0 +1,29 @@
+{
+	"name": "quick Edits",
+	"description": "Opens the selected text in VS Code",
+	"version": "1.5.2",
+	"manifest_version": 3,
+	"background": {
+		"service_worker": "background.js"
+	},
+	"permissions": ["contextMenus", "nativeMessaging", "storage"],
+	"action": {
+		"default_popup": "popup.html",
+		"default_icon": {
+			"16": "img/icon16.png",
+			"48": "img/icon48.png",
+			"128": "img/icon128.png"
+		}
+	},
+	"icons": {
+		"16": "img/icon16.png",
+		"48": "img/icon48.png",
+		"128": "img/icon128.png"
+	},
+	"content_scripts": [
+		{
+			"matches": ["<all_urls>"],
+			"js": ["content.js"]
+		}
+	]
+}

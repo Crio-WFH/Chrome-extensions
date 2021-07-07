@@ -1,0 +1,49 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    padding: 15px;
+}
+
+.header {
+    text-align: center;
+    font-size: 1.5em;
+    padding-bottom: 20px;
+}
+
+.editor-container {
+	display: flex;
+}
+
+.editor {
+    margin: 0 10px 20px;
+    background: #fefefe;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    /* border: solid; */
+}
+
+.editor:hover {
+    background: #f3f3f3;
+    position: relative;
+    bottom: 2px;
+    transition: ease-in-out;
+    padding-bottom: 5px;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+
+.padding {
+    /* border: solid; */
+    padding: 20px 0;
+}
+
+span {
+    font-style: italic;
+    background: aquamarine;
+    padding: 4px;
+}
