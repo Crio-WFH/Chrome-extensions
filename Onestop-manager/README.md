@@ -3,6 +3,7 @@ Introducing a very handy extension which can be used to take that little break w
 Its a simple extension which gives you a place to find some interesting stress busting activities to begin your next phase of work with greater sense of enthusiasm.
 
 🎯Features
+
 ✅The extension has two main sections. One is a fun section and other is social media.
 -A user can have a peek at the fun section and explore various funny and stress busting activities. 
  -The user can also select the social media section which gives him/her the links to his social media platforms
