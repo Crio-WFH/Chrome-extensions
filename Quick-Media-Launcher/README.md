@@ -2,9 +2,9 @@
 
 Chrome Extension for Launching Social Media Platforms and Meeting applications The idea to develop this chrome extension was to make the searching of social media platforms and connectivity apps easier with just one click on the icon from the chrome extension.
 
-*This chrome extension is developed using HTML and CSS - Refer to the code from popup.html file This Chrome Extension can be used in local machine
+*This chrome extension is developed using HTML and CSS - Refer to the code from popup.html file This Chrome Extension can be used in local machine*
 
-**1.Download the zip file from the repository
+**1.Download the zip file from the repository**
 
 **2.Save it on your Computer in a Folder
 
