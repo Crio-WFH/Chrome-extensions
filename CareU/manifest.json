@@ -1,0 +1,36 @@
+{
+    "manifest_version" : 2,
+    "version": "1.0.0",
+    "name":"Care You",
+    "description": "Extension that will boost you prodcutivity!",
+    "icons":{
+        "128":"icons/icon128.png",
+        "48" :"icons/icon48.png",
+        "16":"icons/icon16.png"
+    },
+    
+    "browser_action":{
+        "default_popup":"popup.html",
+        "default_icon":"icons/icon16.png"
+    },
+
+    "background":{
+        "scripts":[
+            "js/jquery-3.2.1.js"
+        ],
+        "persistent": true
+    },
+    
+    
+    "permissions": 
+    [
+        "tabs",
+        "activeTab",
+        "declarativeContent",  
+        "storage",
+        "notifications",
+        "contextMenus",
+        "webNavigation"
+        
+    ] 
+}
