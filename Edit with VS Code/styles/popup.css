@@ -5,14 +5,15 @@
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-body {
-    padding: 15px;
+.main {
+	padding: 15px;
+	/* border: solid salmon; */
 }
 
 .header {
-    text-align: center;
-    font-size: 1.5em;
-    padding-bottom: 20px;
+	text-align: center;
+	font-size: 1.5em;
+	padding-bottom: 20px;
 }
 
 .editor-container {
@@ -20,30 +21,57 @@ body {
 }
 
 .editor {
-    margin: 0 10px 20px;
-    background: #fefefe;
-    padding: 5px;
-    border-radius: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-    /* border: solid; */
+	margin: 0 10px 20px;
+	background: #fefefe;
+	padding: 5px;
+	border-radius: 5px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	/* border: solid; */
 }
 
 .editor:hover {
-    background: #f3f3f3;
-    position: relative;
-    bottom: 2px;
-    transition: ease-in-out;
-    padding-bottom: 5px;
-    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+	background: #f3f3f3;
+	position: relative;
+	bottom: 2px;
+	transition: ease-in-out;
+	padding-bottom: 5px;
+	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
 .padding {
-    /* border: solid; */
-    padding: 20px 0;
+	/* border: solid; */
+	padding: 20px 0;
 }
 
 span {
-    font-style: italic;
-    background: aquamarine;
-    padding: 4px;
+	font-style: italic;
+	background: aquamarine;
+	padding: 4px;
+}
+
+.button-container {
+	display: flex;
+	justify-content: flex-end;
+	margin: 0 10px 5px;
+    /* border: solid; */
+}
+
+.button {
+	display: inline-block;
+	/* border-bottom: 4px solid #aaa; */
+	text-align: right;
+	padding: 10px 20px;
+	font-family: 'Open Sans';
+	font-weight: 1000;
+	font-size: 1.2em;
+	background: #da70d6;
+	color: #fefefe;
+	border-radius: 5px;
+}
+
+.button:hover {
+	color: #fefefe;
+	background: rgb(202, 75, 198);
+	padding: 7px 17px;
+	border: 3px solid orchid;
 }

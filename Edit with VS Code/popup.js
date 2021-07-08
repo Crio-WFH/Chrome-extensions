@@ -101,3 +101,9 @@ chrome.storage.sync.get(['editor'], (resp) => {
 			break
 	}
 })
+
+const button = document.querySelector('.button')
+
+button.addEventListener('click', () => {
+	chrome.runtime.openOptionsPage()
+})

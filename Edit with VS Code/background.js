@@ -1,6 +1,7 @@
 chrome.runtime.onInstalled.addListener(() => {
     chrome.storage.sync.set({
-		editor: "'Code'",
+        editor: "'Code'",
+        data: ""
 	})
 
 	let contextProperties = {
