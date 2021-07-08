@@ -9,6 +9,10 @@
 <hr/>
 
 <h1> SCREENSHOT </h1>
+![Screenshot (28)](https://user-images.githubusercontent.com/66028064/124949411-2bed7880-e02f-11eb-8c51-4f2b19de19d9.png)
+![Screenshot (29)](https://user-images.githubusercontent.com/66028064/124949478-3a3b9480-e02f-11eb-9272-758d1be1dd00.png)
+![Screenshot (30)](https://user-images.githubusercontent.com/66028064/124949491-3d368500-e02f-11eb-8de9-ba7c8fadbbce.png)
+![Screenshot (31)](https://user-images.githubusercontent.com/66028064/124949502-3f004880-e02f-11eb-9642-5591b5cda4d5.png)
 
 <hr/>
 
