@@ -1,7 +1,8 @@
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.sync.set({
-        editor: "'Code'",
-        data: ""
+	chrome.storage.sync.set({
+		editor: "'Code'",
+		data: '',
+		open: true,
 	})
 
 	let contextProperties = {
@@ -14,11 +15,11 @@ chrome.runtime.onInstalled.addListener(() => {
 	chrome.contextMenus.create(contextProperties)
 })
 
-function doThis(_, tab) {
+const doThis = (_, tab) => {
 	chrome.tabs.sendMessage(tab.id, { q: 'getSelection' }, (resp) => {
-        if (resp?.q === 'success') {
-            chrome.storage.sync.get(['editor'], (res) => {
-                switch (res.editor) {
+		chrome.storage.sync.get(['open', 'editor'], (check) => {
+			if (resp?.q === 'success' && check.open) {
+				switch (check.editor) {
 					case "'Atom'":
 						chrome.runtime.sendNativeMessage(
 							'com.hksm.atom.native',
@@ -50,10 +51,10 @@ function doThis(_, tab) {
 						)
 						break
 				}
-            })
-        } else {
-            console.error('can\'t connect!')
-        }
+			} else if (check.open) {
+				console.error("can't connect!")
+			}
+		})
 	})
 }
 

@@ -7,7 +7,6 @@
 
 .main {
 	padding: 15px;
-	/* border: solid salmon; */
 }
 
 .header {
@@ -26,7 +25,6 @@
 	padding: 5px;
 	border-radius: 5px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-	/* border: solid; */
 }
 
 .editor:hover {
@@ -39,11 +37,10 @@
 }
 
 .padding {
-	/* border: solid; */
 	padding: 20px 0;
 }
 
-span {
+span.selected {
 	font-style: italic;
 	background: aquamarine;
 	padding: 4px;
@@ -51,14 +48,75 @@ span {
 
 .button-container {
 	display: flex;
-	justify-content: flex-end;
+	justify-content: space-between;
 	margin: 0 10px 5px;
-    /* border: solid; */
+    align-items: center;
 }
+
+.edit {
+    font-size: 1.4em;
+    display: flex;
+    height: 30px;
+    padding-top: 5px;
+}
+
+.switch {
+    margin: 2px 0 0 10px;
+}
+
+/* slider start */
+.switch {
+    display: inline-block;
+    position: relative;
+    height: 16px;
+    width: 30px;
+}
+
+.switch input { 
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 34px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 11.9px;
+  width: 11.9px;
+  left: 2.3px;
+  bottom: 2.3px;
+  background-color: white;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .slider {
+  background-color: #2196F3;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked + .slider:before {
+  transform: translateX(13.7px);
+}
+/* slider end */
 
 .button {
 	display: inline-block;
-	/* border-bottom: 4px solid #aaa; */
 	text-align: right;
 	padding: 10px 20px;
 	font-family: 'Open Sans';
