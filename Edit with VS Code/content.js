@@ -31,13 +31,16 @@ const setStorage = (content) => {
 	let gridItem = `
         <div class="grid-item">
             <div class="date-time">
+                <div class="button-container edit">
+				    <div class="button edit">🖋</div>
+			    </div>
                 <div>${date}</div>
                 <div>${time}</div>
-                <div class="button-container">
-				    <div class="button">DELETE</div>
+                <div class="button-container delete">
+				    <div class="button delete">❌</div>
 			    </div>
             </div>
-            <textarea class="content">${content}</textarea>
+            <textarea class="content" disabled="true">${content}</textarea>
         </div>
     `
 	chrome.storage.sync.get(['data'], (resp) => {
