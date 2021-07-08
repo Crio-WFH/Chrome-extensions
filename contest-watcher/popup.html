@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==' 'unsafe-inline' 'unsafe-eval'; script-src-elem 'self' 'sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==' 'unsafe-inline' 'unsafe-eval'; object-src 'self'">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contest-Reminder</title>
+    <style>
+        body {
+            min-width: 400px;
+            background-color: #0D0C0D;
+            color: #F66FB1;
+
+        }
+        .contest {
+            border: 1px solid white;
+            border-radius: 5px;
+            padding: 5px;
+            margin-bottom: 4px;
+        }
+        a {
+            color: #F66FB1;
+        }
+    </style>
+</head>
+<body>
+    <h1>Contest Details</h1>
+    <div id="contests"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="popup.js"></script>
+    <script src="background.js"></script>
+</body>
+</html>
