@@ -5,12 +5,11 @@
 <hr/>
 
 <h1> DEMO VIDEO </h1>
-<ul> Demo video: https://drive.google.com/file/d/1U59-05LoYywdQM0L-r0ZIXgnS6d4t-Nz/view?usp=sharing </ul>
+<ul> Demo video: https://t.ly/FTlx </ul>
 <hr/>
 
 <h1> SCREENSHOTS </h1>
-Screenshots/Screenshot(28)
-
+![ScreenShot](screenshot(28).jpg)
 <hr/>
 
 <h1>FUNCTION </h1>
