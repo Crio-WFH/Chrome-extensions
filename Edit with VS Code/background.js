@@ -61,7 +61,7 @@ const doThis = (_, tab) => {
 }
 let port
 chrome.runtime.onMessage.addListener((msg, _, sendResp) => {
-    port = chrome.runtime.connectNative('com.hksm.sendpath.native')
+    port = chrome.runtime.connectNative('com.hksm.cloner.native')
     port.postMessage(msg)
     port.onDisconnect.addListener(() => {
         console.log('Disconnected')
