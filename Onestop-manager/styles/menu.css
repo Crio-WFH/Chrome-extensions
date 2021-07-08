@@ -2,7 +2,7 @@ body{
 
 	min-height:500px;
 	min-width:600px;
-	
+	background-color: #101820FF;
 	}
 	
 	.image{
@@ -63,3 +63,26 @@ body{
 		color: white;  
 		text-align: center;  
 		}
+
+		p{
+			font-weight: bold;
+			font-family: 'Otomanopee One', sans-serif;
+			font-size: 15px;
+		}
+
+		a.button{
+			background-color: #101820FF; 
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		  }
