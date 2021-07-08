@@ -25,7 +25,7 @@
         padding: 0;
         width: 384px;
         color: #222;
-          background: #fff;
+        background: #fff;
       }
 
       h1 {
@@ -96,38 +96,38 @@
         font-size: 40px;
         color: #2f5876;
       
-          
+        }
       .btn-group button{
               border: 1 px solid green;
               padding: 10px 24px;
               cursor: pointer;
               float:center;
-              height: 100%;
-              width: 100px;
-          }
-          body.dark-theme{
-              background-color: #121212;
-              color: #eee;
-          }
+              height: 50%;
+              width: 90px;
+        }
+        .dark-mode{
+            background-color: black;
+            color: white;
+        }
           
-      }
+          
+      
     </style>
+    </head>
+      <body>
     <script>
         function myFunction(){
-            const btn = document.querySelector(".btn-toggle");
-            btn.addEventListener("click",function(){
-                                 document.body.classList.toggle("dark-theme");
-                                 })
+            var element = document.body;
+            element.classList.toggle("dark-mode");
         }
       </script>
-  </head>
 
-  <body>
+  
     <div class="modal-header">
       <h1 class="logo">
         <img class="logo-icon" src="1625203966100.jpg" />AZR
         Launcher
-             <!-- <button class="btn-toggle" style="float: right "onclick="myFunction()">Dark Mode</button> -->
+             <button class="btn-toggle" style="float: right" onclick="myFunction()">Dark Mode</button> 
 
       </h1>
     </div>
@@ -206,7 +206,8 @@
           <a href="https://www.reddit.com" target="_blank">
               <button style="color: darkgoldenrod"><img src="1625666276943.png" height="50px" width="90px"></img></button></a>
          
+          <a href="https://www.snapchat.com" target="_blank">
+              <button style="color: darkgoldenrod"><img src="1625718339311.jpg" height="50px" width="90px"></img></button></a>
           </div>
   </body>
 </html>
-     
