@@ -7,7 +7,7 @@ This extension is used to extract useful information from the webpages in the fo
 - For Demo Video, [Click Here](https://youtu.be/PWAq1EMiMPM).
 
 ## ScreenShot
-![](capture.png)
+![](Images/capture.png)
 
 ## Functions
 - Take notes from webpages.
