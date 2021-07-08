@@ -20,23 +20,23 @@
  </ul>
  <hr/>
  
- <h1>PROCEDURE TO INSTALL</h1>
+<h1>PROCEDURE TO INSTALL</h1>
+<ul>
+ <li>Download or fork the folder and clone it to your local machine</li>
+ <li>Then go to chrome://extensions(Google Chrome Extension) </li>
+ <li>Ensure developer mode is on</li>
+ <li>Click on Load unpacked and select your folder</li.
+ <li> Then to the extension tab in the taskbar of your browser. Thus, your extension is installed. </li>
+  
+  <hr/>
+  
+ <h1> AUTHOR </h1>
  <ul>
-  <li>Download or fork the folder and clone it to your local machine</li>
-  <li>Then go to chrome://extensions(Google Chrome Extension) </li>
-  <li>Ensure developer mode is on</li>
-  <li>Click on Load unpacked and select your folder</li.
-  <li> Then to the extension tab in the taskbar of your browser. Thus, your extension is installed. </li>
-  
+ <li>Made and Written By: Stuti Saini</li.
   <hr/>
   
-  <h1> AUTHOR </h1>
-  <ul>
-  <li>Made and Written By: Stuti Saini</li.
-  <hr/>
-  
-  <h1>CONTRIBUTE</h1>
-  <li>Feel free to contribute</li>
+ <h1>CONTRIBUTE</h1>
+ <li>Feel free to contribute</li>
   <hr/>
   
    
