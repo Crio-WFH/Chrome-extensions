@@ -27,12 +27,13 @@
  <li>Ensure developer mode is on</li>
  <li>Click on Load unpacked and select your folder</li.
  <li> Then to the extension tab in the taskbar of your browser. Thus, your extension is installed. </li>
-  
+  </ul>
   <hr/>
   
  <h1> AUTHOR </h1>
  <ul>
- <li>Made and Written By: Stuti Saini</li.
+  <li>Made and Written By: Stuti Saini</li>
+  </ul>
   <hr/>
   
  <h1>CONTRIBUTE</h1>
