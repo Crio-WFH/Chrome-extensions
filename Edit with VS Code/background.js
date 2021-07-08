@@ -9,7 +9,7 @@ chrome.runtime.onInstalled.addListener(() => {
 
 	let contextProperties = {
 		contexts: ['selection'],
-		title: 'Open with Editor',
+		title: 'Quick Edit',
 		visible: true,
 		id: 'main',
 	}
