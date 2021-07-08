@@ -65,6 +65,30 @@
         "design",
         "ideas"
       ]
+    },
+    {
+      "login": "nsachin08",
+      "name": "nsachin08",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53273271?v=4",
+      "profile": "https://github.com/nsachin08",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
+    },
+    {
+      "login": "Apprentice76",
+      "name": "Hritwik Som",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51828849?v=4",
+      "profile": "https://github.com/Apprentice76",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
