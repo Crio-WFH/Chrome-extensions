@@ -1,0 +1,129 @@
+body {
+	font-family: Roboto;
+	background-image: url('/images/background.png');
+}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+li {
+	overflow-wrap: break-word;
+	cursor: move;
+	cursor: grab;
+	cursor: -moz-grab;
+	cursor: -webkit-grab;
+}
+li:active {
+	cursor: grabbing;
+	cursor: -moz-grabbing;
+	cursor: -webkit-grabbing;
+}
+#homepageui {
+	height: 31em;
+	overflow: scroll;
+	overflow: auto;
+}
+
+#homepageui::-webkit-scrollbar-track {
+	-webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+	background-color: #f5f5f5;
+	border-radius: 5px;
+}
+
+#homepageui::-webkit-scrollbar {
+	width: 10px;
+	background-color: #f5f5f5;
+}
+
+#homepageui::-webkit-scrollbar-thumb {
+	background-color: #2980b9;
+	border-radius: 10px;
+	background-image: -webkit-linear-gradient(
+		0deg,
+		rgba(255, 255, 255, 0.5) 25%,
+		transparent 25%,
+		transparent 50%,
+		rgba(255, 255, 255, 0.5) 50%,
+		rgba(255, 255, 255, 0.5) 75%,
+		transparent 75%,
+		transparent
+	);
+}
+
+h1 {
+	background: #2980b9;
+	color: white;
+	margin: 0;
+	padding: 10px 20px;
+	text-transform: uppercase;
+	font-size: 24px;
+	font-weight: normal;
+}
+
+.fa-plus {
+	float: right;
+}
+
+.item {
+	font-family: Roboto;
+	font-size: 18px;
+	color: #2980b9;
+	background: #fff;
+	line-height: 40px;
+	color: #666;
+	padding: 13px 13px 13px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+.checkbox {
+	float: right;
+}
+
+.item:nth-child(2n) {
+	background: #f7f7f7;
+}
+
+span {
+	background: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
+.item:hover span {
+	width: 40px;
+	opacity: 1;
+}
+
+.todo-input {
+	font-size: 18px;
+	color: #2980b9;
+	background-color: #f7f7f7;
+	width: 100%;
+	padding: 13px 13px 13px 20px;
+	box-sizing: border-box;
+	border: 3px solid rgba(0, 0, 0, 0);
+}
+
+.todo-input:focus {
+	background: #fff;
+	border: 3px solid #2980b9;
+	outline: none;
+}
+
+#container {
+	width: 360px;
+	margin: 100px auto;
+	background: #f7f7f7;
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
