@@ -1,4 +1,4 @@
-# 💻 Quick Edits v1.7.6
+# 💻 Quick Edits v2.1.2
 ![project demo](https://media.giphy.com/media/5dRd9AhjMxnXOityB5/giphy.gif)
 > _Opens the selected text in a Text Editor_
 
@@ -16,6 +16,15 @@ Demo video link (https://vimeo.com/570875673)
 -   Delete snippets by pressing '❌'  or edit them by pressing '🖋'. (Don't forget to save edited snippet by pressing '✔' !!!).
 
 > _Note: defaults to VS Code upon installation and Open editor is turned on_
+
+#### Experimental feature: Git-Cloner
+
+> _Needs python to function_
+
+- Override the copy-link-to-clipboard '📋' button in GitHub.
+- Toggle Cloner On.
+- Type/Paste path of directory where repo is to be cloned.
+- Click '📋' as usual in GitHub and directory will be cloned.
 
 ## ⚙ Installation
 
