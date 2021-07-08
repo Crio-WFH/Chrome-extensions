@@ -9,9 +9,11 @@ HTML, CSS, JavaScript, Nodejs, Express.js, Moment.js
 
 ### Screenshots & Features
 Extension providing the details of contest in upcoming 24 hours
+
 ![image](https://user-images.githubusercontent.com/54480934/124947274-50e0ec00-e02d-11eb-82f8-3d35b9f08912.png)
 
 Chrome Notifications
+
 ![image](https://user-images.githubusercontent.com/54480934/124947327-5c341780-e02d-11eb-9958-141f6c7c71d1.png)
 
 ### Demo
