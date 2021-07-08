@@ -65,6 +65,42 @@
         "design",
         "ideas"
       ]
+    },
+    {
+      "login": "nsachin08",
+      "name": "nsachin08",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53273271?v=4",
+      "profile": "https://github.com/nsachin08",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
+    },
+    {
+      "login": "Apprentice76",
+      "name": "Hritwik Som",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51828849?v=4",
+      "profile": "https://github.com/Apprentice76",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
+    },
+    {
+      "login": "ravit27",
+      "name": "ravit27",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64327146?v=4",
+      "profile": "https://github.com/ravit27",
+      "contributions": [
+        "code",
+        "ideas",
+        "infra",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
