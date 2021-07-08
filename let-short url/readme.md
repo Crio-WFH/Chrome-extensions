@@ -9,7 +9,7 @@
 <hr/>
 
 <h1> SCREENSHOTS </h1>
-![ScreenShot](screenshot(28).jpg)
+![ScreenShot](https://github.com/stuti-ui/Chrome-extensions/blob/main/let-short%20url/Screenshots/Screenshot%20(28).png)
 <hr/>
 
 <h1>FUNCTION </h1>
