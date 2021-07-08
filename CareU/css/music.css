@@ -5,7 +5,6 @@ div,
 span,
 object,
 iframe,
-h1,
 h2,
 h3,
 h4,
@@ -74,9 +73,6 @@ video {
   border: 0;
   outline: 0;
   font-size: 100%;
-  color: #00ffff;
-  text-align: center;
-  background: darkblue;
   background-size: 100% 100%;
   vertical-align: baseline;
   text-transform: uppercase;
@@ -93,13 +89,13 @@ h1 {
   outline: none;
   cursor: pointer;
   border: none;
-  color: #00ffff;
+  color: #e27d60;
   text-align: center;
-  margin: 10px auto;
+  margin: auto;
   font-size: 30px;
 }
 
 .category:hover {
-  background: #6600cc;
+  background: #41b3a3;
   border-radius: 5px;
 }

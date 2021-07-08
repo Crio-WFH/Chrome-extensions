@@ -1,7 +1,7 @@
 body {
-  background-color: darkblue;
+  background-color: #85dcb8;
   font-family: "Quicksand", sans-serif;
-  color: #00ffff;
+  color: #e27d60;
 }
 
 .container__buttons {
@@ -10,7 +10,7 @@ body {
 }
 
 .buttons__icons:hover {
-  background-color: #00ffff;
+  background-color: #c38d9e;
   border-radius: 20px;
 }
 
@@ -24,6 +24,6 @@ h2 {
 }
 
 .hacks {
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
 }

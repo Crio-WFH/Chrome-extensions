@@ -1,6 +1,6 @@
 # Chrome-extensions
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-7-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&labelColor=black&logo=github"></a>
 
@@ -56,6 +56,9 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="http://linkedin.com/in/theadityanvs"><img src="https://avatars.githubusercontent.com/u/46414203?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Nadamuni Venkata Sai Aditya</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=theAdityaNVS" title="Code">💻</a> <a href="#design-theAdityaNVS" title="Design">🎨</a> <a href="#ideas-theAdityaNVS" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://github.com/nsachin08"><img src="https://avatars.githubusercontent.com/u/53273271?v=4?s=100" width="100px;" alt=""/><br /><sub><b>nsachin08</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=nsachin08" title="Code">💻</a> <a href="#ideas-nsachin08" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-nsachin08" title="Design">🎨</a> <a href="#infra-nsachin08" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="https://github.com/Apprentice76"><img src="https://avatars.githubusercontent.com/u/51828849?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Hritwik Som</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=Apprentice76" title="Code">💻</a> <a href="#ideas-Apprentice76" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-Apprentice76" title="Design">🎨</a> <a href="#infra-Apprentice76" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+  </tr>
+  <tr>
+    <td align="center"><a href="https://github.com/ravit27"><img src="https://avatars.githubusercontent.com/u/64327146?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ravit27</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=ravit27" title="Code">💻</a> <a href="#ideas-ravit27" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-ravit27" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#design-ravit27" title="Design">🎨</a></td>
   </tr>
 </table>
 
