@@ -12,3 +12,9 @@ function getQuote() {
       z.innerHTML = data.author;
     });
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  if (document.getElementById("skip") != null) {
+    document.getElementById("skip").addEventListener("click", getQuote);
+  }
+});
