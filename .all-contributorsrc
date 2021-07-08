@@ -101,6 +101,18 @@
         "infra",
         "design"
       ]
+    },
+    {
+      "login": "bhushankelkar",
+      "name": "Kulbhushan Kelkar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43243740?v=4",
+      "profile": "https://github.com/bhushankelkar",
+      "contributions": [
+        "code",
+        "design",
+        "infra",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
