@@ -27,11 +27,10 @@
       <a href="#getting-started">Getting Started</a>
       <ul>
         <li><a href="#installation">Installation</a></li>
-         <li><a href="#Demo">Demo</a></li>
+         <li><a href="#demo">Demo</a></li>
       </ul>
     </li>
-    <li><a href="#contact">Developed by</a></li>
-    <li><a href="#acknowledgements">Acknowledgements</a></li>
+    <li><a href="#developed-by">Developed by</a></li>
     <li><a href="#futurescope">Future Scope</a></li>
   </ol>
 </details>
@@ -74,8 +73,17 @@ This section should list any major frameworks that you built your project using.
   
 4. Done! you should be able to use the extension now when you open a new tab and also a todo list view is available on window bar
 
+## Demo
+[https://github.com/kavya466/Chrome-extensions/blob/main/WFHTool%20-%20JavaScript/res/WFHTOOL.mp4]
+
+
 
 <!-- CONTACT -->
-## Developed by
+## Developed By
 
 Kavya Sri Gurram 
+
+## Future Scope
+* Working on integration of outlook calendar so that meetings can be joined from the extension
+* Timer on blockng websites
+
