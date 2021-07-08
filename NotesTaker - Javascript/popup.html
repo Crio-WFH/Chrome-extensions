@@ -1,0 +1,52 @@
+<!doctype html>
+
+<html>
+  <head>
+    <title>Notes Taker</title>
+    <style>
+      body {
+        font-family: "Segoe UI", "Lucida Grande", Tahoma, sans-serif;
+        font-size: 100%;
+        background-color: #ebdef0 
+
+      }
+      #status {
+        white-space: pre;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        max-width: 400px;
+      }
+        .empty{
+            
+            height: 3px;
+            background-color:#3e373e
+        }
+        .txt{
+            background-image: url(bg.jpg); 
+            background-position: center;
+            width:300px;
+            background-color: rgba(255, 255, 255, 0.73)
+        }
+        .trash{
+        position: relative;
+            left: 270px;
+        
+        }
+        .btn{
+        position: relative;
+        border-radius: 10px;
+        left:30%;
+        }
+    </style>
+
+    <script src="popup.js"></script>
+  </head>
+  <div><p style="text-align: center;">Made By Ravit For #IBD</p></div>
+  <body>
+      <div></div>
+      <div id="store"></div>
+    <div id="status"></div>
+    <img id="image-result" hidden>
+  </body>
+</html>
+
