@@ -4,7 +4,15 @@ A one stop solution for checking and notifying you about all the upcoming contes
 ### What it does?
 It fetches all the upcoming contest details from the clist.by api and sends you chrome notifications when the contest starts. It fetches details of contest day by day. currently the time is in IST only.
 
-### Screenshots
+### TechStack:
+HTML, CSS, JavaScript, Nodejs, Express.js, Moment.js
+
+### Screenshots & Features
+Extension providing the details of contest in upcoming 24 hours
+![image](https://user-images.githubusercontent.com/54480934/124947274-50e0ec00-e02d-11eb-82f8-3d35b9f08912.png)
+
+Chrome Notifications
+![image](https://user-images.githubusercontent.com/54480934/124947327-5c341780-e02d-11eb-9958-141f6c7c71d1.png)
 
 ### Demo
 
@@ -14,11 +22,15 @@ cd backend
 npm install
 npm run start
 ```
+Note: you don;t need to run the backend server it is already up and running on my [repl](https://replit.com/@jainaayush01/clist-contests#index.js), just fetch the data from it
 
 ### Add extension to chrome
 * Open extensions tab in Chrome, turn developer mode on
 * Select `LOAD UNPACKED`, then select the extension folder in dialog box
 * Good to go
+
+### What did i learnt?
+I learnt about chrome notifications, alarms, manifiest.json, Chrome Security Policy, resolving cors errors(yeah always a tough one) 
 
 ### Why backend server was needed?
 * The backend server was needed because of the CORS, you need to make a fetch request from a server to fetch data from clist.by webisite, you can't make a request from frontend directly it sends you an error so i need to create a server and it is running on a [repl](https://replit.com/@jainaayush01/clist-contests#index.js). 
