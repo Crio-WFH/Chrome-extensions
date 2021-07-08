@@ -27,16 +27,3 @@ h2 {
   font-size: 25px;
   font-weight: bold;
 }
-
-.dark-mode {
-  background-color: black;
-  color: white;
-}
-
-#dark {
-  float: right;
-}
-
-#dark:hover {
-  background: #c38d9e;
-}
