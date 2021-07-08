@@ -1,12 +1,12 @@
 {
 	"name": "quick Edits",
 	"description": "Opens the selected text in VS Code",
-	"version": "1.7.6",
+	"version": "2.0.1",
 	"manifest_version": 3,
 	"background": {
 		"service_worker": "background.js"
 	},
-	"permissions": ["contextMenus", "nativeMessaging", "storage", "tabs"],
+	"permissions": ["contextMenus", "nativeMessaging", "storage"],
 	"action": {
 		"default_popup": "popup.html",
 		"default_icon": {
@@ -24,6 +24,10 @@
 		{
 			"matches": ["<all_urls>"],
 			"js": ["content.js"]
+		},
+        {
+			"matches": ["https://github.com/*/*"],
+			"js": ["github.js"]
 		}
 	],
     "options_page": "snippets.html"
