@@ -21,7 +21,6 @@ In the HTML code link to particular media application can be changed to users pe
 
 Below are the attached Screenshot of the extension.
 
+![1625735661726](https://user-images.githubusercontent.com/59816379/124896549-2d04b280-dffb-11eb-8344-418747a0eb8f.jpg)
+![1625735661733](https://user-images.githubusercontent.com/59816379/124896572-31c96680-dffb-11eb-9f81-a248609a55b9.jpg)
 
-![1625719049478](https://user-images.githubusercontent.com/59816379/124863513-cff60600-dfd4-11eb-9f4a-d9787393c87a.jpg)
-![1625719049487](https://user-images.githubusercontent.com/59816379/124863524-d4baba00-dfd4-11eb-9ac4-f20c919a6fd1.jpg)
-![1625719049494](https://user-images.githubusercontent.com/59816379/124863538-d8e6d780-dfd4-11eb-99c1-fa2526b4eba7.jpg)
