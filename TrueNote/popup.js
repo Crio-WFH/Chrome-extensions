@@ -27,3 +27,12 @@ document.getElementById("checkbox").addEventListener('change', (event) =>{
         console.log(response);
     });
 });
+
+document.getElementById("save-btn").addEventListener('click', () =>{
+    chrome.runtime.sendMessage({
+        message:"save_notes_cache",
+        payload:{
+            activeTab:activeTab
+        }
+    });
+})

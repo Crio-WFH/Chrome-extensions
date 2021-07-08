@@ -4,7 +4,39 @@ let options = {
 
 let displayingForm = false;
 
-// function onload() {
+const tabUrl = window.location.href;
+
+console.log(tabUrl);
+
+let notesCache = [];
+
+chrome.storage.sync.get(tabUrl, (data)=>{
+    notesCache = data[tabUrl]?data[tabUrl].savedNotes:[];
+    console.log(data);
+    notesCache.forEach(addSticker);
+});
+
+// dummyNotesCache = [
+//     {
+//         title: "noteTitle1",
+//         description: "noteDescription1",
+//         posX: "200px",
+//         posY: "200px"
+//     }, 
+//     {
+//         title: "noteTitle2",
+//         description: "noteDescription2",
+//         posX: "400px",
+//         posY: "400px"    
+//     },
+//     {
+//         title: "noteTitle3",
+//         description: "noteDescription3",
+//         posX: "600px",
+//         posY: "600px"
+//     }
+// ];
+
 const form = document.createElement("div");
 form.id = "noteForm";
 
@@ -59,20 +91,20 @@ form.appendChild(descriptionLabel);
 form.appendChild(noteFormBtnGrp);
 
 document.body.appendChild(form);
-// }
-
-// chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-//     if (request.message === "onload") {
-//         onload();
-//         sendResponse("");
-//     } 
-// })
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log(request);
     if (request.message === "change_options") {
         console.log(`Is enabled ${request.isEnabled}`);
         options.isEnabled = request.isEnabled;
+        sendResponse({
+            message:"success"
+        });
+
+        return true;
+    } else if (request.message === "save_notes_cache") {
+        console.log("Saved notes");
+        saveNotes();
         sendResponse({
             message:"success"
         });
@@ -88,6 +120,14 @@ document.body.addEventListener("click", (e) => {
         displayForm(posX, posY);
     }
 });
+
+function saveNotes() {
+    if (notesCache.length > 0) {
+        chrome.storage.sync.set({[tabUrl]: {savedNotes:notesCache}});
+    } else {
+        chrome.storage.sync.remove(tabUrl);
+    }
+}
 
 function displayForm(posX, posY) {
     displayingForm = true;
@@ -122,8 +162,17 @@ document.getElementById("addNoteBtn").addEventListener("click", (e) => {
         const styles = window.getComputedStyle(createNoteForm);
         const posX = styles.getPropertyValue('left');
         const posY = styles.getPropertyValue('top');
+        
+        let note = {
+            title: noteTitle,
+            description: noteDescription,
+            posX: posX,
+            posY: posY
+        }
+        
+        notesCache.push(note);
 
-        addSticker(noteTitle, noteDescription, posX, posY);
+        addSticker(note);
 
         discardForm();
     }
@@ -132,9 +181,9 @@ document.getElementById("addNoteBtn").addEventListener("click", (e) => {
 document.getElementById("discardCreateNoteBtn").addEventListener("click", discardForm);
 
 
-function addSticker(title, description, posX, posY){
+function addSticker(note){
 
-    console.log(`Form positions ${posX} ${posY}`);
+    console.log(`Form positions ${note.posX} ${note.posY}`);
 
     const colorTheme = getRandomColor();
 
@@ -142,17 +191,17 @@ function addSticker(title, description, posX, posY){
 
     const newSticker = document.createElement("div");
     newSticker.className = "note";
-    newSticker.style.top = posY;
-    newSticker.style.left = posX;
+    newSticker.style.top = note.posY;
+    newSticker.style.left = note.posX;
 
     const noteTitle = document.createElement("p");
     noteTitle.className = "noteTitle";
-    noteTitle.innerHTML = title;
+    noteTitle.innerHTML = note.title;
     noteTitle.style.color = colorTheme;
 
     const noteDescription = document.createElement("p");
     noteDescription.className = "noteDescription";
-    noteDescription.innerHTML = description;
+    noteDescription.innerHTML = note.description;
 
     const discardBtn = document.createElement("div");
     discardBtn.className = "discardBtn";

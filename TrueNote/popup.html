@@ -13,8 +13,9 @@
             html, body {
                 font-family:'Poppins',sans-serif;
                 margin: 0;
-                padding:0;
+                padding:0 0 12px 0;
                 width: 384px;
+                /* height:max-content; */
                 min-height: 167px;
             }
 
@@ -39,7 +40,8 @@
             }
 
             .version{
-                color: rgb(109, 109, 109);
+                /* color: rgb(109, 109, 109); */
+                color: #bdbdbd;
                 font-size: 18px;
             }
 
@@ -47,10 +49,17 @@
                padding: 0 22px; 
             }
             
-            .wrapper{
+            .options-wrapper{
                 display:flex;
                 justify-content:space-between;
                 align-items: center;
+            }
+
+            .options-wrapper div{
+                width:100px;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
             }
             
             .switch{
@@ -95,6 +104,27 @@
                 transform: translateX(20px);
             }
 
+            .btn-grp span{
+                cursor: pointer;
+                padding-right:10px;
+                font-weight: 500;
+            }
+
+            #save-btn{
+                color:#2B8ACE;
+                border-right: 2px solid #cccccc;
+            }
+
+            #reset-btn{
+                color:#C55211;
+                padding-left: 10px;
+            }
+
+            .btn-grp{
+                /* background-color:rgb(255, 0, 0); */
+                margin-top: 16px;
+            }
+
         </style>
     </head>
     <body>
@@ -106,12 +136,20 @@
         </div>
         <div class="model-content">
             <p class="description">Take your notes most effectively</p>
-            <div class="wrapper">
+            <div class="options-wrapper">
                 <span class="enable-text">Enable note taking</span>
-                <label class="switch">
-                    <input type="checkbox" id="checkbox">
-                    <span class="slider"></span> 
-                </label>
+                <div>
+                    OFF
+                    <label class="switch">
+                        <input type="checkbox" id="checkbox">
+                        <span class="slider"></span> 
+                    </label>
+                    ON
+                </div>
+            </div>
+            <div class="btn-grp">
+                <span id="save-btn">Save notes</span>
+                <span id="reset-btn">Reset notes</span>
             </div>
         </div>
         <script src="./popup.js"></script>
