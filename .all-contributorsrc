@@ -65,6 +65,66 @@
         "design",
         "ideas"
       ]
+    },
+    {
+      "login": "nsachin08",
+      "name": "nsachin08",
+      "avatar_url": "https://avatars.githubusercontent.com/u/53273271?v=4",
+      "profile": "https://github.com/nsachin08",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
+    },
+    {
+      "login": "Apprentice76",
+      "name": "Hritwik Som",
+      "avatar_url": "https://avatars.githubusercontent.com/u/51828849?v=4",
+      "profile": "https://github.com/Apprentice76",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
+    },
+    {
+      "login": "ravit27",
+      "name": "ravit27",
+      "avatar_url": "https://avatars.githubusercontent.com/u/64327146?v=4",
+      "profile": "https://github.com/ravit27",
+      "contributions": [
+        "code",
+        "ideas",
+        "infra",
+        "design"
+      ]
+    },
+    {
+      "login": "bhushankelkar",
+      "name": "Kulbhushan Kelkar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43243740?v=4",
+      "profile": "https://github.com/bhushankelkar",
+      "contributions": [
+        "code",
+        "design",
+        "infra",
+        "ideas"
+      ]
+    },
+    {
+      "login": "kamatvedita99",
+      "name": "Vedita Kamat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62342400?v=4",
+      "profile": "https://github.com/kamatvedita99",
+      "contributions": [
+        "code",
+        "design",
+        "infra",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
