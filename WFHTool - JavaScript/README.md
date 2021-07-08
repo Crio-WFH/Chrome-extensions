@@ -40,7 +40,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-This WFHTool extension solves 4 major challenges of work from home environment.
+This WFHTool extension solves 4 major challenges in a work from home environment.
 
 1. Motivation - This extension makes an attempt to keep up the motivation by displaying <strong>quotes</strong> which will get updated every day,every 25 minutes and on click of the quote area.
 2. Distractions - In my opinion, distractions are the major blockers to be more productive at work, So this tool will provide you a way where you can add all the sites that are causing your distractions and <block them>. Can unblock and delte a site at anytime in case of urgency!
