@@ -14,6 +14,7 @@ const getContests = () => {
                 let endTime = moment(elem.end, "YYYY-MM-DD hh:mm:ss");
                 let datetime = new Date(startTime._d);
                 let time = datetime.getTime();
+                time = time + 19800000; //IST
                 // console.log(time);
 
                 let contest = document.createElement("div");
