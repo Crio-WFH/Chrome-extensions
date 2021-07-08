@@ -3,7 +3,7 @@
   "author":"Ravit Garg", 
 
   "name": "Notestaker",
-  "description": "This extension helps you to take notes from webpages and download it your local machine",
+  "description": "This extension helps you to take notes from webpages and download it to your local machine",
   "version": "1.0",
 
   "browser_action": {
