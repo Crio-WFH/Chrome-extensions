@@ -101,6 +101,30 @@
         "infra",
         "design"
       ]
+    },
+    {
+      "login": "bhushankelkar",
+      "name": "Kulbhushan Kelkar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/43243740?v=4",
+      "profile": "https://github.com/bhushankelkar",
+      "contributions": [
+        "code",
+        "design",
+        "infra",
+        "ideas"
+      ]
+    },
+    {
+      "login": "kamatvedita99",
+      "name": "Vedita Kamat",
+      "avatar_url": "https://avatars.githubusercontent.com/u/62342400?v=4",
+      "profile": "https://github.com/kamatvedita99",
+      "contributions": [
+        "code",
+        "design",
+        "infra",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,

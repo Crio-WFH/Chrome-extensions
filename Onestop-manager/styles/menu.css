@@ -1,0 +1,96 @@
+body{
+
+	min-height:500px;
+	min-width:600px;
+	background-color: #101820FF;
+	}
+	
+	.image{
+	
+		padding:5px;
+	
+	
+	}
+	
+	.fa-twitter-square,.fa-github-square,.fa-youtube-square{
+		padding:20px;
+		background-color: white;
+		color:#e18a07;
+	}
+	
+	
+	.menu
+	{
+		display:flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap:wrap;
+	}
+	
+	ul{
+		display: flex;
+		align-items: center;
+		/*background-color:#c0c0c0;*/
+	
+	}
+	
+	ul li{
+		padding:20px;
+		
+		list-style: none;
+		
+		}
+	
+	
+	.btn{
+	
+	padding:10px;
+	border-radius:10px;
+	
+		}
+	
+	h1{
+		text-align: center;
+	}
+	
+	footer {  
+		position: fixed;  
+		left: 10px;  
+		bottom: 5px;  
+		right: 10px;   
+		width: 95%;  
+		background-color: gray;  
+		color: white;  
+		text-align: center;  
+		}
+
+		p{
+			font-weight: bold;
+			font-family: 'Otomanopee One', sans-serif;
+			font-size: 15px;
+		}
+
+		a.button{
+			background-color: #101820FF; 
+			border: none;
+			color: white;
+			padding: 15px 32px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+		}
+		.center {
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			width: 50%;
+		  }
+
+		  .parastyle{
+			  padding-top: 25%;
+		  }
+
+		  .para{
+			  padding-top: 10%;
+		  }
