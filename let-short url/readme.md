@@ -24,7 +24,7 @@
  <ul>
   <li>Download or fork the folder and clone it to your local machine</li>
   <li>Then go to chrome://extensions(Google Chrome Extension) </li>
-  <li>Ensure developer mode is on</li.
+  <li>Ensure developer mode is on</li>
   <li>Click on Load unpacked and select your folder</li.
   <li> Then to the extension tab in the taskbar of your browser. Thus, your extension is installed. </li>
   
