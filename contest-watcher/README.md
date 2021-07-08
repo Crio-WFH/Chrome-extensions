@@ -17,6 +17,7 @@ Chrome Notifications
 ![image](https://user-images.githubusercontent.com/54480934/124947327-5c341780-e02d-11eb-9958-141f6c7c71d1.png)
 
 ### Demo
+[Video](https://youtu.be/DxYEtq2UuqQ)
 
 ### Run the backend
 ```
@@ -35,7 +36,7 @@ Note: you don;t need to run the backend server it is already up and running on m
 I learnt about chrome notifications, alarms, manifiest.json, Chrome Security Policy, resolving cors errors(yeah always a tough one) 
 
 ### Why backend server was needed?
-* The backend server was needed because of the CORS, you need to make a fetch request from a server to fetch data from clist.by webisite, you can't make a request from frontend directly it sends you an error so i need to create a server and it is running on a [repl](https://replit.com/@jainaayush01/clist-contests#index.js). 
+* The backend server was needed because of the CORS, you need to make a fetch request from a server to fetch data from clist.by website, you can't make a request from frontend directly it sends you an error so i need to create a server and it is running on a [repl](https://replit.com/@jainaayush01/clist-contests#index.js). 
 
 ## 📝 Licence
 
