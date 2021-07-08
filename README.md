@@ -1,6 +1,6 @@
 # Chrome-extensions
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-8-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-9-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&labelColor=black&logo=github"></a>
 
@@ -59,6 +59,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
   </tr>
   <tr>
     <td align="center"><a href="https://github.com/ravit27"><img src="https://avatars.githubusercontent.com/u/64327146?v=4?s=100" width="100px;" alt=""/><br /><sub><b>ravit27</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=ravit27" title="Code">💻</a> <a href="#ideas-ravit27" title="Ideas, Planning, & Feedback">🤔</a> <a href="#infra-ravit27" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#design-ravit27" title="Design">🎨</a></td>
+    <td align="center"><a href="https://github.com/bhushankelkar"><img src="https://avatars.githubusercontent.com/u/43243740?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Kulbhushan Kelkar</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=bhushankelkar" title="Code">💻</a> <a href="#design-bhushankelkar" title="Design">🎨</a> <a href="#infra-bhushankelkar" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#ideas-bhushankelkar" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
