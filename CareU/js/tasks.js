@@ -186,30 +186,6 @@
         $self.find("#task-input").val("").focus();
       });
 
-      /* edit task */
-      list.find(".edit").live("click", function (e) {
-        e.preventDefault();
-        var title = $(this).siblings(".task-title");
-
-        list
-          .find(".task-title")
-          .attr("contenteditable", "false")
-          .removeClass("editing");
-        title.attr("contenteditable", "true").addClass("editing").focus();
-      });
-      $(".task-list").on("focusout", ".task-title", function () {
-        var task = $(this).parent();
-        saveEditedTask(task);
-      });
-      $(".task-list").on("keydown", ".task-title", function (e) {
-        var code = e.keyCode ? e.keyCode : e.which;
-        if (code == 13 && !e.shiftKey) {
-          e.preventDefault();
-          var task = $(this).parent();
-          saveEditedTask(task);
-        }
-      });
-
       /* delete task */
       list.find(".remove").live("click", function (e) {
         e.preventDefault();
