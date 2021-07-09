@@ -3,6 +3,7 @@ var block = document.getElementById('block')
 var blockedtable = document.getElementById('tablebody')
 
 var blockedsites = []
+var counter = 1
 
 renderBlockedSites()
 
@@ -29,7 +30,6 @@ function addSite(item) {
 			saveToStorage(blockedsites)
 			//clear the content of input box
 			sitename.value = ''
-			console.log(blockedsites)
 		})
 	}
 }
@@ -80,6 +80,7 @@ $(document).on('click', '.deletesite', function () {
 				//delete the item
 				blockedsites.splice(i, 1)
 				//save back to storage
+				counter = 1
 				saveToStorage(blockedsites)
 			}
 		})
@@ -110,6 +111,7 @@ $(document).on('click', '#block', function () {
 				//update the checkbox
 				site.enabled = !site.enabled
 				//save back to storage
+				counter = 1
 				saveToStorage(blockedsites)
 			}
 		})
