@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+
+  "name": "Fylfot",
+  "description": "This Extension Converts Text into Speech, User can make ToDo Lists, Daily Random Thoughts and User can Access Social Media Apps on a Click",
+  "version": "1.0.0",
+  "icons": { "128": "icons8-alpha-30.png" },
+  "browser_action": {
+    "default_icon": "icons8-alpha-30.png",
+    "default_popup": "popup.html"
+  },
+  "chrome_url_overrides" : {
+    "newtab": "customNewTab.html"
+  },
+  
+  "permissions": ["activeTab","storage","http://api.forismatic.com/","contextMenus",
+		"tabs",
+		"tts",
+		"http://*/",
+		"https://*/"]
+  
+}

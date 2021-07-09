@@ -1,0 +1,29 @@
+body {
+  
+  position: absolute;
+  width: 70%;
+  top: 25%;
+  left: 0;
+  right: 0;
+  margin: auto;
+  height: 100%;
+  background-image: url('http://i.imgur.com/9HMnxKs.png');
+  background-repeat: repeat-y;
+
+
+
+}
+div{
+  
+  
+}
+p {
+  font-size:30px;
+  font-family: ⏰  ;
+  
+
+}
+
+cite {
+  font-size:20px;
+}
