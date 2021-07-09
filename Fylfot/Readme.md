@@ -39,7 +39,7 @@ It is a Chrome extension that provides ease of work. it comes with features like
 * JavaScript & Jquery.
 
 ## Youtube Link :link:
-https://youtu.be/ZTU2XPitvJc
+https://youtu.be/Mh6zfeuo5WI
 
 ## ScreenShorts :movie_camera:	
 ![image](https://user-images.githubusercontent.com/52539720/125071025-5fcfa900-e0d6-11eb-88b9-01e0d40dff4e.png)
