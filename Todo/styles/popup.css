@@ -1,0 +1,104 @@
+body {
+  width: 350px;
+  background-color: #fefefe;
+  color: '#222';
+}
+.todo-input-cont {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 12px;
+}
+.todo-input {
+  border-radius: 2px;
+  outline: none;
+  border: none;
+  padding: 5px;
+}
+.todo-input:focus {
+  outline: none;
+  border: none;
+  box-shadow: 0 1px 2px solid #9f9f9f;
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 7px 12px;
+  background-color: #f7f7f7;
+  color: #3e3e3e;
+  border-radius: 2px;
+}
+.add-btn {
+  background-color: #4c86dd;
+  color: #efefef;
+}
+.heading {
+  text-align: center;
+  color: #333;
+}
+.todo-cont {
+}
+.todo-list {
+  padding-left: 4px;
+}
+
+.completed-list {
+  padding-left: 4px;
+}
+
+.warn {
+  color: #efefef;
+  font-size: 16px;
+  padding: 10px;
+  background-color: red;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.task-list {
+  list-style: none;
+  padding: 5px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #eee;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.todo-text {
+  width: 120px;
+  overflow-wrap: break-word;
+  padding: 5px;
+  font-size: 16px;
+}
+
+.btn-group {
+  display: flex;
+}
+
+.edit-btn {
+  color: #efefef;
+  background-color: #2f2;
+  margin: 3px;
+}
+.delete-btn {
+  color: #efefef;
+  background-color: #f22;
+}
+.save-btn {
+  background-color: #4c86dd;
+  color: #efefef;
+}
+
+.input-edit {
+  width: 130px;
+  overflow-wrap: break-word;
+  overflow: hidden;
+}
+.radio-cont {
+  text-align: center;
+}
+.radio-music {
+  text-align: center;
+  text-decoration: none;
+}
