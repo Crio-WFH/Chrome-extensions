@@ -7,10 +7,17 @@ Simple Todo Extension to increase productivity
 - Contains link to freecodecamp radio server
 - Uses Chrome Storage API to save tasks
 
-![](./img/img1.png)
-![](./img/img2.png)
-![](./img/img3.png)
-![](./img/img4.png)
+Initial ui\
+![](./img/img1.jpg)
+
+After adding a task\
+![](./img/img2.jpg)
+
+During Editing\
+![](./img/img3.jpg)
+
+Adding More Tasks\
+![](./img/img4.jpg)
 
 ### Functions
 
