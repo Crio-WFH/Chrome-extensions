@@ -14,7 +14,14 @@ HTML, CSS, JavaScript, Nodejs, Express.js, Moment.js
 ### Screenshots & Features
 Extension providing the details of contest in upcoming 24 hours
 
-![image](https://user-images.githubusercontent.com/54480934/124947274-50e0ec00-e02d-11eb-82f8-3d35b9f08912.png)
+Dark Mode:
+
+![image](https://user-images.githubusercontent.com/54480934/125066803-0d3fbe00-e0d1-11eb-9561-85a0a671d6d8.png)
+
+Light Mode:
+
+![image](https://user-images.githubusercontent.com/54480934/125066846-192b8000-e0d1-11eb-8fd6-1ebb5ec80752.png)
+
 
 Chrome Notifications
 
