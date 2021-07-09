@@ -28,5 +28,7 @@
 ![ss5](https://user-images.githubusercontent.com/31816531/125031000-9cd17680-e0a9-11eb-80cb-af54bbea653a.png)
 ![ss6](https://user-images.githubusercontent.com/31816531/125031025-a4911b00-e0a9-11eb-8e74-5fe2cad89b30.png)
 
+## Note 🟥
+Select the source folder for the extension to load properly and to avoid any errors.
 
 🛎️ For working, click at the [link](https://www.youtube.com/watch?v=QQ0uwY55EPY)
