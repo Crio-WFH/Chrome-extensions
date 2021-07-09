@@ -1,34 +1,47 @@
-<div style="display: flex; justify-content: space-between">
-<h1 style="flex:1">💻 Quick Edits v1.5.2</h1>
-<img style="margin: auto 10px" width="50" height="50" src="https://imgur.com/lEfOiEa.jpg" />
-</div>
+# 💻 Quick Edits v2.1.2
+![project demo](https://imgur.com/qPliNEN.gif)
+> _Opens the selected text in a Text Editor. Defaults to VS Code upon installation and Open editor is turned on_
 
-<div style="text-align: center">
-
-![project demo](https://media.giphy.com/media/5dRd9AhjMxnXOityB5/giphy.gif)
-<blockquote style="background: #f9f9f9;
-  border-left: 4px solid #ddd;
-  margin: 1.5em 10px;
-  padding: 0.5em 10px;">
-  <em>Opens the selected text in a Text Editor</em>
-</blockquote>
-
-Demo video link (https://vimeo.com/570875673)
-
-</div>
+Demo video link (https://vimeo.com/573019919)
 
 ## 🎉 Uses/Features
+<ul>
+<li>   Make the process of copy-pasting-editing code instantaneous.
+<li>   Removes the hassle of opening text editor, set it up side-by-side with browser and then Copy and Pasting.
+<li>   No unnecessary switching between windows thereby increase your productivity.
+<li>   Inbuilt support for 5 most used editors (yes, it includes even notepad).
+<li>   Minimal user interaction, set editor in pop-up once, then forget this exists.
+<li>   Toggle whether to open editor or just save snippet (snippets don't get deleted unless you reload the extension).
+<p>
+<img src="https://imgur.com/ludRjxJ.jpg" alt="console" height="200"/>
+</p>
+<li>  Access saved snippets via `SNIPPETS!` button.
+<p>
+<img src="https://imgur.com/s0qNAVA.jpg" alt="snippetTab" height="200" width="350"/>
+</p>
+<li>   Copy snippets with one click by clicking '📋' button.
+<p>
+<img src="https://imgur.com/GhrcxBR.jpg" alt="snippet" height="300">
+</p>
+<li>   Delete snippets by pressing '❌'  or edit them by pressing '🖋'. (Don't forget to save edited snippet by pressing '✔' !!!).
+</ul>
+  
+### Experimental feature: Git-Cloner
+> This is useful when you have multiple repos to clone and one global clone directory. 
+> Obviously you need git installed and authentication/ssh keys set up beforehand
 
--   Make the process of copy-pasting-editing code instantaneous
--   Removes the hassle of opening text editor, set it up side-by-side with browser and then Copy and Pasting
--   No unnecessary switching between windows, increase productivity
--   Inbuilt support for 5 most used editors (yes, it includes even notepad)
--   Minimal user interaction, set editor in pop-up once, then forget this exists.
+- Override the copy-link-to-clipboard '📋' button in GitHub.
+- Toggle Cloner On.
+- Type/Paste path of directory where repo is to be cloned.
+- Click '📋' as usual in GitHub and directory will be cloned.
+  
+######  _Needs python to function !!_
 
-> _Note: defaults to VS Code upon installation_
+> _Cloning process: (https://vimeo.com/572937843)_
 
 ## ⚙ Installation
 
+>   _Refer this: (https://vimeo.com/571618622)_
 -   Open extensions tab in Chrome, turn developer mode on
 -   Select `LOAD UNPACKED`, then select the extension folder in dialog box
 
@@ -62,4 +75,4 @@ PR's are welcome, but fork the project and do so only in `dev` branch
 
 ## 👻 Authors
 
-> `Hritwik Som (Apprentice76)`
+  > `Hritwik Som (Apprentice76)`
