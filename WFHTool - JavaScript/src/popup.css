@@ -21,7 +21,6 @@ li:active {
 	cursor: -webkit-grabbing;
 }
 #homepageui {
-	height: 31em;
 	overflow: scroll;
 	overflow: auto;
 }
