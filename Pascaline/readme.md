@@ -17,11 +17,10 @@ check out the design here [LINk](https://www.figma.com/file/9jfAMxBJrdaCvGGGVZsq
 <img src="https://github.com/wordssaysalot/Chrome-extensions/blob/main/Pascaline/img/ss.gif?raw=true">
 
 # How to Use
-1. Download or clone the repo.
-2. Go to chrome://extensions/
-3. Turn on the developer mode (at the top right corner).
-4. Select "Load unpacked".
-5. Select the downloaded folder. 
+1. You Can donwload th root folder or fork it and clone to your local machine.
+2. Then go to chrome://extensions or edge://extensions or brave://extensions depending on Chromium Browser.
+3. Click load unpacked package and simply select the root folder.
+4. Voila ! There's your Chrome Extension Up and Running.
 
 # Technologies Used 
 - HTML.
