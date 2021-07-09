@@ -75,13 +75,13 @@ p {
 	flex-direction: column;
 }
 .clock {
-	position: relative;
+	position: absolute;
+	right: 0px;
 	font-size: 60px;
 	font-family: Orbitron;
 	letter-spacing: 7px;
 }
 .grid-item-2 {
-	height: 6.6em;
 	overflow: scroll;
 	overflow: auto;
 }
@@ -131,7 +131,7 @@ pre {
 	padding-left: 15px !important;
 }
 .secondcolumn {
-	height: 510px;
+	height: 505px;
 	padding-right: 10px !important;
 	padding-bottom: 10px !important;
 }
@@ -148,8 +148,8 @@ pre {
 }
 .grid-container {
 	display: grid;
-	grid-template-columns: [first] 40px [line2] 200px [line3] 200px [end];
-	grid-template-rows: [row1-start] 10% [row1-end] 200px [third-line] 200px [last-line];
+	grid-template-columns: [first] 40px [line2] 207px [line3] 207px [end];
+	grid-template-rows: [row1-start] 10% [row1-end] 215px [third-line] 215px [last-line];
 }
 .grid-item {
 	color: white;
