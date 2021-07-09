@@ -45,7 +45,7 @@ chrome.storage.sync.get(['data', 'raw', 'oneFile'], (resp) => {
 			// Setting updated data
 			if (resp.oneFile) {
 				chrome.storage.sync.set({
-					raw: document.querySelector('textarea').innerHTML,
+					raw: "",
 				})
 			} else {
 				chrome.storage.sync.set({
