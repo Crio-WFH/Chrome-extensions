@@ -19,7 +19,7 @@ const getContests = () => {
 
                 let contest = document.createElement("div");
                 contest.classList = ["contest"];
-                contest.innerHTML = `<a href="${elem.href}">${elem.event}</a><br> Starts at: ${startTime}<br> Ends at: ${endTime}<br>`;
+                contest.innerHTML = `<a href="${elem.href}" target="_blank">${elem.event}</a><br> Starts at: ${startTime}<br> Ends at: ${endTime}<br>`;
 
                 doc.appendChild(contest);
 
