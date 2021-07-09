@@ -6,6 +6,7 @@ set key2=com.hksm.atom.native
 set key3=com.hksm.sublime.native
 set key4=com.hksm.notepad.native
 set key5=com.hksm.npp.native
+set key6=com.hksm.cloner.native
 
 cd /d "%~dp0"
 cd ..
@@ -102,13 +103,31 @@ echo } >> clients/npp.json
 @echo powershell Get-Clipboard -TextFormatType UnicodeText^>Tmp.txt>> clients/npp.bat
 @echo start notepad++ Tmp.txt>> clients/npp.bat
 
+@REM -----------Git-Cloner-------------
+
+echo { > clients/cloner.json
+echo     "name": "com.hksm.cloner.native", >> clients/cloner.json
+echo     "description": "Starts Git-Cloner", >> clients/cloner.json
+echo     "path": "cloner.bat", >> clients/cloner.json
+echo     "type": "stdio", >> clients/cloner.json
+echo     "allowed_origins": [ >> clients/cloner.json
+echo         "chrome-extension://%id%/" >> clients/cloner.json
+echo      ] >> clients/cloner.json
+echo } >> clients/cloner.json
+
+
+@echo @echo off> clients/cloner.bat
+@echo python cloner.py %%*>> clients/cloner.bat
+
 xcopy ".\clients" "%localappdata%\clients" /i /y /q
+xcopy ".\config\cloner.py" "%localappdata%\clients" /i /y /q
 
 reg add "HKCU\SOFTWARE\Google\Chrome\NativeMessagingHosts\%key1%" /f /t REG_SZ /d "%localappdata%\clients\vscode.json"
 reg add "HKCU\SOFTWARE\Google\Chrome\NativeMessagingHosts\%key2%" /f /t REG_SZ /d "%localappdata%\clients\atom.json"
 reg add "HKCU\SOFTWARE\Google\Chrome\NativeMessagingHosts\%key3%" /f /t REG_SZ /d "%localappdata%\clients\sublime.json"
 reg add "HKCU\SOFTWARE\Google\Chrome\NativeMessagingHosts\%key4%" /f /t REG_SZ /d "%localappdata%\clients\notepad.json"
 reg add "HKCU\SOFTWARE\Google\Chrome\NativeMessagingHosts\%key5%" /f /t REG_SZ /d "%localappdata%\clients\npp.json"
+reg add "HKCU\SOFTWARE\Google\Chrome\NativeMessagingHosts\%key6%" /f /t REG_SZ /d "%localappdata%\clients\cloner.json"
 
 del clients /q
 rmdir clients

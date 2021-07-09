@@ -1,27 +1,103 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Fira+Code&family=Open+Sans:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
 		<link rel="stylesheet" href="styles/popup.css" />
 	</head>
 	<body>
-    <div class="main">
-		<div class="header">Choose default Editor: <span class="selected">'Code'</span></div>
-		<div class="editor-container">
-			<div class="editor vs">
-                <img src="img/vs.png" alt="vscode" />
-            </div>
-			<div class="editor atom">
-                <img src="img/atom.png" alt="atom" />
-            </div>
-			<div class="editor subl">
-                <img src="img/sublime.png" alt="sublime" />
-            </div>
-			<div class="editor npp">
-                <img src="img/npp.png" alt="notepad++" />
-            </div>
-			<div class="editor note">
-                <img src="img/notepad.png" alt="notepad" />
-            </div>
-        <script src="popup.js"></script>
+		<div class="header">
+			<img src="img/logo.jpg" alt="logo" class="header" />
+			<div class="text">Quick Edits</div>
+		</div>
+		<div class="main">
+			<div class="title">
+				Choose default Editor:
+				<span class="selected">'Code'</span>
+			</div>
+			<!-- title -->
+			<div class="editor-container">
+				<div class="editor vs">
+					<img src="img/vs.png" alt="vscode" />
+				</div>
+				<div class="editor atom">
+					<img src="img/atom.png" alt="atom" />
+				</div>
+				<div class="editor subl">
+					<img src="img/sublime.png" alt="sublime" />
+				</div>
+				<div class="editor npp">
+					<img src="img/npp.png" alt="notepad++" />
+				</div>
+				<div class="editor note">
+					<img src="img/notepad.png" alt="notepad" />
+				</div>
+			</div>
+            <div class="button">SNIPPETS!</div>
+			<!-- editor-container -->
+			<div class="button-container">
+				<div class="togglers">
+					<div class="edit">
+						<div class="text">Open Editor</div>
+						<label class="switch">
+							<input class="e" type="checkbox" checked="true" />
+							<span class="slider e"></span>
+						</label>
+					</div>
+					<!-- edit -->
+				</div>
+				<!-- togglers -->
+				<div class="togglers o">
+					<div class="edit o">
+						<div class="text o">One File</div>
+						<label class="switch o"
+							><input type="checkbox" class="o" /><span
+								class="slider o"
+							></span
+						></label>
+					</div>
+				</div>
+                <!-- togglers-one-file -->
+			</div>
+			<!-- button-container -->
+			<div class="clone-container">
+				<div class="togglers c">
+					<div class="edit c">
+						<img
+							class="c"
+							src="img/github.png"
+							alt="github-logo"
+							height="20"
+							width="20"
+						/>
+						<div class="text c">Cloner</div>
+						<label class="switch c">
+							<input class="c" type="checkbox" checked="true" />
+							<span class="slider c"></span>
+						</label>
+					</div>
+					<!-- edit -->
+				</div>
+				<!-- togglers -->
+				<input
+					type="text"
+					class="location"
+					placeholder="Enter clone directory"
+				/>
+			</div>
+			<!-- clone-container -->
+		</div>
+		<!-- main -->
+		<div class="footer">
+			Made with
+			<img src="img/heart.png" alt="heart" height="10" width="10" />
+			by Hritwik
+		</div>
+		<!-- footer -->
+		<script src="popup.js"></script>
 	</body>
 </html>

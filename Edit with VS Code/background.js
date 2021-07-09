@@ -1,11 +1,17 @@
 chrome.runtime.onInstalled.addListener(() => {
-    chrome.storage.sync.set({
+	chrome.storage.sync.set({
 		editor: "'Code'",
+		data: '',
+        open: true,
+        override: false,
+        path: '',
+        oneFile: true,
+        raw: ''
 	})
 
 	let contextProperties = {
 		contexts: ['selection'],
-		title: 'Open with Editor',
+		title: 'Quick Edit',
 		visible: true,
 		id: 'main',
 	}
@@ -13,11 +19,11 @@ chrome.runtime.onInstalled.addListener(() => {
 	chrome.contextMenus.create(contextProperties)
 })
 
-function doThis(_, tab) {
+const doThis = (_, tab) => {
 	chrome.tabs.sendMessage(tab.id, { q: 'getSelection' }, (resp) => {
-        if (resp?.q === 'success') {
-            chrome.storage.sync.get(['editor'], (res) => {
-                switch (res.editor) {
+		chrome.storage.sync.get(['open', 'editor'], (check) => {
+			if (resp?.q === 'success' && check.open) {
+				switch (check.editor) {
 					case "'Atom'":
 						chrome.runtime.sendNativeMessage(
 							'com.hksm.atom.native',
@@ -49,11 +55,25 @@ function doThis(_, tab) {
 						)
 						break
 				}
-            })
-        } else {
-            console.error('can\'t connect!')
-        }
+			} else if (check.open) {
+				console.error("can't connect!")
+			}
+		})
 	})
 }
+let port
+chrome.runtime.onMessage.addListener((msg, _, sendResp) => {
+    port = chrome.runtime.connectNative('com.hksm.cloner.native')
+    port.postMessage(msg)
+    port.onDisconnect.addListener(() => {
+        console.log('Disconnected')
+    })
+    port.onMessage.addListener((m) => {
+        console.log('host:', m)
+        return true
+    })
+    sendResp('clone command sent...')
+    return true
+})
 
 chrome.contextMenus.onClicked.addListener(doThis)
