@@ -42,3 +42,11 @@ setInterval(() => {
     getContests();
 }, 86400000)
 getContests();
+
+document.getElementById("btn").addEventListener("click", () => {
+    document.body.classList.toggle('dark');
+    document.getElementById('btn').classList.toggle('borderDark');
+    document.querySelectorAll('.contest').forEach((elem, elemIdx) => {
+        elem.classList.toggle('borderDark');
+    })
+})
