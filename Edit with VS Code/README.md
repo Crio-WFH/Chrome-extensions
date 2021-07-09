@@ -2,7 +2,7 @@
 ![project demo](https://imgur.com/qPliNEN.gif)
 > _Opens the selected text in a Text Editor. Defaults to VS Code upon installation and Open editor is turned on_
 
-Demo video link (https://vimeo.com/572952061)
+Demo video link (https://vimeo.com/573019919)
 
 ## 🎉 Uses/Features
 <ul>
