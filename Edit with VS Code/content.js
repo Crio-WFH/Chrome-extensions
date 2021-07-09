@@ -55,11 +55,28 @@ const setStorage = (content) => {
 	})
 }
 
+const setRawStorage = (content) => {
+    chrome.storage.sync.get(['raw'], (resp) => {
+        let newRaw = resp.raw
+        newRaw = newRaw + '\n\n\n' + content
+        chrome.storage.sync.set({
+            raw: newRaw
+        })
+        console.log(resp.raw)
+    })
+}
+
 chrome.runtime.onMessage.addListener((req, _, sendResp) => {
 	if (req.q === 'getSelection') {
 		const element = document.createElement('textarea')
-		element.innerHTML = window.getSelection().toString()
-		setStorage(element.innerHTML)
+        element.innerHTML = window.getSelection().toString()
+        chrome.storage.sync.get(['oneFile'], (resp) => {
+            if (!resp.oneFile) {
+                setStorage(element.innerHTML)
+            } else {
+                setRawStorage(element.innerHTML)
+            }
+        })
 		element.setAttribute('readonly', '')
 		element.style.position = 'absolute'
 		element.style.left = '-9999px'

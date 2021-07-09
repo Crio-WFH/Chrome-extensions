@@ -11,16 +11,18 @@ body {
   padding: 20px;
 }
 
-.content {
-  height: 300px;
-  width: 98%;
-}
-
 .grid-item {
   border: solid #ab54f7;
+  width: 1fr;
   border-radius: 5px;
   padding: 5px 20px 10px;
   background: #D7AEFB;
+}
+
+.content {
+  height: 300px;
+  width: 99%;
+  margin: 0 auto;
 }
 
 .date-time {

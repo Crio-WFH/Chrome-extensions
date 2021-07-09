@@ -7,8 +7,10 @@ const slider = document.querySelector('.slider.e')
 const cloneSlider = document.querySelector('.slider.c')
 const localPath = document.querySelector('input.location')
 const cloneToggle = document.querySelector('input.c')
+const oneFile = document.querySelector('input.o')
+const oneFileSlider = document.querySelector('.slider.o')
 
-chrome.storage.sync.get(['open', 'editor', 'path', 'override'], (resp) => {
+chrome.storage.sync.get(['open', 'editor', 'path', 'override', 'oneFile'], (resp) => {
     // open
     editorOpen.checked = resp.open
 
@@ -31,6 +33,9 @@ chrome.storage.sync.get(['open', 'editor', 'path', 'override'], (resp) => {
     } else {
         localPath.disabled = false
     }
+
+    // oneFile
+    oneFile.checked = resp.oneFile
 })
 
 slider.addEventListener('click', () => {
@@ -50,6 +55,15 @@ cloneSlider.addEventListener('click', () => {
         })
         cloneToggle.checked = !resp.override
         localPath.disabled = resp.override
+    })
+})
+
+oneFileSlider.addEventListener('click', () => {
+    chrome.storage.sync.get(['oneFile'], (resp) => {
+        chrome.storage.sync.set({
+            oneFile: !resp.oneFile
+        })
+        oneFile.checked = !resp.oneFile
     })
 })
 

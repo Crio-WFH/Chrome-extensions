@@ -4,7 +4,9 @@ chrome.runtime.onInstalled.addListener(() => {
 		data: '',
         open: true,
         override: false,
-        path: ''
+        path: '',
+        oneFile: true,
+        raw: ''
 	})
 
 	let contextProperties = {

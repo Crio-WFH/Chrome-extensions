@@ -4,10 +4,12 @@ body {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     gap: 20px;
     padding: 20px;
 }
+
+
 
 .content {
     height: 300px;
