@@ -1,0 +1,11 @@
+{
+  "name": "To Do",
+  "version": "0.01",
+  "description": "To-Do Extension",
+  "manifest_version": 2,
+	"browser_action": {
+    "default_icon": "resources/icon.png",
+		"default_title": "TO-Do's",
+		"default_popup": "main.html"
+	}
+}
