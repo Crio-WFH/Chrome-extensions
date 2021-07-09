@@ -55,7 +55,7 @@ li:active {
 
 h1 {
 	background: #2980b9;
-	color: white;
+	color: white !important;
 	margin: 0;
 	padding: 10px 20px;
 	text-transform: uppercase;

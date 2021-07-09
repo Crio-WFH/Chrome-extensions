@@ -27,7 +27,7 @@ $(document).ready(function () {
 			//get the dom object
 			eventt = event.target
 
-			event.dataTransfer.setData('text/plain', eventt)
+			event.dataTransfer.setData('text', eventt)
 		},
 		false
 	)
@@ -57,8 +57,10 @@ $(document).ready(function () {
 			// move dragged elem to the selected drop target
 
 			if (event.target.className == 'grid-item-2') {
-				var copy = eventt.cloneNode(true)
+				var copy = eventt
+
 				var qid = event.target.id
+				var sourcetype = copy.getAttribute('data-id')
 				copy.type = 'quadrant-item' + qid
 
 				var todo_name = copy.childNodes[4].previousSibling.textContent
@@ -69,6 +71,10 @@ $(document).ready(function () {
 				var todo
 
 				getFromStorage(function (todos) {
+					todos = todos.filter(function (todo) {
+						return todo.id !== sourcetype
+					})
+
 					todo = {
 						id: Date.now().toString(36) + Math.random().toString(36).substr(2),
 						type: copy.type,
@@ -77,9 +83,10 @@ $(document).ready(function () {
 						completed: todo_checked,
 					}
 					todos.push(todo)
-
 					saveToStorage(todos)
 				})
+			} else {
+				renderTodos()
 			}
 		},
 		false
@@ -117,11 +124,17 @@ $(document).ready(function () {
 				if (item.completed === true) {
 					li.classList.add('checked')
 				}
-
-				li.innerHTML = `
+				if (checked) {
+					li.innerHTML = `
+            <span class="deleteitem"><i class="fa fa-trash"></i></span>
+            <p style="none !important"><s>${item.name}</s></p>
+            <input type="checkbox" class="checkbox" ${checked}> `
+				} else {
+					li.innerHTML = `
             <span class="deleteitem"><i class="fa fa-trash"></i></span>
             <p style="none !important">${item.name}</p>
             <input type="checkbox" class="checkbox" ${checked}> `
+				}
 
 				// finally add the <li> to the <ul>
 				if (item.type == 'todo-item') {
