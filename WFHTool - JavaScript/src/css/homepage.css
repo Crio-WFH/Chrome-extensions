@@ -9,7 +9,8 @@ body {
 }
 
 body {
-	margin: 10px !important;
+	margin-left: 10px !important;
+	margin-right: 10px !important;
 
 	overflow-y: auto;
 	justify-content: center;
@@ -34,9 +35,9 @@ p {
 	word-wrap: break-word;
 	justify-content: center;
 	align-items: center;
-	width: max-content;
+
 	height: 80px;
-	width: 260px;
+
 	padding: 10px;
 	background-color: #ffffff;
 	box-shadow: 0px 10px 5px rgba(0, 0, 0, 0.315);
@@ -62,10 +63,11 @@ p {
 	text-align: center;
 }
 .maincontainer {
-	width: 1150px;
 	display: flex;
-	flex-flow: row wrap;
+	align-items: stretch;
+	justify-content: space-between;
 	padding-top: 10px;
+	padding-top: 20px;
 	padding-bottom: 0px !important;
 	justify-content: space-around;
 }
@@ -75,8 +77,9 @@ p {
 	flex-direction: column;
 }
 .clock {
-	position: absolute;
-	right: 0px;
+	position: fixed;
+	right: 20px;
+	bottom: 5px;
 	font-size: 60px;
 	font-family: Orbitron;
 	letter-spacing: 7px;
@@ -124,21 +127,23 @@ pre {
 }
 
 .firstcolumn {
-	height: 480px;
+	height: 90vh;
 	display: flex;
+	align-items: stretch;
 	justify-self: center;
 	padding-right: 10px !important;
 	padding-left: 15px !important;
 }
 .secondcolumn {
-	height: 505px;
 	padding-right: 10px !important;
-	padding-bottom: 10px !important;
+}
+
+.stylescreen {
+	height: 58vh;
 }
 
 .thirdcolumn {
-	padding-right: 10px !important;
-	padding-bottom: 10px !important;
+	padding-right: 15px !important;
 }
 .container {
 	padding-right: 0px !important;
@@ -148,13 +153,16 @@ pre {
 }
 .grid-container {
 	display: grid;
-	grid-template-columns: [first] 40px [line2] 207px [line3] 207px [end];
-	grid-template-rows: [row1-start] 10% [row1-end] 215px [third-line] 215px [last-line];
+	grid-template-columns: [first] 10% [line2] 45% [line3] 45% [end];
+	grid-template-rows: [row1-start] 6vh [row1-end] 32vh [third-line] 32vh [last-line];
 }
 .grid-item {
 	color: white;
 }
 .grid-item-1 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	background-color: #2bc0e4;
 	border: none;
 	font-size: 30px;
@@ -205,7 +213,7 @@ pre {
 .sites {
 	border: 1px solid rgba(131, 102, 102, 0.8);
 	padding: 3px;
-	height: 370px;
+	height: 60vh;
 	overflow: scroll;
 	overflow: auto;
 }
