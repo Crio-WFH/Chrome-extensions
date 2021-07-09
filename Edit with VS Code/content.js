@@ -34,8 +34,11 @@ const setStorage = (content) => {
                 <div class="button-container edit">
 				    <div class="button edit">🖋</div>
 			    </div>
-                <div>${date}</div>
-                <div>${time}</div>
+                <div class="button-container copy">
+				    <div class="button copy">📋</div>
+			    </div>
+                <div class="date">${date}</div>
+                <div class="time">${time}</div>
                 <div class="button-container delete">
 				    <div class="button delete">❌</div>
 			    </div>

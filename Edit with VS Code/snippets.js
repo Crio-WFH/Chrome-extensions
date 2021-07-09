@@ -5,40 +5,52 @@ chrome.storage.sync.get(['data'], (resp) => {
 	let deleteItem = document.querySelectorAll('.button.delete')
 	let editItem = document.querySelectorAll('.button.edit')
 	let textarea = document.querySelectorAll('textarea')
+    let copyItem = document.querySelectorAll('.button.copy')
+    console.log(copyItem)
 
-    // Updating data
+	// Updating data
 	for (let i = 0; i < deleteItem.length; i++) {
 		deleteItem[i].addEventListener('click', (event) => {
 			let child = event.target
 			while (child.parentNode !== root) {
 				child = child.parentNode
 			}
-            root.removeChild(child)
-            
+			root.removeChild(child)
+
 			// Setting updated data
 			chrome.storage.sync.set({
 				data: root.innerHTML,
 			})
-        })
-        editItem[i].addEventListener('click', (event) => {
-            let edit = event.target
-            let gridItem = edit.parentNode.parentNode.parentNode
-            let text = gridItem.querySelector('textarea')
-            text.disabled = !text.disabled
-            if (text.disabled === false) {
+		})
+		editItem[i].addEventListener('click', (event) => {
+			let edit = event.target
+			let gridItem = edit.parentNode.parentNode.parentNode
+			let text = gridItem.querySelector('textarea')
+			text.disabled = !text.disabled
+			if (text.disabled === false) {
 				edit.innerHTML = '✔'
 			} else {
 				edit.innerHTML = '🖋'
 				// Setting updated data
 				chrome.storage.sync.set({
 					data: root.innerHTML,
-                })
-                // console.log('sync')
+				})
+				// console.log('sync')
 			}
         })
-        textarea[i].addEventListener('input', (event) => {
+        copyItem[i].addEventListener('click', (event) => {
+			let copyChild = event.target
+			let gridItem = copyChild.parentNode.parentNode.parentNode
+			let text = gridItem.querySelector('textarea')
+			text.disabled = false
+            text.select()
+			document.execCommand('copy')
+			console.log('copy');
+			text.disabled = true
+		})
+		textarea[i].addEventListener('input', (event) => {
 			let area = event.target
 			area.innerHTML = event.target.value
 		})
-    }
+	}
 })
