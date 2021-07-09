@@ -36,3 +36,5 @@ check out the design here [LINk](https://www.figma.com/file/9jfAMxBJrdaCvGGGVZsq
 This project is part of the Crio #IBD competition.</div>
 <img src="https://github.com/wordssaysalot/Chrome-extensions/blob/main/Pascaline/img/ibd.png" alt='DSC WOW' >
 
+# Licence
+GNU General Public License Version 3
