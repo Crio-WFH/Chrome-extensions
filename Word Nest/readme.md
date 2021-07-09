@@ -11,7 +11,7 @@ This Extension helps to know the meaning and type of selected word from a web pa
 ![](demo1.png)
 
 
-
+## Video Demo: https://bit.ly/3yynd10
 
 
 
