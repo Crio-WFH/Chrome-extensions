@@ -4,6 +4,10 @@ A one stop solution for checking and notifying you about all the upcoming contes
 ### What it does?
 It fetches all the upcoming contest details from the clist.by api and sends you chrome notifications when the contest starts. It fetches details of contest day by day. currently the time is in IST only.
 
+The clist.by api is used to fetch the details about the upcoming and ongoing competitive programming contests on various CP platforms like codechef, codeforces, leetcode, atcoder, spoj, projecteuler, hackerearth, hackerrank, etc. 
+
+So Here we fetch the details of the CP contest in upcoming 24 hours and details include contest site, name, starting time and ending time
+
 ### TechStack:
 HTML, CSS, JavaScript, Nodejs, Express.js, Moment.js
 
