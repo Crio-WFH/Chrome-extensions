@@ -1,8 +1,8 @@
 # 💻 Quick Edits v2.1.2
-![project demo](https://media.giphy.com/media/5dRd9AhjMxnXOityB5/giphy.gif)
+![project demo](https://imgur.com/qPliNEN.gif)
 > _Opens the selected text in a Text Editor_
 
-Demo video link (https://vimeo.com/570875673)
+Demo video link (https://vimeo.com/572952061)
 
 ## 🎉 Uses/Features
 
@@ -11,20 +11,33 @@ Demo video link (https://vimeo.com/570875673)
 -   No unnecessary switching between windows thereby increase your productivity.
 -   Inbuilt support for 5 most used editors (yes, it includes even notepad).
 -   Minimal user interaction, set editor in pop-up once, then forget this exists.
--   Toggle whether to open editor or just save snippet.
+-   Toggle whether to open editor or just save snippet (snippets don't get deleted unless you reload the extension).
+<p>
+<img src="https://imgur.com/ludRjxJ.jpg" alt="console" height="200"/>
+</p>
 -   Access saved snippets via `SNIPPETS!` button.
+<p>
+<img src="https://imgur.com/s0qNAVA.jpg" alt="snippetTab" height="200" width="350"/>
+</p>
+-   Copy snippets with one click by clicking '📋' button.
+<p>
+<img src="https://imgur.com/GhrcxBR.jpg" alt="snippet" height="300">
+</p>
 -   Delete snippets by pressing '❌'  or edit them by pressing '🖋'. (Don't forget to save edited snippet by pressing '✔' !!!).
 
 > _Note: defaults to VS Code upon installation and Open editor is turned on_
 
 #### Experimental feature: Git-Cloner
-
-> _Needs python to function_
+> This is useful when you have multiple repos to clone and one global clone directory. 
+> Obviously you need git installed and authentication/ssh keys set up beforehand
 
 - Override the copy-link-to-clipboard '📋' button in GitHub.
 - Toggle Cloner On.
 - Type/Paste path of directory where repo is to be cloned.
 - Click '📋' as usual in GitHub and directory will be cloned.
+######  _Needs python to function !!_
+
+> _Cloning process: (https://vimeo.com/572937843)_
 
 ## ⚙ Installation
 
