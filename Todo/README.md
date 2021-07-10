@@ -6,6 +6,7 @@ Simple Todo Extension to increase productivity
 - Built with HTML,CSS,Vanilla JS
 - Contains link to freecodecamp radio server
 - Uses Chrome Storage API to save tasks
+- For Video Demonstration [Click here](https://youtu.be/m0BrXTOT4Zg)
 
 Initial ui\
 ![](./img/img1.jpg)
