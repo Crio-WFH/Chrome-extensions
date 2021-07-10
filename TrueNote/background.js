@@ -59,5 +59,13 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       });
       sendResponse("success");
       return true;
-    }
+    } else if (request.message === "reset_notes") {
+        chrome.tabs.sendMessage(request.payload.activeTab.id, {
+          message: "reset_notes"
+        }, response =>{
+          console.log("Frontend reset notes");
+        });
+        sendResponse("success");
+        return true;
+      }
 });

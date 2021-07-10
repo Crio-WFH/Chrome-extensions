@@ -13,10 +13,8 @@
             html, body {
                 font-family:'Poppins',sans-serif;
                 margin: 0;
-                padding:0 0 12px 0;
+                padding:0 0 8px 0;
                 width: 384px;
-                /* height:max-content; */
-                min-height: 167px;
             }
 
             h1{
@@ -28,6 +26,7 @@
             .model-header{
                 align-items: center;
                 border-bottom: 0.5px solid #dadada;
+                /* background-color: #2B8ACE; */
             }
 
             .logo{
@@ -46,13 +45,15 @@
             }
 
             .model-content{
-               padding: 0 22px; 
+               padding: 5px 22px 0px 22px; 
+               /* background-color:#C55211; */
             }
             
             .options-wrapper{
                 display:flex;
                 justify-content:space-between;
                 align-items: center;
+                margin-bottom: 16px;
             }
 
             .options-wrapper div{
@@ -65,8 +66,8 @@
             .switch{
                 position: relative;
                 display: inline-block;
-                width:40px;
-                height:20px;
+                width:36px;
+                height:18px;
             }
 
             .switch input{
@@ -87,8 +88,8 @@
             .slider:before{
                 position: absolute;
                 content:"";
-                width:16px;
-                height:16px;
+                width:14px;
+                height:14px;
                 left:2px;
                 bottom:2px;
                 border-radius: 50%;
@@ -101,7 +102,7 @@
             }
 
             input:checked + .slider:before{
-                transform: translateX(20px);
+                transform: translateX(18px);
             }
 
             .btn-grp span{
@@ -120,11 +121,6 @@
                 padding-left: 10px;
             }
 
-            .btn-grp{
-                /* background-color:rgb(255, 0, 0); */
-                margin-top: 16px;
-            }
-
         </style>
     </head>
     <body>
@@ -141,7 +137,18 @@
                 <div>
                     OFF
                     <label class="switch">
-                        <input type="checkbox" id="checkbox">
+                        <input type="checkbox" id="take-note-checkbox">
+                        <span class="slider"></span> 
+                    </label>
+                    ON
+                </div>
+            </div>
+            <div class="options-wrapper">
+                <span class="enable-text">Display my notes</span>
+                <div>
+                    OFF
+                    <label class="switch">
+                        <input type="checkbox" id="display-note-checkbox">
                         <span class="slider"></span> 
                     </label>
                     ON

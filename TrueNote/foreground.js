@@ -1,5 +1,6 @@
 let options = {
-    isEnabled:false
+    takeNotes:false,
+    displayNotes:false
 }
 
 let displayingForm = false;
@@ -96,7 +97,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log(request);
     if (request.message === "change_options") {
         console.log(`Is enabled ${request.isEnabled}`);
-        options.isEnabled = request.isEnabled;
+        options.takeNotes = request.isEnabled;
         sendResponse({
             message:"success"
         });
@@ -110,11 +111,19 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         });
 
         return true;
+    } else if (request.message === "reset_notes") {
+        console.log("Reset notes");
+        resetNotes();
+        sendResponse({
+            message:"success"
+        });
+
+        return true;
     }
 })
 
 document.body.addEventListener("click", (e) => {
-    if (options.isEnabled && !displayingForm) {
+    if (options.takeNotes && !displayingForm) {
         var posX = e.pageX, posY = e.pageY;
         console.log(e.pageX + " " + e.pageY);
         displayForm(posX, posY);
@@ -148,7 +157,7 @@ function discardForm() {
     }, 500);
 }
 
-document.getElementById("addNoteBtn").addEventListener("click", (e) => {
+function addNote(){
     console.log("Adding note");
     let noteTitle = document.getElementById("inputTitle").value;
     let noteDescription = document.getElementById("inputDescription").value;
@@ -172,18 +181,40 @@ document.getElementById("addNoteBtn").addEventListener("click", (e) => {
         
         notesCache.push(note);
 
-        addSticker(note);
+        console.log("Current note cache");
+        console.log(notesCache);
+
+        addSticker(note, notesCache.length-1);
 
         discardForm();
     }
-});
+}
+
+function discardNote(index, DOMElement) {
+    console.log("Discarding note " + index);
+    notesCache.splice(index, 1);
+    console.log("Current note cache");
+    console.log(notesCache);
+    DOMElement.remove();
+}
+
+function resetNotes(){
+    const notes = document.getElementsByClassName("note");
+    while (notes.length > 0) {
+        notes[0].remove();
+    }
+    notesCache = [];
+    console.log(notesCache);
+}
+
+document.getElementById("addNoteBtn").addEventListener("click", addNote);
 
 document.getElementById("discardCreateNoteBtn").addEventListener("click", discardForm);
 
 
-function addSticker(note){
+function addSticker(note, index) {
 
-    console.log(`Form positions ${note.posX} ${note.posY}`);
+    console.log(`Form positions ${note.posX} ${note.posY} ${index}`);
 
     const colorTheme = getRandomColor();
 
@@ -206,6 +237,8 @@ function addSticker(note){
     const discardBtn = document.createElement("div");
     discardBtn.className = "discardBtn";
     discardBtn.innerHTML = "Discard";
+    discardBtn.setAttribute("note-index", index);
+    discardBtn.onclick = () => discardNote(discardBtn.getAttribute('note-index'), discardBtn.parentElement);
     discardBtn.style.backgroundColor = colorTheme;
     
     newSticker.appendChild(noteTitle);

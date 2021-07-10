@@ -9,11 +9,11 @@ chrome.tabs.query({active: true, currentWindow: true}, (tabs)=>{
     console.log(activeTab);
     chrome.storage.sync.get(activeTab.id.toString(), (data) => {
         console.log(data[activeTab.id].isEnabled);
-        document.getElementById("checkbox").checked = data[activeTab.id].isEnabled;
+        document.getElementById("take-note-checkbox").checked = data[activeTab.id].isEnabled;
     });
 });
 
-document.getElementById("checkbox").addEventListener('change', (event) =>{
+function changeUserOption(){
     const isEnabled = event.target.checked;
     console.log(isEnabled);
     chrome.storage.sync.set({[activeTab.id]:{isEnabled:isEnabled}});
@@ -26,7 +26,11 @@ document.getElementById("checkbox").addEventListener('change', (event) =>{
     }, response => {
         console.log(response);
     });
-});
+}
+
+document.getElementById("take-note-checkbox").addEventListener('change', changeUserOption);
+
+document.getElementById("display-note-checkbox").addEventListener('change', changeUserOption);
 
 document.getElementById("save-btn").addEventListener('click', () =>{
     chrome.runtime.sendMessage({
@@ -35,4 +39,13 @@ document.getElementById("save-btn").addEventListener('click', () =>{
             activeTab:activeTab
         }
     });
-})
+});
+
+document.getElementById("reset-btn").addEventListener('click', () =>{
+    chrome.runtime.sendMessage({
+        message:"reset_notes",
+        payload:{
+            activeTab:activeTab
+        }
+    });
+});
