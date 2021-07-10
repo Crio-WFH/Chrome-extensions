@@ -137,6 +137,18 @@
         "ideas",
         "design"
       ]
+    },
+    {
+      "login": "kavya466",
+      "name": "kavya466",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24410733?v=4",
+      "profile": "https://github.com/kavya466",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
