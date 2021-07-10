@@ -41,3 +41,5 @@ https://youtu.be/Mh6zfeuo5WI
 ## References To get started :
 * Extension development overview - https://developer.chrome.com/docs/extensions/mv3/devguide/
 * API Reference - https://developer.chrome.com/docs/extensions/reference/
+## Blog :newspaper:
+https://abhinavkgupta.medium.com/fylfot-the-chrome-extension-bb68471337a5
