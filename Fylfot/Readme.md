@@ -34,7 +34,7 @@ https://youtu.be/Mh6zfeuo5WI
 
 ## ScreenShorts 🎥
 ![image](https://user-images.githubusercontent.com/52539720/125122775-7cd69d00-e113-11eb-8c5f-30d2e9cdb498.png)
-![image](https://user-images.githubusercontent.com/52539720/125122829-8f50d680-e113-11eb-9f54-3688cf131e90.png)
+![image](https://user-images.githubusercontent.com/52539720/125171172-64788800-e1d0-11eb-9899-61818c4d11d8.png)
 
 
 
