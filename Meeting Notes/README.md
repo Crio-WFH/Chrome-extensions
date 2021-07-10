@@ -11,9 +11,11 @@ It can also be used as a To-Do list. I've used the Firebase Realtime database to
 - Maintain it as a To-Do list and update the same.
 
 
-## ScreenShots :camera_flash:
-![](https://drive.google.com/file/d/1A5rn2MMs4Eg3gmAZunjcq2aBcTWm0_d4/view?usp=sharing)
-![](https://drive.google.com/file/d/1X3MFCxd-JjUYgWiXJ5OTWA234rzZneez/view?usp=sharing)
+## Screenshots :camera_flash:
+
+![image](https://drive.google.com/uc?export=view&id=1A5rn2MMs4Eg3gmAZunjcq2aBcTWm0_d4)
+
+![image](https://drive.google.com/uc?export=view&id=1X3MFCxd-JjUYgWiXJ5OTWA234rzZneez)
 
 
 
@@ -42,4 +44,4 @@ It can also be used as a To-Do list. I've used the Firebase Realtime database to
 - Coming soon!
 
 ## Contribute 
--Feel Free to Contribute to the Project!
+- Feel Free to Contribute to the Project!
