@@ -1,6 +1,6 @@
 # Chrome-extensions
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-12-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-13-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&labelColor=black&logo=github"></a>
 
@@ -63,6 +63,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/kamatvedita99"><img src="https://avatars.githubusercontent.com/u/62342400?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Vedita Kamat</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=kamatvedita99" title="Code">💻</a> <a href="#design-kamatvedita99" title="Design">🎨</a> <a href="#infra-kamatvedita99" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#ideas-kamatvedita99" title="Ideas, Planning, & Feedback">🤔</a></td>
     <td align="center"><a href="https://jainaayush01.github.io/"><img src="https://avatars.githubusercontent.com/u/54480934?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Aayush Jain</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=jainaayush01" title="Code">💻</a> <a href="#infra-jainaayush01" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#ideas-jainaayush01" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-jainaayush01" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/kavya466"><img src="https://avatars.githubusercontent.com/u/24410733?v=4?s=100" width="100px;" alt=""/><br /><sub><b>kavya466</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=kavya466" title="Code">💻</a> <a href="#ideas-kavya466" title="Ideas, Planning, & Feedback">🤔</a> <a href="#design-kavya466" title="Design">🎨</a> <a href="#infra-kavya466" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
+    <td align="center"><a href="https://github.com/abbasrangwala111"><img src="https://avatars.githubusercontent.com/u/59816379?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abbas Zoharbhai Rangwala</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=abbasrangwala111" title="Code">💻</a> <a href="#infra-abbasrangwala111" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#design-abbasrangwala111" title="Design">🎨</a></td>
   </tr>
 </table>
 
