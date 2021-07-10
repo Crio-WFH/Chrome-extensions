@@ -3,7 +3,7 @@
 
 >Productivity is never an accident. It is always the result of a commitment to intelligent planning and focused effort.
                                                                                                                             
-                                                                                          - Paul J. Meyer                    
+                                                                                             - Paul J. Meyer                    
                                                
 
 ## Installation 💻
@@ -19,6 +19,7 @@
 - Increase your productivity by blocking social media sites to work at your peak time
 - Block or unblock the website by just 1 click!
 - Block the website of your choice by simply appending to the list of URLs
+- Set the time period for blocking the websites
 
 ## Screenshots 👀
 ![ss1](https://user-images.githubusercontent.com/31816531/125030233-6fd09400-e0a8-11eb-9703-2d0ef9855d7f.png)
@@ -27,6 +28,8 @@
 ![ss4](https://user-images.githubusercontent.com/31816531/125030956-8deac400-e0a9-11eb-8525-a038b69fa021.png)
 ![ss5](https://user-images.githubusercontent.com/31816531/125031000-9cd17680-e0a9-11eb-80cb-af54bbea653a.png)
 ![ss6](https://user-images.githubusercontent.com/31816531/125031025-a4911b00-e0a9-11eb-8e74-5fe2cad89b30.png)
+![timer](https://user-images.githubusercontent.com/31816531/125156888-839df800-e185-11eb-92dc-375ea8b7223c.png)
+
 
 ## Note 🟥
 Select the source folder for the extension to load properly and to avoid any errors.
