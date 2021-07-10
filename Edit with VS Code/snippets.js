@@ -90,3 +90,13 @@ chrome.storage.sync.get(['data', 'raw', 'oneFile'], (resp) => {
 		})
 	}
 })
+
+
+chrome.runtime.onMessage.addListener((req, _, sendResp) => {
+	if (req.q === 'getSelection') {
+		sendResp({ q: 'success' })
+		return true
+	} else {
+		sendResp({ q: 'failure' })
+	}
+})
