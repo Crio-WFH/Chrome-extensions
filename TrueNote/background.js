@@ -21,7 +21,7 @@ chrome.tabs.onUpdated.addListener((tabId, changeInfo, tab) => {
       .then(() => {
         console.log("Injected foreground script " + tabId);
 
-        chrome.storage.sync.set({ [tabId]: { isEnabled: false } });
+        chrome.storage.sync.set({ [tabId]: { options:{takeNotes:false, displayNotes:false} } });
       })
       .catch(err => {
         console.log(err);
@@ -44,14 +44,21 @@ chrome.tabs.onRemoved.addListener((tabId, removeInfo) => {
     popup -> background -> frontend (As there cannot be direct communication between pop -> frontend)
 */
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
-  if (request.message === "change_options") {
+  if (request.message === "change_takeNotes_option") {
     chrome.tabs.sendMessage(request.payload.activeTab.id, {
-      message: "change_options",
-      isEnabled: request.payload.isEnabled
+      message: "change_takeNotes_option",
+      value: request.payload.value
     });
     sendResponse("success");
     return true;
-  } else if (request.message === "save_notes_cache") {
+  } else if (request.message === "change_displayNotes_option") {
+      chrome.tabs.sendMessage(request.payload.activeTab.id, {
+        message: "change_displayNotes_option",
+        value: request.payload.value
+      });
+      sendResponse("success");
+      return true;
+    } else if (request.message === "save_notes_cache") {
       chrome.tabs.sendMessage(request.payload.activeTab.id, {
         message: "save_notes_cache"
       }, response =>{

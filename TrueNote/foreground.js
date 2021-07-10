@@ -95,9 +95,18 @@ document.body.appendChild(form);
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log(request);
-    if (request.message === "change_options") {
-        console.log(`Is enabled ${request.isEnabled}`);
-        options.takeNotes = request.isEnabled;
+    if (request.message === "change_takeNotes_option") {
+        console.log(`Changing take notes option to ${request.value}`);
+        options.takeNotes = request.value;
+        sendResponse({
+            message:"success"
+        });
+
+        return true;
+    } else if (request.message === "change_displayNotes_option") {
+        console.log(`Changing display notes option to ${request.value}`);
+        options.displayNotes = request.value;
+        displayNotes();
         sendResponse({
             message:"success"
         });
@@ -129,6 +138,14 @@ document.body.addEventListener("click", (e) => {
         displayForm(posX, posY);
     }
 });
+
+function displayNotes(){
+    const notes = document.getElementsByClassName("note");
+    console.log(notes.length);
+    for (let i = 0; i < notes.length; i++) {
+        notes[i].style.visibility = (options.displayNotes)?"visible":"hidden";
+    }
+}
 
 function saveNotes() {
     if (notesCache.length > 0) {
@@ -229,6 +246,7 @@ function addSticker(note, index) {
     noteTitle.className = "noteTitle";
     noteTitle.innerHTML = note.title;
     noteTitle.style.color = colorTheme;
+    newSticker.style.visibility = (options.displayNotes)?"visible":"hidden";
 
     const noteDescription = document.createElement("p");
     noteDescription.className = "noteDescription";
