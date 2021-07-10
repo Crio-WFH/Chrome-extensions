@@ -125,6 +125,18 @@
         "infra",
         "ideas"
       ]
+    },
+    {
+      "login": "jainaayush01",
+      "name": "Aayush Jain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54480934?v=4",
+      "profile": "https://jainaayush01.github.io/",
+      "contributions": [
+        "code",
+        "infra",
+        "ideas",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
