@@ -80,9 +80,9 @@ p {
 	position: fixed;
 	right: 20px;
 	bottom: 5px;
-	font-size: 60px;
+	font-size: 10vh;
 	font-family: Orbitron;
-	letter-spacing: 7px;
+	letter-spacing: 1vh;
 }
 .grid-item-2 {
 	overflow: scroll;
@@ -139,7 +139,7 @@ pre {
 }
 
 .stylescreen {
-	height: 58vh;
+	height: 57vh;
 }
 
 .thirdcolumn {
@@ -154,7 +154,7 @@ pre {
 .grid-container {
 	display: grid;
 	grid-template-columns: [first] 10% [line2] 45% [line3] 45% [end];
-	grid-template-rows: [row1-start] 6vh [row1-end] 32vh [third-line] 32vh [last-line];
+	grid-template-rows: [row1-start] 6vh [row1-end] 32vh [third-line] 33vh [last-line];
 }
 .grid-item {
 	color: white;
