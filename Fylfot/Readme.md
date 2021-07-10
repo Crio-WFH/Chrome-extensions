@@ -26,9 +26,9 @@ It is a Chrome extension that provides ease of work. it comes with features like
 > * Click on the extension icon.
 > * Click on the speak button. User can pause or stop the text as per the requirements.
 ## Technologies Used 🛠️
-HTML.
-CSS.
-JavaScript & Jquery.
+1. HTML
+2. CSS
+3. JavaScript & Jquery.
 ## Youtube Link 🔗
 https://youtu.be/Mh6zfeuo5WI
 
