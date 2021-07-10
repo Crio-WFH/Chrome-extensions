@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="/css/homepage.css" />
+		<link rel="stylesheet" href="/popup.css" />
+		<link
+			rel="stylesheet"
+			href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+			integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+			crossorigin="anonymous"
+		/>
+
+		<link
+			href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+			rel="stylesheet"
+			integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+			crossorigin="anonymous"
+		/>
+		<script src="/jquery.min.js"></script>
+
+		<title>New Tab</title>
+	</head>
+	<body>
+		<div class="maincontainer">
+			<div class="firstcolumn columnd col-sm-3 col-lg-3 col-xl-3">
+				<div class="quotetext" id="card">
+					<p class="ptext">Sample quote</p>
+				</div>
+				<br />
+				<br />
+				<div class="sites">
+					<h3
+						style="
+							padding-top: 10px;
+							font-size: large;
+							font-family: Anton;
+							text-align: center;
+						"
+					>
+						BLOCK SITES
+					</h3>
+					<br />
+					<input
+						type="text"
+						id="sitename"
+						placeholder="Add a site to block and press enter to save"
+					/>
+
+					<br />
+					<br />
+					<table id="blockedsites">
+						<thead>
+							<tr>
+								<th>Site Name</th>
+								<th>Blocked status</th>
+								<th>Delete site</th>
+							</tr>
+						</thead>
+						<tbody id="tablebody"></tbody>
+					</table>
+				</div>
+			</div>
+			<div class="secondcolumn columnd col-sm-6 col-lg-5 col-xl-5">
+				<h1 style="text-align: center">To-Do List</h1>
+
+				<input
+					type="text"
+					style="text-align: center"
+					class="todo-input"
+					placeholder="Add a Todo and Press Enter..."
+				/>
+
+				<ul class="stylescreen todo-items" id="homepageui"></ul>
+			</div>
+			<div class="thirdcolumn columnd col-sm-3 col-lg-4 col-xl-4">
+				<div class="grid-container">
+					<div class="grid-item"><p class="quadrant-text"></p></div>
+					<div class="grid-item-1">
+						<p style="text-align: center; font-size: 3.5vh">URGENT</p>
+					</div>
+					<div class="grid-item-1">
+						<p style="font-size: 3.5vh">NOT URGENT</p>
+					</div>
+					<div class="grid-item-1">
+						<p
+							style="
+								writing-mode: vertical-rl;
+								text-orientation: mixed;
+								font-size: 3.5vh;
+							"
+						>
+							IMPORTANT
+						</p>
+					</div>
+					<div class="grid-item-2" id="q1">
+						<ul class="emptyquadrant quadrant-itemq1"></ul>
+					</div>
+					<div class="grid-item-2" id="q2">
+						<ul class="emptyquadrant quadrant-itemq2"></ul>
+					</div>
+					<div class="grid-item-1">
+						<p
+							style="
+								writing-mode: vertical-rl;
+								text-align: center;
+								text-orientation: mixed;
+								font-size: 3.5vh;
+							"
+						>
+							NOT IMPORTANT
+						</p>
+					</div>
+					<div class="grid-item-2" id="q3">
+						<ul class="emptyquadrant quadrant-itemq3"></ul>
+					</div>
+					<div class="grid-item-2" id="q4">
+						<ul class="emptyquadrant quadrant-itemq4"></ul>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="clockid" class="clock heading" onload="showTime()"></div>
+		<script src="/js/quotes.js"></script>
+		<script src="/js/time.js"></script>
+		<script src="/popup.js"></script>
+		<script src="/js/blocksite.js"></script>
+	</body>
+</html>
