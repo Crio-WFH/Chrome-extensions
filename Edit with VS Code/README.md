@@ -1,10 +1,13 @@
 # 💻 Quick Edits v2.1.2
+
 ![project demo](https://imgur.com/qPliNEN.gif)
+
 > _Opens the selected text in a Text Editor. Defaults to VS Code upon installation and Open editor is turned on_
 
 Demo video link (https://vimeo.com/573019919)
 
 ## 🎉 Uses/Features
+
 <ul>
 <li>   Make the process of copy-pasting-editing code instantaneous.
 <li>   Removes the hassle of opening text editor, set it up side-by-side with browser and then Copy and Pasting.
@@ -13,7 +16,7 @@ Demo video link (https://vimeo.com/573019919)
 <li>   Minimal user interaction, set editor in pop-up once, then forget this exists.
 <li>   Toggle whether to open editor or just save snippet (snippets don't get deleted unless you reload the extension).
 <p>
-<img src="https://imgur.com/ludRjxJ.jpg" alt="console" height="200"/>
+<img src="https://user-images.githubusercontent.com/51828849/125167173-d47d1300-e1bc-11eb-98a8-4959c3d1922a.png" alt="console" height="200"/>
 </p>
 <li>  Access saved snippets via `SNIPPETS!` button.
 <p>
@@ -24,24 +27,31 @@ Demo video link (https://vimeo.com/573019919)
 <img src="https://imgur.com/GhrcxBR.jpg" alt="snippet" height="300">
 </p>
 <li>   Delete snippets by pressing '❌'  or edit them by pressing '🖋'. (Don't forget to save edited snippet by pressing '✔' !!!).
+<li>   Added One File Mode, now append copied blocks onto one single file and edit them.
+<p>
+<img src="https://user-images.githubusercontent.com/51828849/125167306-7bfa4580-e1bd-11eb-88a4-01256ce40f96.png" height="400" />
+</p>
 </ul>
+
+> Handy trick: In one file mode, if you need to quickly launch editor with the entire text content of the snippet, just click on '📋' and select Quick Edit from right-click context menu. Of course 'Open Editor' should be toggled on. 
   
 ### Experimental feature: Git-Cloner
 > This is useful when you have multiple repos to clone and one global clone directory. 
 > Obviously you need git installed and authentication/ssh keys set up beforehand
 
-- Override the copy-link-to-clipboard '📋' button in GitHub.
-- Toggle Cloner On.
-- Type/Paste path of directory where repo is to be cloned.
-- Click '📋' as usual in GitHub and directory will be cloned.
-  
-######  _Needs python to function !!_
+-   Override the copy-link-to-clipboard '📋' button in GitHub.
+-   Toggle Cloner On.
+-   Type/Paste path of directory where repo is to be cloned.
+-   Click '📋' as usual in GitHub and directory will be cloned.
+
+###### _Needs python to function !!_
 
 > _Cloning process: (https://vimeo.com/572937843)_
 
 ## ⚙ Installation
 
->   _Refer this: (https://vimeo.com/571618622)_
+> _Refer this: (https://vimeo.com/571618622)_
+
 -   Open extensions tab in Chrome, turn developer mode on
 -   Select `LOAD UNPACKED`, then select the extension folder in dialog box
 
@@ -75,4 +85,4 @@ PR's are welcome, but fork the project and do so only in `dev` branch
 
 ## 👻 Authors
 
-  > `Hritwik Som (Apprentice76)`
+> `Hritwik Som (Apprentice76)`

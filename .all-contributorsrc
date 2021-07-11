@@ -125,6 +125,53 @@
         "infra",
         "ideas"
       ]
+    },
+    {
+      "login": "jainaayush01",
+      "name": "Aayush Jain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/54480934?v=4",
+      "profile": "https://jainaayush01.github.io/",
+      "contributions": [
+        "code",
+        "infra",
+        "ideas",
+        "design"
+      ]
+    },
+    {
+      "login": "kavya466",
+      "name": "kavya466",
+      "avatar_url": "https://avatars.githubusercontent.com/u/24410733?v=4",
+      "profile": "https://github.com/kavya466",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
+    },
+    {
+      "login": "abbasrangwala111",
+      "name": "Abbas Zoharbhai Rangwala",
+      "avatar_url": "https://avatars.githubusercontent.com/u/59816379?v=4",
+      "profile": "https://github.com/abbasrangwala111",
+      "contributions": [
+        "code",
+        "infra",
+        "design"
+      ]
+    },
+    {
+      "login": "MalayGain",
+      "name": "MalayGain",
+      "avatar_url": "https://avatars.githubusercontent.com/u/65612251?v=4",
+      "profile": "https://github.com/MalayGain",
+      "contributions": [
+        "code",
+        "ideas",
+        "design",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
