@@ -1,5 +1,7 @@
 # True Note (v 1.0)
 
+This is a chrome extension built for taking quick and informative notes directly on the screen of a webpage. Users can add notes, delete notes, reset notes, save their notes, hide and also shrink and expand their notes. This tool can be beneficial to web UI designers, researchers along with many more. 
+
 [Demo video link](https://youtu.be/EibNoVMeA90)
 
 ## :star2: Features
