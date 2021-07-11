@@ -54,7 +54,7 @@ title.setAttribute("type", "text");
 title.setAttribute("maxlength","20");
 const titlePlaceholder = document.createElement("span");
 titlePlaceholder.className="placeholder";
-titlePlaceholder.innerHTML = 'Note title<span class="asterics">*</span>';
+titlePlaceholder.innerHTML = 'Note title (max 20 characters)<span class="asterics">*</span>';
 
 titleLabel.appendChild(title);
 titleLabel.appendChild(titlePlaceholder);
@@ -224,6 +224,17 @@ function resetNotes(){
     console.log(notesCache);
 }
 
+function shrinkNote(noteDOMElement){
+    console.log("Shrinking note");
+    const noteContentDiv = noteDOMElement.children[1];
+    noteContentDiv.classList.toggle("note-content-shrinked");
+    const noteHeader = noteDOMElement.children[0];
+    const noteTitle = noteHeader.children[0];
+    noteTitle.classList.toggle("noteTitle-shrinked");
+    noteHeader.classList.toggle("noteHeader-shrinked");
+    noteDOMElement.classList.toggle("note-shrinked");
+}
+
 document.getElementById("addNoteBtn").addEventListener("click", addNote);
 
 document.getElementById("discardCreateNoteBtn").addEventListener("click", discardForm);
@@ -241,12 +252,19 @@ function addSticker(note, index) {
     newSticker.className = "note";
     newSticker.style.top = note.posY;
     newSticker.style.left = note.posX;
+    newSticker.style.visibility = (options.displayNotes)?"visible":"hidden";
 
+    const noteHeader = document.createElement("div");
+    noteHeader.className = "noteHeader";
+    noteHeader.onclick = () => shrinkNote(noteHeader.parentElement);
+
+    const noteContent = document.createElement("div");
+    noteContent.className = "noteContent";
+   
     const noteTitle = document.createElement("p");
     noteTitle.className = "noteTitle";
     noteTitle.innerHTML = note.title;
     noteTitle.style.color = colorTheme;
-    newSticker.style.visibility = (options.displayNotes)?"visible":"hidden";
 
     const noteDescription = document.createElement("p");
     noteDescription.className = "noteDescription";
@@ -256,12 +274,15 @@ function addSticker(note, index) {
     discardBtn.className = "discardBtn";
     discardBtn.innerHTML = "Discard";
     discardBtn.setAttribute("note-index", index);
-    discardBtn.onclick = () => discardNote(discardBtn.getAttribute('note-index'), discardBtn.parentElement);
+    discardBtn.onclick = () => discardNote(discardBtn.getAttribute('note-index'), discardBtn.parentElement.parentElement);
     discardBtn.style.backgroundColor = colorTheme;
     
-    newSticker.appendChild(noteTitle);
-    newSticker.appendChild(noteDescription);
-    newSticker.appendChild(discardBtn);
+    noteHeader.appendChild(noteTitle);
+    noteContent.appendChild(noteDescription);
+    noteContent.appendChild(discardBtn);
+
+    newSticker.appendChild(noteHeader);
+    newSticker.appendChild(noteContent);
 
     document.body.appendChild(newSticker);
 }

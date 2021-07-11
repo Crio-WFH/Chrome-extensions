@@ -1,9 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,600;1,500&display=swap');
 
 .note, #noteForm{
-    max-width: 300px;
-    min-width: 250px;
-    padding: 15px 20px 20px 20px; 
+    position: relative;
+    /* max-width: 300px; */
+    width: 300px;
+    /* min-width: 250px; */
+    /* padding: 15px 20px 20px 20px;  */
     position: absolute;
     top: 0;
     left: 0;
@@ -13,6 +15,56 @@
     backdrop-filter: blur(11px);
     border-radius: 7px;
     z-index: 9999;
+}
+
+#noteForm{
+    padding: 15px 20px 20px 20px;
+}
+
+/* .note{
+    transition: all 0.5s;
+} */
+
+.note-shrinked{
+    width:25px;
+    height: 25px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 2px 4px rgba(83, 83, 83, 0.31);
+    box-sizing: border-box;
+}
+
+.noteHeader{
+    padding: 15px 20px 0px 20px;
+    cursor: pointer;
+    /* transition: padding 0.5s, width 0.5s, height 0.5s, border-radius 0.5, background-color 0.5s; */
+    /* background-color: #F72F4E; */
+}
+
+.noteHeader-shrinked{
+    padding:0;
+    width:17px;
+    height: 17px;
+    border-radius: 50%;
+    background-color: #F72F4E;
+}
+
+.noteContent{
+    width:inherit;
+    height:100%;
+    padding: 0px 20px 20px 20px;
+    opacity: 1;
+    /* background-color: #7a7a7a; */
+    box-sizing: border-box;
+}
+
+.note-content-shrinked {
+    width:0;
+    height:0;
+    padding:0;
+    visibility:hidden;
 }
 
 #noteForm{
@@ -30,6 +82,13 @@
     border-bottom: 0.7px solid rgb(167, 167, 167);
     margin-top: 0;
     padding-top:0;
+}
+
+.noteTitle-shrinked{
+    padding:0;
+    width:0;
+    height:0;
+    visibility: hidden;
 }
 
 #formTitle{
@@ -63,6 +122,7 @@
 
 #noteFormBtnGrp{
     display:flex;
+    justify-content: space-between;
     margin-top:15px;
 }
 
