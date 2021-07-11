@@ -1,5 +1,7 @@
-const start = 9;
-const end = 18;
+
+const start = prompt("Enter the starting time : ");
+const end = prompt("Enter the ending time : ");
+
 
 const current= new Date(Date.now()).getHours();
 
@@ -18,7 +20,6 @@ if(current >= start && current <= end){
         ["blocking"]
     )
 }
-
 else{
     display("The sites can be accessed now!");
 }
