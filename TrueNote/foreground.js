@@ -143,9 +143,10 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 })
 
 document.body.addEventListener("click", (e) => {
+    console.log(e.pageX + " " + e.pageY);
     if (options.takeNotes && !globals.displayingForm) {
         var posX = e.pageX, posY = e.pageY;
-        console.log(e.pageX + " " + e.pageY);
+        // console.log(e.pageX + " " + e.pageY);
         displayForm(posX, posY);
     }
 });
@@ -181,7 +182,7 @@ function discardForm() {
     document.getElementById("inputDescription").value="";
 
     setTimeout(() => {
-        displayingForm = false;
+        globals.displayingForm = false;
     }, 500);
 }
 
