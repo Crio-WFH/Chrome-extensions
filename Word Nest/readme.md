@@ -4,8 +4,8 @@ This Extension helps to know the meaning and type of selected word from a web pa
 <hr>
 
 ## Features :
-📖showing the meaning of selected word
-
+ 📖showing the meaning of selected word <br>
+ 🔊voice support to describe about selected word and also give user suggestion to select text properly
 
 ## ScreenShots :camera_flash:
 ![](demo1.png)
