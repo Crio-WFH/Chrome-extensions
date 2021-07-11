@@ -36,6 +36,8 @@
 
 
 ## Note 🟥
-Select the source folder for the extension to load properly and to avoid any errors.
+- Select the source folder for the extension to load properly and to avoid any errors
+- The `starting time` refers to the time from which the website would be blocked. And the `ending time` refers to the time till which the website would be blocked
+- Generally, it is advisable to do a system restart after enabling the extension for the perfect working
 
 🛎️ For working, click at the [link](https://www.youtube.com/watch?v=QQ0uwY55EPY)
