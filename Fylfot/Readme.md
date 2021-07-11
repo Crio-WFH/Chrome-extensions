@@ -5,7 +5,14 @@ An extension must fulfill a single purpose that is narrowly defined and easy to 
 
 ## ![icons8-alpha-30](https://user-images.githubusercontent.com/52539720/125122932-b1e2ef80-e113-11eb-8430-bca127710425.png)FylFot
 It is a Chrome extension that provides ease of work. it comes with features like To-Do list, Shortcut of applications, and Inspirational Quote with a click of a new tab.it comes with an additional feature of Text to Speech Converter
-
+### 1. Random Thoughts:
+This Section is in Full-Screen mode when you pin this Extension. This inspires the Users every time with different thoughts when they open a New Tab.
+### 2. Social Media App Launcher:
+This Section is added in my Extension so that Users open the social Media Apps on a Click.
+### 3. Text to Speech Converter:
+This Section Converts Text into Speech so that Users can give relax to their Eyes.
+### 4. ToDo List:
+This Section Provides the User to Make Sticky Notes, Add important Points, etc to the ToDo list.
 ## Features ✨
 * Social Media Apps Launcher
 * ToDo List
