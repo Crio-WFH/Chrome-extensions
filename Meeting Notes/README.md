@@ -20,7 +20,7 @@ It can also be used as a To-Do list. I've used the Firebase Realtime database to
 
 
 ## Demo Video  :movie_camera:
-[Click Here](https://youtu.be/E5RwMr0SwWc)
+[Click Here](https://youtu.be/QFkIvNWUjII)
 
 
 ## How to Use :computer:
@@ -41,7 +41,7 @@ It can also be used as a To-Do list. I've used the Firebase Realtime database to
 4. Firebase
 
 ## Blog
-- Coming soon!
+- [Read here](https://medium.com/@nishanth.ramesh1/how-i-built-a-chrome-extension-to-aid-work-from-home-febbf8c1ddc6)
 
 ## Contribute 
 - Feel Free to Contribute to the Project!
