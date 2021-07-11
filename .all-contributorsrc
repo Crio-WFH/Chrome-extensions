@@ -172,6 +172,17 @@
         "design",
         "infra"
       ]
+    },
+    {
+      "login": "imnishanth",
+      "name": "Nishanth Ramesh",
+      "avatar_url": "https://avatars.githubusercontent.com/u/35870845?v=4",
+      "profile": "https://github.com/imnishanth",
+      "contributions": [
+        "code",
+        "design",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
