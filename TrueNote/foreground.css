@@ -21,9 +21,10 @@
     padding: 15px 20px 20px 20px;
 }
 
-/* .note{
-    transition: all 0.5s;
-} */
+.note{
+    /* transition: all 0.3s;
+    transition-delay: 0.3s; */
+}
 
 .note-shrinked{
     width:25px;
@@ -39,7 +40,6 @@
 .noteHeader{
     padding: 15px 20px 0px 20px;
     cursor: pointer;
-    /* transition: padding 0.5s, width 0.5s, height 0.5s, border-radius 0.5, background-color 0.5s; */
     /* background-color: #F72F4E; */
 }
 
@@ -58,6 +58,7 @@
     opacity: 1;
     /* background-color: #7a7a7a; */
     box-sizing: border-box;
+    /* transition: all 0.3s; */
 }
 
 .note-content-shrinked {
@@ -107,7 +108,7 @@
     margin-top: 12px;
 }
 
-.discardBtn, #discardCreateNoteBtn, #addNoteBtn{
+.note-discardBtn, #discardCreateNoteBtn, #addNoteBtn{
     width:max-content;
     padding:8px 20px;
     margin-top: 12px;
@@ -118,6 +119,12 @@
     color:white;
     /* box-shadow: 0 0 20px 1px rgb(139, 139, 139); */
     cursor: pointer;
+}
+
+.note-discardBtn{
+    background-color: transparent;
+    border: 1px solid;
+    /* border-color: #124b8b; */
 }
 
 #noteFormBtnGrp{
@@ -135,7 +142,7 @@
     margin-right: 20px;
 }
 
-.input-box {
+.note-input-box {
     position: relative;
     display: block;
     padding-top: 10px;
@@ -144,7 +151,7 @@
     /* background-color: aqua; */
 }
 
-.input-box input{
+.note-input-box input{
     border-bottom: 1px solid #7a7a7a;
     border-top: transparent;
     border-left: none;
@@ -158,7 +165,7 @@
     /* background-color: rgb(202, 202, 202); */
 }
 
-.placeholder {
+.note-placeholder {
     position: absolute;
     top: 5px;
     left: 0px;
@@ -167,6 +174,7 @@
     padding-left: 3px;
     padding-right: 3px;
     font-weight: 600;
+    color:#363636;
     font-family: 'Poppins', sans-serif;
 }
 

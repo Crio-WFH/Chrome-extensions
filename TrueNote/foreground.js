@@ -56,27 +56,27 @@ function createNoteForm(){
     formTitle.innerHTML = "Create note";
 
     const titleLabel = document.createElement("label");
-    titleLabel.className = "input-box";
+    titleLabel.className = "note-input-box";
     const title = document.createElement("input");
-    title.id = "inputTitle";
+    title.id = "note-inputTitle";
     title.required = true;
     title.setAttribute("type", "text");
     title.setAttribute("maxlength","20");
     const titlePlaceholder = document.createElement("span");
-    titlePlaceholder.className="placeholder";
+    titlePlaceholder.className="note-placeholder";
     titlePlaceholder.innerHTML = 'Note title (max 20 characters)<span class="asterics">*</span>';
 
     titleLabel.appendChild(title);
     titleLabel.appendChild(titlePlaceholder);
 
     const descriptionLabel = document.createElement("label");
-    descriptionLabel.className = "input-box";
+    descriptionLabel.className = "note-input-box";
     const description = document.createElement("input");
-    description.id = "inputDescription";
+    description.id = "note-inputDescription";
     description.required = true;
     description.setAttribute("type", "text");
     const descriptionPlaceholder = document.createElement("span");
-    descriptionPlaceholder.className="placeholder";
+    descriptionPlaceholder.className="note-placeholder";
     descriptionPlaceholder.innerHTML='Your note needs a description<span class="asterics">*</span>';
 
     descriptionLabel.appendChild(description);
@@ -143,7 +143,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 })
 
 document.body.addEventListener("click", (e) => {
-    console.log(e.pageX + " " + e.pageY);
+    console.log("From body " + e.pageX + " " + e.pageY);
     if (options.takeNotes && !globals.displayingForm) {
         var posX = e.pageX, posY = e.pageY;
         // console.log(e.pageX + " " + e.pageY);
@@ -178,8 +178,8 @@ function displayForm(posX, posY) {
 function discardForm() {
     document.getElementById("noteForm").style.visibility = "hidden";
     console.log("Discarding form");
-    document.getElementById("inputTitle").value="";
-    document.getElementById("inputDescription").value="";
+    document.getElementById("note-inputTitle").value="";
+    document.getElementById("note-inputDescription").value="";
 
     setTimeout(() => {
         globals.displayingForm = false;
@@ -188,8 +188,8 @@ function discardForm() {
 
 function addNote(){
     console.log("Adding note");
-    let noteTitle = document.getElementById("inputTitle").value;
-    let noteDescription = document.getElementById("inputDescription").value;
+    let noteTitle = document.getElementById("note-inputTitle").value;
+    let noteDescription = document.getElementById("note-inputDescription").value;
 
     if (noteTitle == null || noteTitle.trim() === "") {
         alert("The note requires a title");
@@ -220,6 +220,10 @@ function addNote(){
 }
 
 function discardNote(index, DOMElement) {
+    globals.displayingForm=true;
+    setTimeout(()=>{
+        globals.displayingForm=false;
+    }, 300);
     console.log("Discarding note " + index);
     globals.notesCache.splice(index, 1);
     console.log("Current note cache");
@@ -237,6 +241,10 @@ function resetNotes(){
 }
 
 function shrinkNote(noteDOMElement){
+    globals.displayingForm=true;
+    setTimeout(()=>{
+        globals.displayingForm=false;
+    }, 500);
     console.log("Shrinking note");
     const noteContentDiv = noteDOMElement.children[1];
     noteContentDiv.classList.toggle("note-content-shrinked");
@@ -283,11 +291,12 @@ function addSticker(note, index) {
     noteDescription.innerHTML = note.description;
 
     const discardBtn = document.createElement("div");
-    discardBtn.className = "discardBtn";
+    discardBtn.className = "note-discardBtn";
     discardBtn.innerHTML = "Discard";
     discardBtn.setAttribute("note-index", index);
     discardBtn.onclick = () => discardNote(discardBtn.getAttribute('note-index'), discardBtn.parentElement.parentElement);
-    discardBtn.style.backgroundColor = colorTheme;
+    discardBtn.style.borderColor = colorTheme;
+    discardBtn.style.color = colorTheme;
     
     noteHeader.appendChild(noteTitle);
     noteContent.appendChild(noteDescription);
@@ -300,7 +309,7 @@ function addSticker(note, index) {
 }
 
 function getRandomColor(){
-    const colors = ["#E76100", "#76AA08", "#DC11BC", "#1193DC", "#A711DC"];
+    const colors = ["#A95010", "#5C800F", "#DC11BC", "#9C0F86", "#7A159D"];
     const randomIndex = Math.floor(Math.random()*10)%colors.length;
     return colors[randomIndex];
 }
