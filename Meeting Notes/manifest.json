@@ -1,0 +1,20 @@
+{
+  "name": "Meeting Notes",
+  "version": "0.1",
+  "description": "Open, save & manage meeting notes when you open a new tab",
+  "icons":{
+    "128":"icons/icon1.png"
+  },
+  "background":{
+    "page": "background.html",
+    "persistent": false
+  },
+  "chrome_url_overrides":{
+    "newtab": "notes.html"
+  },
+  "browser_action":{
+    "default_icon": "icons/icon2.png" 
+  },
+  "manifest_version": 2,
+  "content_security_policy": "script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'"
+}

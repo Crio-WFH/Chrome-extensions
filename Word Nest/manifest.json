@@ -1,0 +1,43 @@
+{
+    "manifest_version":2,
+    "name":"Word Nest",
+    "description":"Find the meaning",
+    "version":"0.1",
+    
+
+    "browser_action":{
+        "default_popup":"index.html",
+        "default_icon":"icon64.png",
+        "default_title":"Find the selected word meaning"
+        
+    },
+    
+    "background": {
+        "scripts": ["background.js"]
+       
+    },
+
+    
+
+    "content_scripts": [
+        {
+            "matches" : [
+                "<all_urls>"
+            ],
+            "js" : [
+                "contentScript.js"
+            ]
+        }
+    ],
+
+    
+      
+    "permissions":["storage","activeTab","tabs","contextMenus",  "notifications", "background"],
+
+    "content_security_policy": "script-src 'self' https://cdnjs.cloudflare.com; object-src 'self'"
+
+
+    
+}
+
+
