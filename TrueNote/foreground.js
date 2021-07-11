@@ -3,95 +3,106 @@ let options = {
     displayNotes:false
 }
 
-let displayingForm = false;
+let globals = {
+    displayingForm:false,
+    tabUrl:window.location.href,
+    notesCache:[]
+}
 
-const tabUrl = window.location.href;
+console.log(globals.tabUrl);
 
-console.log(tabUrl);
+/*dummyNotesCache = [
+    {
+        title: "noteTitle1",
+        description: "noteDescription1",
+        posX: "200px",
+        posY: "200px"
+    }, 
+    {
+        title: "noteTitle2",
+        description: "noteDescription2",
+        posX: "400px",
+        posY: "400px"    
+    },
+    {
+        title: "noteTitle3",
+        description: "noteDescription3",
+        posX: "600px",
+        posY: "600px"
+    }
+];
+*/
 
-let notesCache = [];
+onload();
 
-chrome.storage.sync.get(tabUrl, (data)=>{
-    notesCache = data[tabUrl]?data[tabUrl].savedNotes:[];
-    console.log(data);
-    notesCache.forEach(addSticker);
-});
+function onload(){
+    
+    createNoteForm();
 
-// dummyNotesCache = [
-//     {
-//         title: "noteTitle1",
-//         description: "noteDescription1",
-//         posX: "200px",
-//         posY: "200px"
-//     }, 
-//     {
-//         title: "noteTitle2",
-//         description: "noteDescription2",
-//         posX: "400px",
-//         posY: "400px"    
-//     },
-//     {
-//         title: "noteTitle3",
-//         description: "noteDescription3",
-//         posX: "600px",
-//         posY: "600px"
-//     }
-// ];
+    chrome.storage.sync.get(globals.tabUrl, (data)=>{
+        globals.notesCache = data[globals.tabUrl]?data[globals.tabUrl].savedNotes:[];
+        console.log(data);
+        globals.notesCache.forEach(addSticker);
+    });
+}
 
-const form = document.createElement("div");
-form.id = "noteForm";
+function createNoteForm(){
+    
+    const form = document.createElement("div");
+    form.id = "noteForm";
 
-const formTitle = document.createElement("p");
-formTitle.id = "formTitle";
-formTitle.innerHTML = "Create note";
+    const formTitle = document.createElement("p");
+    formTitle.id = "formTitle";
+    formTitle.innerHTML = "Create note";
 
-const titleLabel = document.createElement("label");
-titleLabel.className = "input-box";
-const title = document.createElement("input");
-title.id = "inputTitle";
-title.required = true;
-title.setAttribute("type", "text");
-title.setAttribute("maxlength","20");
-const titlePlaceholder = document.createElement("span");
-titlePlaceholder.className="placeholder";
-titlePlaceholder.innerHTML = 'Note title (max 20 characters)<span class="asterics">*</span>';
+    const titleLabel = document.createElement("label");
+    titleLabel.className = "input-box";
+    const title = document.createElement("input");
+    title.id = "inputTitle";
+    title.required = true;
+    title.setAttribute("type", "text");
+    title.setAttribute("maxlength","20");
+    const titlePlaceholder = document.createElement("span");
+    titlePlaceholder.className="placeholder";
+    titlePlaceholder.innerHTML = 'Note title (max 20 characters)<span class="asterics">*</span>';
 
-titleLabel.appendChild(title);
-titleLabel.appendChild(titlePlaceholder);
+    titleLabel.appendChild(title);
+    titleLabel.appendChild(titlePlaceholder);
 
-const descriptionLabel = document.createElement("label");
-descriptionLabel.className = "input-box";
-const description = document.createElement("input");
-description.id = "inputDescription";
-description.required = true;
-description.setAttribute("type", "text");
-const descriptionPlaceholder = document.createElement("span");
-descriptionPlaceholder.className="placeholder";
-descriptionPlaceholder.innerHTML='Your note needs a description<span class="asterics">*</span>';
+    const descriptionLabel = document.createElement("label");
+    descriptionLabel.className = "input-box";
+    const description = document.createElement("input");
+    description.id = "inputDescription";
+    description.required = true;
+    description.setAttribute("type", "text");
+    const descriptionPlaceholder = document.createElement("span");
+    descriptionPlaceholder.className="placeholder";
+    descriptionPlaceholder.innerHTML='Your note needs a description<span class="asterics">*</span>';
 
-descriptionLabel.appendChild(description);
-descriptionLabel.appendChild(descriptionPlaceholder);
+    descriptionLabel.appendChild(description);
+    descriptionLabel.appendChild(descriptionPlaceholder);
 
-const noteFormBtnGrp = document.createElement("div");
-noteFormBtnGrp.id = "noteFormBtnGrp";
+    const noteFormBtnGrp = document.createElement("div");
+    noteFormBtnGrp.id = "noteFormBtnGrp";
 
-const addNoteBtn = document.createElement("div");
-addNoteBtn.id = "addNoteBtn";
-addNoteBtn.innerHTML = "Add note";
+    const addNoteBtn = document.createElement("div");
+    addNoteBtn.id = "addNoteBtn";
+    addNoteBtn.innerHTML = "Add note";
 
-const discardCreateNoteBtn = document.createElement("div");
-discardCreateNoteBtn.id = "discardCreateNoteBtn";
-discardCreateNoteBtn.innerHTML = "Discard";
+    const discardCreateNoteBtn = document.createElement("div");
+    discardCreateNoteBtn.id = "discardCreateNoteBtn";
+    discardCreateNoteBtn.innerHTML = "Discard";
 
-noteFormBtnGrp.appendChild(addNoteBtn);
-noteFormBtnGrp.appendChild(discardCreateNoteBtn);
+    noteFormBtnGrp.appendChild(addNoteBtn);
+    noteFormBtnGrp.appendChild(discardCreateNoteBtn);
 
-form.appendChild(formTitle);
-form.appendChild(titleLabel);
-form.appendChild(descriptionLabel);
-form.appendChild(noteFormBtnGrp);
+    form.appendChild(formTitle);
+    form.appendChild(titleLabel);
+    form.appendChild(descriptionLabel);
+    form.appendChild(noteFormBtnGrp);
 
-document.body.appendChild(form);
+    document.body.appendChild(form);
+}
 
 chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log(request);
@@ -132,7 +143,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 })
 
 document.body.addEventListener("click", (e) => {
-    if (options.takeNotes && !displayingForm) {
+    if (options.takeNotes && !globals.displayingForm) {
         var posX = e.pageX, posY = e.pageY;
         console.log(e.pageX + " " + e.pageY);
         displayForm(posX, posY);
@@ -148,15 +159,15 @@ function displayNotes(){
 }
 
 function saveNotes() {
-    if (notesCache.length > 0) {
-        chrome.storage.sync.set({[tabUrl]: {savedNotes:notesCache}});
+    if (globals.notesCache.length > 0) {
+        chrome.storage.sync.set({[globals.tabUrl]: {savedNotes:globals.notesCache}});
     } else {
-        chrome.storage.sync.remove(tabUrl);
+        chrome.storage.sync.remove(globals.tabUrl);
     }
 }
 
 function displayForm(posX, posY) {
-    displayingForm = true;
+    globals.displayingForm = true;
     const form = document.getElementById("noteForm");
     form.style.top = posY+"px";
     form.style.left = posX+"px";
@@ -196,12 +207,12 @@ function addNote(){
             posY: posY
         }
         
-        notesCache.push(note);
+        globals.notesCache.push(note);
 
         console.log("Current note cache");
-        console.log(notesCache);
+        console.log(globals.notesCache);
 
-        addSticker(note, notesCache.length-1);
+        addSticker(note, globals.notesCache.length-1);
 
         discardForm();
     }
@@ -209,9 +220,9 @@ function addNote(){
 
 function discardNote(index, DOMElement) {
     console.log("Discarding note " + index);
-    notesCache.splice(index, 1);
+    globals.notesCache.splice(index, 1);
     console.log("Current note cache");
-    console.log(notesCache);
+    console.log(globals.notesCache);
     DOMElement.remove();
 }
 
@@ -220,7 +231,7 @@ function resetNotes(){
     while (notes.length > 0) {
         notes[0].remove();
     }
-    notesCache = [];
+    globals.notesCache = [];
     console.log(notesCache);
 }
 
