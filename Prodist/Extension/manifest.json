@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+    "name": "Prodist",
+    "permissions": ["webRequest","webRequestBlocking","<all_urls>"],
+    "description": "Website blocker to increase productivity!",
+    "version": "1.0",
+
+    "background": {
+        "scripts": ["background.js"]
+      },
+
+      "icons": { "16": "image/image16.ico",
+        "48": "image/image48.png",
+       "128": "image/image128.png" },
+   
+    "browser_action": {
+        "default_popup": "popup.html"
+      }
+  }
