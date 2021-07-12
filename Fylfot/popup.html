@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="all" />
+    <script src="js/jquery.js"></script>
+    <script src="js/app.js"></script>
+    <title>Traversy Media Quick Launcher</title>
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans"
+      rel="stylesheet"
+      type="text/css"
+    />
+    
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <style>
+      /* Modal Structure */
+
+      html,
+      body {
+        
+        font-family: "Open Sans", sans-serif;
+        font-size: 14px;
+        margin: 0;
+        min-height: 180px;
+        padding: 0;
+        width: 384px;
+      }
+
+      h1 {
+        font-family: Tahoma, sans-serif;
+        font-size: 22px;
+        text-align: center;
+        font-weight: 400;
+        margin: 0;
+        color: #2f5876;
+      }
+
+      a:link,
+      a:visited {
+        color: #000000;
+        outline: 0;
+        text-decoration: none;
+      }
+
+      img {
+        width: 30px;
+      }
+
+      .modal-header {
+        align-items: center;
+        border-bottom: 0.5px solid #dadada;
+      }
+
+      .modal-icons {
+        border-top: 0.5px solid #dadada;
+        height: 50px;
+        
+        width: 100%;
+      }
+
+      .logo {
+        padding: 16px;
+      }
+
+      .logo-icon {
+        vertical-align: text-bottom;
+        margin-right: 12px;
+      }
+
+      .version {
+        color: #444;
+        font-size: 18px;
+      }
+
+      .flex-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 10px 22px;
+      }
+
+      .flex {
+        opacity: 1;
+        text-align:center;
+        transition: opacity 0.2s ease-in-out;
+        width: 120px;
+      }
+
+      .flex:hover {
+        opacity: 0.4;
+      }
+
+      .flex .fa {
+        font-size: 40px;
+        color: #2f5876;
+      }
+
+      button {
+			padding: 0px;
+			border: 1px solid rgb(200,200,200);
+			-webkit-border-radius: 5px;
+			-webkit-appearance: button;
+			-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.5);
+		}
+		button img {
+			vertical-align: bottom;
+		}
+		
+		#advancedlink {
+			font-family: Calibri, Verdana, sans serif;
+			font-size: .6em;
+		}
+		
+		#advancedsection {
+			display: none;
+		}
+    </style>
+    <script src="speaker.js"></script>
+	<script src="popup.js"></script>
+  </head>
+
+  <body>
+    <div class="modal-header">
+      <h1 class="logo"><b>
+        Social Apps Launcher</b>
+      </h1>
+    </div>
+    <div class="modal-icons">
+      <div class="flex-container">
+        <div class="flex">
+          <a href="https://www.instagram.com" target="_blank">
+            <i class="fa fa-instagram" style="color:darksalmon "></i>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.youtube.com" target="_blank">
+            <i class="fa fa-youtube" style="color:darksalmon "></i>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.twitter.com" target="_blank">
+            <i class="fa fa-twitter" style="color:darksalmon "></i>
+          </a>
+        </div>
+        </div>
+        <div class="flex-container">
+        <div class="flex">
+          <a href="https://www.facebook.com" target="_blank">
+            <i class="fa fa-facebook" style="color:darksalmon "></i>
+          </a>
+        </div>
+        
+        
+        <div class="flex">
+          <a href="https://www.github.com" target="_blank">
+            <i class="fa fa-github" style="color:darksalmon "></i>
+            
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://web.telegram.org/z/" target="_blank">
+            <i class="fa fa-telegram" style="color:darksalmon "></i>
+          </a>
+        </div>
+        </div>
+        <div class="flex-container">
+        <div class="flex">
+          <a href="https://web.whatsapp.com/" target="_blank">
+            <i class="fa fa-whatsapp" style="color:darksalmon "></i>
+          </a>
+          
+        </div>
+        <div class="flex">
+          <a href="https://slack.com/intl/en-in/" target="_blank">
+            <i class="fa fa-slack" style="color:darksalmon "></i>
+          </a>
+        </div>
+        <div class="flex">
+          <a href="https://www.google.com/docs/about/" target="_blank">
+            <i class="fa fa-google" style="color:darksalmon "></i>
+          </a>
+        </div>
+        
+        </div>
+        <hr>
+        <div class="flex-container">
+          
+          <section class="wrapper">
+            <header>
+              <h1>
+                <b>
+                  ToDo List
+                </b>
+              </h1>
+            </header>
+        <!-- content -->
+        <div class="ToDo">
+            <form action="#" spellcheck='false'>
+                <!-- <label for="task-input">Type</label> -->
+                <input type="text" id="task-input" placeholder='Enter Todo List Items' class="add" />
+                <input type="submit" id="task-submit" value="+" class="add-btn"/>
+            </form>
+            <ul class='task-list'></ul>
+            <div class="bottom">
+                <div class="progress-bar">
+                    <div class="progress-status">
+                        <p><span class='tasks-left'>0</span> of <span class='tasks-total'>0</span> tasks done</p>
+                    </div>
+                </div>
+                
+                <a href='#' class="remove-checked"><span>Remove checked</span></a>
+            </div>
+
+        </div>
+        </section>
+        </div>
+        <hr>
+        
+          <header><h1><b>Text to Speech Converter</b></h1></header>
+        <div class ="flex-container">
+          
+          <div class="flex">
+            <button id="narrate"><img src="images/speak32.png" title="Speak" alt="Speak"></button>
+          </div>
+          <div class="flex">
+            <button id="stop"><img src="images/stop32.png" title="Stop" alt="Stop"></button>
+          </div>
+          <div class="flex">
+            <button id="pauseresume"><img id="pauseresume_img" src="images/pause32.png" title="Pause/Resume" alt="Pause/Resume"></button>
+          </div>
+          <div>
+            <a id="advancedlink" href="#">Settings</a>
+          </div>
+        </div>
+        <div class ="flex-container">
+
+          <div id="advancedsection" >
+            <hr>
+            
+            <textarea rows="5" cols="45" id="testText"></textarea>
+            <button id="testbutton"><div style="padding:5px">Test</div></button>
+        </div>
+        </div>
+        
+        
+        <!-- EO content -->
+        
+    
+    </div>
+    </div>
+    
+   
+
+          
+  </body>
+</html>
