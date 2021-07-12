@@ -194,6 +194,17 @@
         "design",
         "infra"
       ]
+    },
+    {
+      "login": "AKG1301",
+      "name": "Ak",
+      "avatar_url": "https://avatars.githubusercontent.com/u/52539720?v=4",
+      "profile": "https://github.com/AKG1301",
+      "contributions": [
+        "infra",
+        "code",
+        "design"
+      ]
     }
   ],
   "contributorsPerLine": 7,
