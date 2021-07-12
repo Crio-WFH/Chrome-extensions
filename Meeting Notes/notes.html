@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Meeting Notes</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="notes.css">
+</head>
+
+<body class="dark">
+  <div class="main">
+    <aside class="sidebar">
+      <div class="icon">✒️</div>
+      <h1> Meeting Notes</h1>
+      <div class="newNote">➕ New Note</div>
+      <div class="pages-holder"></div>
+    </aside>
+    <section class="holder">
+      <div class="icon">📃</div>
+      <button class="savePage hidden">Save</button>
+      <button class="deletePage hidden">Delete</button>
+      <h1 contenteditable="true" placeholder="Untitled"></h1>
+      <div class="post-body" contenteditable="true" placeholder="Write your post here..."></div>
+    </section>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>

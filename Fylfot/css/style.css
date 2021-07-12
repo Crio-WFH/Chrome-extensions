@@ -1,0 +1,235 @@
+/* RESET STYLES*/
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+ol, ul {
+   list-style: none;
+}
+
+
+/* ================================ Layout ================================ */
+
+body {
+    
+    text-align: left;
+    color: #333;
+    font: 13px Tahoma, sans-serif;
+}
+.wrapper {
+    position: relative;
+    width: 340px;
+    margin:0 auto;
+    background: #fcfcfc;
+}
+
+/* ================================ EO Layout ================================ */
+
+/* ================================ Header ================================ */
+
+header {
+    font: 25px/50px Tahoma, sans-serif;
+    text-transform: uppercase;
+    color: #555;
+    text-align: center;
+    text-shadow: 0 0 1px #e0f2fa;
+}
+
+/* ================================ EO Header ================================ */
+
+/* ================================ Content ================================ */
+
+.ToDo{
+    padding: 0 10px 10px 15px;
+}
+
+.add{
+    width: 300px;
+    height:38px;
+    border: 1px solid darksalmon;
+    text-align: center;
+    font: italic 18px Arial, sans-serif;
+    color: #08638e;
+}
+
+.add-btn{
+    height: 42px;
+    border: 1px solid darksalmon;
+    background-color: darksalmon;
+    font: italic 18px/40px Arial, sans-serif;
+    color: #fff;
+    margin: 0;
+    padding: 0 16px;
+    cursor: pointer;
+}
+
+/*======LIST======*/
+
+.task-list{
+    margin: 10px 0 30px 0px;
+    color: #4a9ac0;
+}
+
+.task-list li {
+    background: #f0f9ff;
+    padding:10px 10px 4px;
+    border-bottom: 1px solid #e9e9e9;
+}
+.task-list .done {
+    background: #f9fdff;
+}
+
+.task-list li:first-child{
+    border-top: 1px solid #e9e9e9;
+}
+
+.task-list .toggle {
+    margin:0 10px 0 0;
+    vertical-align: top;
+}
+
+.task-title {
+    position: relative;
+    top:-3px;
+    display: inline-block;
+    padding:2px;
+    border:1px solid transparent;
+    width: 352px;
+    text-align: left;
+    line-height: 13px;
+}
+
+.editing {
+    background-color: #fff;
+}
+.done .editing {
+    text-decoration: line-through;
+    border-color: #f0f9ff;
+}
+
+.done .task-title {
+    text-decoration: line-through;
+}
+
+.remove{
+    float: right;
+    width: 12px;
+    height: 12px;
+    text-indent: -9999px;
+    background: url(../images/sprite.png) no-repeat 0 -11px;
+    margin: 0 0 0 10px;
+}
+
+.remove:hover{
+    background: url(../images/sprite.png) no-repeat 0 0;
+}
+
+.edit{
+    float: right;
+    width: 12px;
+    height: 13px;
+    text-indent: -9999px;
+    background: url(../images/sprite.png) no-repeat 0 -34px;
+    margin: 0;
+}
+
+.edit:hover{
+    background: url(../images/sprite.png) no-repeat 0 -22px;
+}
+/* ======EO LIST====== */
+
+.bottom {
+    overflow: hidden;
+}
+
+.progress-bar {
+    display: none;
+    float: left;
+    width: 330px;
+    height: 26px;
+    text-align: center;
+    border: 1px solid #e9e9e9;
+    overflow: hidden;
+}
+
+.progress-status {
+    height: 100%;
+    background: rgb(170, 116, 85);
+    -webkit-transition:all .5s ease-in;
+    transition:all .5s ease-in;
+}
+
+.progress-status p {
+    width: 200px;
+    text-align: center;
+    color: #666;
+    line-height: 25px;
+}
+
+.progress-status p span {
+    font-weight: bold;
+}
+
+.remove-checked {
+    display: none;
+    text-decoration: none;
+    
+    float: right;
+    background: darksalmon;
+    margin: 15px 0 0 20px;
+    padding: 6px 10px 6px 20px;
+}
+
+.remove-checked span {
+    display: inline-block;
+    background:darksalmon url("../images/sprite.png") no-repeat right -47px;
+    font: 14px/14px Arial, sans-serif;
+    color: #fff;
+    padding: 0 20px 0 0;
+}
+
+/* ================================ EO Content ================================ */
+
+
+
+/* ================================ EO Footer ================================ */
+
+/* ================================ Scroll Bar ================================ */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: darksalmon;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.7);
+}
+::-webkit-scrollbar-thumb:window-inactive {
+    background: darksalmon;
+}
+/* ================================ Scroll Bar ================================ */

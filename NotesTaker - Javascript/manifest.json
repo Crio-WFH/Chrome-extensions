@@ -1,0 +1,40 @@
+{
+  "manifest_version": 2,
+  "author":"Ravit Garg", 
+
+  "name": "Notestaker",
+  "description": "This extension helps you to take notes from webpages and download it to your local machine",
+  "version": "1.0",
+
+  "browser_action": {
+    "default_icon": "Images/icon.png",
+    "default_popup": "popup.html",
+    "default_title" : "Notestaker"
+  },
+ "icons": {
+      "128": "Images/icon128.png",
+      "32": "Images/icon32.png",
+      "48": "Images/icon48.png"
+   },
+"content_scripts": [{
+    "matches": [ "http://*/*", "https://*/*" ],
+    "css": [  ],
+    "js": [ "container.js" ],
+    "run_at": "document_end",
+    "all_frames": true
+  }],
+ 
+  "background": {
+    "page":"bg.html",
+    "persistent": true
+  },
+
+  "permissions": [
+    "background",
+    "tabs",
+    "activeTab",
+    "http://*/*",
+    "https://*/*",
+    "storage"
+  ]
+}
