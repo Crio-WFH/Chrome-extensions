@@ -183,6 +183,17 @@
         "design",
         "infra"
       ]
+    },
+    {
+      "login": "kichloo",
+      "name": "Vishal Kichloo",
+      "avatar_url": "https://avatars.githubusercontent.com/u/31816531?v=4",
+      "profile": "https://github.com/kichloo",
+      "contributions": [
+        "code",
+        "design",
+        "infra"
+      ]
     }
   ],
   "contributorsPerLine": 7,
