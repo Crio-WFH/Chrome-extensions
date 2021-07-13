@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+        <style>
+            html, body {
+                font-family:'Poppins',sans-serif;
+                margin: 0;
+                padding:0 0 8px 0;
+                width: 384px;
+            }
+
+            h1{
+                font-size:22px;
+                margin:0;
+                color: rgb(47, 100, 160);
+            }
+
+            .model-header{
+                align-items: center;
+                border-bottom: 0.5px solid #dadada;
+                /* background-color: #2B8ACE; */
+            }
+
+            .logo{
+                padding:16px;
+            }
+
+            .logo-icon{
+                vertical-align: text-bottom;
+                margin-right: 12px;
+            }
+
+            .version{
+                /* color: rgb(109, 109, 109); */
+                color: #bdbdbd;
+                font-size: 18px;
+            }
+
+            .model-content{
+               padding: 5px 22px 0px 22px; 
+               /* background-color:#C55211; */
+            }
+            
+            .options-wrapper{
+                display:flex;
+                justify-content:space-between;
+                align-items: center;
+                margin-bottom: 16px;
+            }
+
+            .options-wrapper div{
+                width:100px;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+            }
+            
+            .switch{
+                position: relative;
+                display: inline-block;
+                width:36px;
+                height:18px;
+            }
+
+            .switch input{
+                display: none;
+            }
+
+            .slider{
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color:#ccc;
+                border-radius:34px;
+                transition: 0.4s;
+            }
+
+            .slider:before{
+                position: absolute;
+                content:"";
+                width:14px;
+                height:14px;
+                left:2px;
+                bottom:2px;
+                border-radius: 50%;
+                background-color:#fff;
+                transition:0.4s;
+            }
+
+            input:checked + .slider{
+                background-color: rgb(8, 153, 20);
+            }
+
+            input:checked + .slider:before{
+                transform: translateX(18px);
+            }
+
+            .btn-grp span{
+                cursor: pointer;
+                padding-right:10px;
+                font-weight: 500;
+            }
+
+            #save-btn{
+                color:#2B8ACE;
+                border-right: 2px solid #cccccc;
+            }
+
+            #reset-btn{
+                color:#C55211;
+                padding-left: 10px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div class="model-header">
+            <h1 class="logo">
+                <img src="./images/TrueNote_logo_198x198.jpg" alt="True Note" class="logo-icon" width="50">True Note
+                <span class="version">(1.0)</span>
+            </h1>
+        </div>
+        <div class="model-content">
+            <p class="description">Take your notes most effectively</p>
+            <div class="options-wrapper">
+                <span class="enable-text">Enable note taking</span>
+                <div>
+                    OFF
+                    <label class="switch">
+                        <input type="checkbox" id="take-note-checkbox">
+                        <span class="slider"></span> 
+                    </label>
+                    ON
+                </div>
+            </div>
+            <div class="options-wrapper">
+                <span class="enable-text">Display my notes</span>
+                <div>
+                    OFF
+                    <label class="switch">
+                        <input type="checkbox" id="display-note-checkbox">
+                        <span class="slider"></span> 
+                    </label>
+                    ON
+                </div>
+            </div>
+            <div class="btn-grp">
+                <span id="save-btn">Save notes</span>
+                <span id="reset-btn">Reset notes</span>
+            </div>
+        </div>
+        <script src="./popup.js"></script>
+    </body>
+</html>
