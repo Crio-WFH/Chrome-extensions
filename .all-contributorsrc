@@ -216,6 +216,17 @@
         "design",
         "infra"
       ]
+    },
+    {
+      "login": "wordssaysalot",
+      "name": "Ritesh Kumar",
+      "avatar_url": "https://avatars.githubusercontent.com/u/56651899?v=4",
+      "profile": "https://wordssaysalot.netlify.app/",
+      "contributions": [
+        "code",
+        "infra",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
