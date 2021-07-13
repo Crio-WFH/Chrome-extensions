@@ -22,4 +22,4 @@ While working from from home we often come accross certain important things to t
 * Remove Notes, but everytime you need to relaod the extension and have to click on the first Note's delete button to delete the last note taken.
 
 ## Video Explanation
-Will update shortly when my PR gets merged.
+Here is the video link https://drive.google.com/file/d/1QJcphxzP0u-5Zmxdzf-4xMLuE54SaV9m/view?usp=sharing
