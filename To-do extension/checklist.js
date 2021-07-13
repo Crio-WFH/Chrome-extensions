@@ -1,58 +1,60 @@
-/*Creating a close button to delete done tasks */
-
-var mytasks = document.getElementsByTagName("LI");
-var itr;
-for (itr = 0; itr < mytasks.length; itr++) {
-    var span = document.createElement("SPAN");
-    var txtascii = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txtascii);
-    mytasks[itr].appendChild(span);
-}
-
-/* click on close buttton to hide the list items */
-var close = document.getElementsByClassName("close");
-var itr;
-for (itr = 0; itr < close.length; itr++) {
-    close[itr].onclick = function() {
-        var div = this.parentElement;
-        div.style.display = "none";
-    }
-}
-
-/* Adding a checked symbol when clicking a list item */
-var record = document.querySelector('ul');
-record.addEventListener('click', function(check) {
-    if (check.target.tagName === 'LI') {
-        check.target.classList.toggle('checked');
-    }
-}, false);
-
-/*adding a new list item on clicking the add button*/
-document.getElementById("myButton").addEventListener("click", newElement);
-
-function newElement() {
-    var listItem = document.createElement('listItem');
-    var insertValue = document.getElementById("myInput").nodeValue;
-    var exist = document.createTextNode(insertValue);
-    listItem.appendChild(exist);
-    if (insertValue === '') {
-        alert("You must write something before you add!");
+console.log("welcome");
+showNotes();
+// if user adds a note , add it to the local Storage
+let addbtn = document.getElementById("addbtn");
+addbtn.addEventListener("click", function(e) {
+    let addtxt = document.getElementById("floatingTextarea2");
+    let notes = localStorage.getItem("notes");
+    if (notes == null) {
+        notesObj = [];
     } else {
-        document.getElementById("myUL").appendChild(listItem);
+        notesObj = JSON.parse(notes)
     }
-    document.getElementById("myInput").value = "";
-    var span = document.createElement("SPAN");
-    var txtascii = document.createTextNode("\u00D7");
-    span.className = "close";
-    span.appendChild(txtascii);
-    listItem.appendChild(span);
+    notesObj.push(addtxt.value);
+    localStorage.setItem("notes", JSON.stringify(notesObj));
+    addtxt.value = "";
+    console.log(notesObj);
+    showNotes();
+})
 
-    for (var itr = 0; itr < close.length; itr++) {
-        close[itr].onclick = function() {
-            var part = this.parentElement;
-            part.style.display = "none";
-        }
+function showNotes() {
+    let notes = localStorage.getItem("notes");
+    if (notes == null) {
+        notesObj = [];
+    } else {
+        notesObj = JSON.parse(notes);
+    }
+    let html = "";
+    notesObj.forEach(function(element, index) {
+        html += `<div class=" my-2 mx-2 card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">Your Notes${index+1}</h5>
+          <p class="card-text">${element}</p>
+          <button id="myBtn" class="btn btn-primary addbutton">Delete</button>
+          
+        </div>
+      </div>`
+    });
+    let notesElm = document.getElementById("notes");
+    if (notesObj.length != 0) {
+        notesElm.innerHTML = html;
+    } else {
+        notesElm.innerHTML = `nothing to show add a new note`;
     }
 
 }
+
+// function to delete a note
+document.getElementById("myBtn").addEventListener("click",
+    function deleteNote(index) {
+        console.log("i m deleting", index)
+        let notes = localStorage.getItem("notes");
+        if (notes == null) {
+            notesObj = [];
+        } else {
+            notesObj = JSON.parse(notes);
+        }
+        notesObj.splice(index, 1);
+        localStorage.setItem("notes", JSON.stringify(notesObj));
+        showNotes();
+    })
