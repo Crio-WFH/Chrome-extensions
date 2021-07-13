@@ -227,6 +227,18 @@
         "infra",
         "ideas"
       ]
+    },
+    {
+      "login": "ayush78781",
+      "name": "Ayush Saxena",
+      "avatar_url": "https://avatars.githubusercontent.com/u/76848435?v=4",
+      "profile": "https://github.com/ayush78781",
+      "contributions": [
+        "code",
+        "infra",
+        "design",
+        "ideas"
+      ]
     }
   ],
   "contributorsPerLine": 7,
