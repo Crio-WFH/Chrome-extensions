@@ -3,7 +3,7 @@ Displays your Note-taking extension whenever you are opening a new tab in Google
 
 
 ![Screenshot](https://github.com/ayush78781/Chrome-extensions/blob/ayush78781/chrome-extension/add/To-do%20extension/images/dev7-100%3B1.PNG)
-![Screenshot](https://github.com/ayush78781/chrome-extension/blob/master/images/dev6-100%3B2.PNG)
+![Screenshot](https://github.com/ayush78781/Chrome-extensions/blob/ayush78781/chrome-extension/add/To-do%20extension/images/dev7-100%3B2.PNG)
 
 ## Installation
 * Fork and clone this project to your local system
