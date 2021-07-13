@@ -1,6 +1,6 @@
 # Chrome-extensions
 <!-- ALL-CONTRIBUTORS-BADGE:START - Do not remove or modify this section -->
-[![All Contributors](https://img.shields.io/badge/all_contributors-19-orange.svg?style=flat-square)](#contributors-)
+[![All Contributors](https://img.shields.io/badge/all_contributors-20-orange.svg?style=flat-square)](#contributors-)
 <!-- ALL-CONTRIBUTORS-BADGE:END -->
 <a href="CONTRIBUTING.md"><img alt="Contributions Welcome" src="https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&labelColor=black&logo=github"></a>
 
@@ -72,6 +72,7 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
     <td align="center"><a href="https://github.com/AKG1301"><img src="https://avatars.githubusercontent.com/u/52539720?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ak</b></sub></a><br /><a href="#infra-AKG1301" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=AKG1301" title="Code">💻</a> <a href="#design-AKG1301" title="Design">🎨</a></td>
     <td align="center"><a href="https://github.com/manishdasa100"><img src="https://avatars.githubusercontent.com/u/55842398?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Manish Das</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=manishdasa100" title="Code">💻</a> <a href="#design-manishdasa100" title="Design">🎨</a> <a href="#infra-manishdasa100" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a></td>
     <td align="center"><a href="https://wordssaysalot.netlify.app/"><img src="https://avatars.githubusercontent.com/u/56651899?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ritesh Kumar</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=wordssaysalot" title="Code">💻</a> <a href="#infra-wordssaysalot" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#ideas-wordssaysalot" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/ayush78781"><img src="https://avatars.githubusercontent.com/u/76848435?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ayush Saxena</b></sub></a><br /><a href="https://github.com/Crio-WFH/Chrome-extensions/commits?author=ayush78781" title="Code">💻</a> <a href="#infra-ayush78781" title="Infrastructure (Hosting, Build-Tools, etc)">🚇</a> <a href="#design-ayush78781" title="Design">🎨</a> <a href="#ideas-ayush78781" title="Ideas, Planning, & Feedback">🤔</a></td>
   </tr>
 </table>
 
