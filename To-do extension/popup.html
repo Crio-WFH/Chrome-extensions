@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <style>
+        button {
+            height: 30px;
+            width: 30px;
+            outline: none;
+            margin: 10px;
+            border: none;
+            border-radius: 2px;
+        }
+        
+        button.current {
+            box-shadow: 0 0 0 2px white, 0 0 0 4px black;
+        }
+        
+        body {
+            margin: 0rem;
+            width: 350px;
+        }
+        
+        .addbutton {
+            padding: 10px;
+            width: 35%;
+            background: #4688f1;
+            font-weight: bolder;
+            color: #555;
+            float: left;
+            text-align: center;
+            font-size: 12px;
+            cursor: pointer;
+            transition: 0.3s;
+            border-radius: 0.5rem;
+        }
+        
+        .addbutton:hover {
+            background-color: #bbb;
+        }
+        
+        * {
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+
+<body>
+    <button id="changeColor"></button>
+    <div id="buttonDiv">
+        <h3>Choose an option to change background color!</h3>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Notes</a>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            </div>
+        </div>
+    </nav>
+    <div class="container my-3">
+        <h1>Take Your Magic Notes</h1>
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Write Note</h5>
+                <div class="form-floating  cardname">
+                    <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2" style="height: 100px"></textarea>
+                    <!-- <label for="floatingTextarea2">Comments</label> -->
+                </div>
+                <!-- <a href="#" class="btn btn-primary">Add Note</a> -->
+                <button class="btn btn-primary my-3 addbutton" id="addbtn">Add</button>
+            </div>
+        </div>
+        <h2>Your Notes </h2>
+        <p>Kindly reload the extension and click on the <strong>first Note's delete button</strong> to delete the last Note. Do it every time to delete a Note.</p>
+        <hr>
+        <div id="notes" class="row container-fluid">
+
+        </div>
+    </div>
+    <script src="checklist.js"></script>
+    <script src="popup.js"></script>
+    <script src="options.js"></script>
+
+</body>
+
+</html>
