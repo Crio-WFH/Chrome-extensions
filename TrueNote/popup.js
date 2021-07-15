@@ -8,11 +8,18 @@ chrome.tabs.query({active: true, currentWindow: true}, (tabs)=>{
     activeTab = tabs[0];
     console.log(activeTab);
     chrome.storage.sync.get(activeTab.id.toString(), (data) => {
-        console.log(data[activeTab.id].options);
-        options.takeNotes = data[activeTab.id].options.takeNotes;
-        options.displayNotes = data[activeTab.id].options.displayNotes;
-        document.getElementById("take-note-checkbox").checked = data[activeTab.id].options.takeNotes;
-        document.getElementById("display-note-checkbox").checked = data[activeTab.id].options.displayNotes;
+        if (data[activeTab.id] == undefined) {
+            console.log("Could not find active tab");
+            document.getElementById("warning").innerHTML = "Please reload the page to use this extention"  
+            document.getElementById("take-note-checkbox").disabled = true;
+            document.getElementById("display-note-checkbox").disabled = true;
+        } else {
+            console.log(data[activeTab.id].options);
+            options.takeNotes = data[activeTab.id].options.takeNotes;
+            options.displayNotes = data[activeTab.id].options.displayNotes;
+            document.getElementById("take-note-checkbox").checked = data[activeTab.id].options.takeNotes;
+            document.getElementById("display-note-checkbox").checked = data[activeTab.id].options.displayNotes;
+        }
     });
 });
 
