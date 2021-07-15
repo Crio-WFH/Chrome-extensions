@@ -1,9 +1,9 @@
-let options = {
+const options = {
     takeNotes:false,
     displayNotes:false
 }
 
-let globals = {
+const globals = {
     displayingForm:false,
     tabUrl:window.location.href,
     notesCache:[]
