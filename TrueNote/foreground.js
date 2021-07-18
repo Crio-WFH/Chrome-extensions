@@ -1,48 +1,26 @@
-var options = {
+var myOptions = {
     takeNotes:false,
     displayNotes:false
 }
 
-var globals = {
+var myGlobals = {
     displayingForm:false,
     tabUrl:window.location.href,
     notesCache:[]
 }
 
-console.log(globals.tabUrl);
+console.log(myGlobals.tabUrl);
 
-/*dummyNotesCache = [
-    {
-        title: "noteTitle1",
-        description: "noteDescription1",
-        posX: "200px",
-        posY: "200px"
-    }, 
-    {
-        title: "noteTitle2",
-        description: "noteDescription2",
-        posX: "400px",
-        posY: "400px"    
-    },
-    {
-        title: "noteTitle3",
-        description: "noteDescription3",
-        posX: "600px",
-        posY: "600px"
-    }
-];
-*/
+onloadForeground();
 
-onload();
-
-function onload(){
+function onloadForeground(){
     
     createNoteForm();
 
-    chrome.storage.sync.get(globals.tabUrl, (data)=>{
-        globals.notesCache = data[globals.tabUrl]?data[globals.tabUrl].savedNotes:[];
+    chrome.storage.sync.get(myGlobals.tabUrl, (data)=>{
+        myGlobals.notesCache = data[myGlobals.tabUrl]?data[myGlobals.tabUrl].savedNotes:[];
         console.log(data);
-        globals.notesCache.forEach(addSticker);
+        myGlobals.notesCache.forEach(addSticker);
     });
 }
 
@@ -108,7 +86,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
     console.log(request);
     if (request.message === "change_takeNotes_option") {
         console.log(`Changing take notes option to ${request.value}`);
-        options.takeNotes = request.value;
+        myOptions.takeNotes = request.value;
         sendResponse({
             message:"success"
         });
@@ -116,7 +94,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
         return true;
     } else if (request.message === "change_displayNotes_option") {
         console.log(`Changing display notes option to ${request.value}`);
-        options.displayNotes = request.value;
+        myOptions.displayNotes = request.value;
         displayNotes();
         sendResponse({
             message:"success"
@@ -144,7 +122,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
 document.body.addEventListener("click", (e) => {
     console.log("From body " + e.pageX + " " + e.pageY);
-    if (options.takeNotes && !globals.displayingForm) {
+    if (myOptions.takeNotes && !myGlobals.displayingForm) {
         var posX = e.pageX, posY = e.pageY;
         // console.log(e.pageX + " " + e.pageY);
         displayForm(posX, posY);
@@ -155,20 +133,20 @@ function displayNotes(){
     const notes = document.getElementsByClassName("note");
     console.log(notes.length);
     for (let i = 0; i < notes.length; i++) {
-        notes[i].style.visibility = (options.displayNotes)?"visible":"hidden";
+        notes[i].style.visibility = (myOptions.displayNotes)?"visible":"hidden";
     }
 }
 
 function saveNotes() {
-    if (globals.notesCache.length > 0) {
-        chrome.storage.sync.set({[globals.tabUrl]: {savedNotes:globals.notesCache}});
+    if (myGlobals.notesCache.length > 0) {
+        chrome.storage.sync.set({[myGlobals.tabUrl]: {savedNotes:myGlobals.notesCache}});
     } else {
-        chrome.storage.sync.remove(globals.tabUrl);
+        chrome.storage.sync.remove(myGlobals.tabUrl);
     }
 }
 
 function displayForm(posX, posY) {
-    globals.displayingForm = true;
+    myGlobals.displayingForm = true;
     const form = document.getElementById("noteForm");
     form.style.top = posY+"px";
     form.style.left = posX+"px";
@@ -182,7 +160,7 @@ function discardForm() {
     document.getElementById("note-inputDescription").value="";
 
     setTimeout(() => {
-        globals.displayingForm = false;
+        myGlobals.displayingForm = false;
     }, 500);
 }
 
@@ -208,26 +186,26 @@ function addNote(){
             posY: posY
         }
         
-        globals.notesCache.push(note);
+        myGlobals.notesCache.push(note);
 
         console.log("Current note cache");
-        console.log(globals.notesCache);
+        console.log(myGlobals.notesCache);
 
-        addSticker(note, globals.notesCache.length-1);
+        addSticker(note, myGlobals.notesCache.length-1);
 
         discardForm();
     }
 }
 
 function discardNote(index, DOMElement) {
-    globals.displayingForm=true;
+    myGlobals.displayingForm=true;
     setTimeout(()=>{
-        globals.displayingForm=false;
+        myGlobals.displayingForm=false;
     }, 300);
     console.log("Discarding note " + index);
-    globals.notesCache.splice(index, 1);
+    myGlobals.notesCache.splice(index, 1);
     console.log("Current note cache");
-    console.log(globals.notesCache);
+    console.log(myGlobals.notesCache);
     DOMElement.remove();
 }
 
@@ -236,14 +214,14 @@ function resetNotes(){
     while (notes.length > 0) {
         notes[0].remove();
     }
-    globals.notesCache = [];
+    myGlobals.notesCache = [];
     console.log(notesCache);
 }
 
 function shrinkNote(noteDOMElement){
-    globals.displayingForm=true;
+    myGlobals.displayingForm=true;
     setTimeout(()=>{
-        globals.displayingForm=false;
+        myGlobals.displayingForm=false;
     }, 500);
     console.log("Shrinking note");
     const noteContentDiv = noteDOMElement.children[1];
@@ -272,7 +250,7 @@ function addSticker(note, index) {
     newSticker.className = "note";
     newSticker.style.top = note.posY;
     newSticker.style.left = note.posX;
-    newSticker.style.visibility = (options.displayNotes)?"visible":"hidden";
+    newSticker.style.visibility = (myOptions.displayNotes)?"visible":"hidden";
 
     const noteHeader = document.createElement("div");
     noteHeader.className = "noteHeader";
