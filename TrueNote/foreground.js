@@ -118,7 +118,7 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
         return true;
     }
-})
+});
 
 document.body.addEventListener("click", (e) => {
     console.log("From body " + e.pageX + " " + e.pageY);
