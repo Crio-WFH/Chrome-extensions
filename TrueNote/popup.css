@@ -11,7 +11,7 @@ h1{
     color: rgb(47, 100, 160);
 }
 
-.model-header{
+.modal-header{
     align-items: center;
     border-bottom: 0.5px solid #dadada;
     /* background-color: #2B8ACE; */
@@ -32,7 +32,7 @@ h1{
     font-size: 18px;
 }
 
-.model-content{
+.modal-content{
    padding: 5px 22px 0px 22px; 
    /* background-color:#C55211; */
 }
@@ -115,7 +115,7 @@ input:checked + .slider:before{
     padding-left: 10px;
 }
 
-.model-footer{
+.modal-footer{
     width:100%;
     padding:1.5em 0 1.5em 0;
     /* background-color: #3bc511; */
@@ -124,7 +124,7 @@ input:checked + .slider:before{
     gap:15px;
 }
 
-.model-footer a{
+.modal-footer a{
     position:relative;
     text-decoration:none;
     font-size: 22px;
@@ -147,6 +147,6 @@ input:checked + .slider:before{
     border-radius:6px;
 }
 
-.model-footer a:hover .tooltip{
+.modal-footer a:hover .tooltip{
     visibility:visible;
 }

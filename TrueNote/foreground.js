@@ -150,11 +150,15 @@ function displayForm(posX, posY) {
     const form = document.getElementById("noteForm");
     form.style.top = posY+"px";
     form.style.left = posX+"px";
+    form.style.transform = "translate(0,0)";
+    fitElementToScreen(form);
     form.style.visibility = "visible";
 }
 
 function discardForm() {
-    document.getElementById("noteForm").style.visibility = "hidden";
+    const form = document.getElementById("noteForm");
+    form.style.visibility = "hidden";
+    // form.style.transform = "translate(0,0)";
     console.log("Discarding form");
     document.getElementById("note-inputTitle").value="";
     document.getElementById("note-inputDescription").value="";
@@ -224,6 +228,8 @@ function shrinkNote(noteDOMElement){
         myGlobals.displayingForm=false;
     }, 500);
     console.log("Shrinking note");
+    noteDOMElement.classList.remove("left-overflow-transfom");
+    noteDOMElement.classList.remove("up-overflow-transfom");
     const noteContentDiv = noteDOMElement.children[1];
     noteContentDiv.classList.toggle("note-content-shrinked");
     const noteHeader = noteDOMElement.children[0];
@@ -231,6 +237,21 @@ function shrinkNote(noteDOMElement){
     noteTitle.classList.toggle("noteTitle-shrinked");
     noteHeader.classList.toggle("noteHeader-shrinked");
     noteDOMElement.classList.toggle("note-shrinked");
+}
+
+function fitElementToScreen(DOMElement){
+    if ((document.body.clientWidth - parseInt(DOMElement.style.left)) < parseInt(window.getComputedStyle(DOMElement).getPropertyValue('width'))) {
+        if ((document.body.clientHeight - parseInt(DOMElement.style.top)) < parseInt(window.getComputedStyle(DOMElement).getPropertyValue('height'))){
+            DOMElement.style.transform="translate(-100%, -100%)";
+        } else {
+            DOMElement.style.transform="translateX(-100%)";
+        }
+    }else if ((document.body.clientHeight - parseInt(DOMElement.style.top)) < parseInt(window.getComputedStyle(DOMElement).getPropertyValue('height'))) {
+        DOMElement.style.transform="translateY(-100%)";
+    }
+
+    console.log('DOMElement transform style');
+    console.log(DOMElement.style.transform);
 }
 
 document.getElementById("addNoteBtn").addEventListener("click", addNote);
@@ -250,7 +271,7 @@ function addSticker(note, index) {
     newSticker.className = "note";
     newSticker.style.top = note.posY;
     newSticker.style.left = note.posX;
-    newSticker.style.visibility = (myOptions.displayNotes)?"visible":"hidden";
+    newSticker.style.visibility = "hidden";
 
     const noteHeader = document.createElement("div");
     noteHeader.className = "noteHeader";
@@ -284,6 +305,9 @@ function addSticker(note, index) {
     newSticker.appendChild(noteContent);
 
     document.body.appendChild(newSticker);
+
+    fitElementToScreen(newSticker);
+    newSticker.style.visibility = (myOptions.displayNotes)?"visible":"hidden";
 }
 
 function getRandomColor(){
