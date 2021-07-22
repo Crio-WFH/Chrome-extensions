@@ -12,7 +12,7 @@
     background: rgba(255, 255, 255, 0.459);
     border: 1px solid #B1B1B1;
     box-sizing: border-box;
-    backdrop-filter: blur(11px);
+    backdrop-filter: blur(13px);
     border-radius: 7px;
     z-index: 9999;
 }
@@ -31,11 +31,6 @@
 
 #noteForm{
     padding: 15px 20px 20px 20px;
-}
-
-.note{
-    /* transition: all 0.3s;
-    transition-delay: 0.3s; */
 }
 
 .note-shrinked{

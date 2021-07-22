@@ -6,7 +6,8 @@ var myOptions = {
 var myGlobals = {
     displayingForm:false,
     tabUrl:window.location.href,
-    notesCache:[]
+    notesCache:[],
+    changesPersited:true
 }
 
 console.log(myGlobals.tabUrl);
@@ -102,11 +103,17 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
 
         return true;
     } else if (request.message === "save_notes_cache") {
-        console.log("Saved notes");
-        saveNotes();
-        sendResponse({
-            message:"success"
-        });
+        console.log("Saving notes");
+        const payload = {};
+        if (myGlobals.changesPersited == false) {
+            saveNotes();
+            payload.status = "success";
+            payload.message = "Your notes have been saved.";
+        } else {
+            payload.status = "fail";
+            payload.message = "It seems you do not have any chages to save. Go ahead and add as many notes as you want.";
+        }
+        sendResponse(payload);
 
         return true;
     } else if (request.message === "reset_notes") {
@@ -143,6 +150,7 @@ function saveNotes() {
     } else {
         chrome.storage.sync.remove(myGlobals.tabUrl);
     }
+    myGlobals.changesPersited=true;
 }
 
 function displayForm(posX, posY) {
@@ -158,7 +166,6 @@ function displayForm(posX, posY) {
 function discardForm() {
     const form = document.getElementById("noteForm");
     form.style.visibility = "hidden";
-    // form.style.transform = "translate(0,0)";
     console.log("Discarding form");
     document.getElementById("note-inputTitle").value="";
     document.getElementById("note-inputDescription").value="";
@@ -192,6 +199,8 @@ function addNote(){
         
         myGlobals.notesCache.push(note);
 
+        myGlobals.changesPersited = false;
+
         console.log("Current note cache");
         console.log(myGlobals.notesCache);
 
@@ -211,15 +220,18 @@ function discardNote(index, DOMElement) {
     console.log("Current note cache");
     console.log(myGlobals.notesCache);
     DOMElement.remove();
+    myGlobals.changesPersited = false;
 }
 
 function resetNotes(){
+    console.log("Resetting notes");
     const notes = document.getElementsByClassName("note");
     while (notes.length > 0) {
         notes[0].remove();
     }
     myGlobals.notesCache = [];
-    console.log(notesCache);
+    console.log(myGlobals.notesCache);
+    myGlobals.changesPersited = false;
 }
 
 function shrinkNote(noteDOMElement){
@@ -311,7 +323,7 @@ function addSticker(note, index) {
 }
 
 function getRandomColor(){
-    const colors = ["#A95010", "#5C800F", "#DC11BC", "#9C0F86", "#7A159D"];
+    const colors = ["#864415", "#506d13", "#831872", "#195d77", "#6d1e1e"];
     const randomIndex = Math.floor(Math.random()*10)%colors.length;
     return colors[randomIndex];
 }
