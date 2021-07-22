@@ -62,17 +62,50 @@ chrome.runtime.onMessage.addListener((request, sender, sendResponse) => {
       chrome.tabs.sendMessage(request.payload.activeTab.id, {
         message: "save_notes_cache"
       }, response =>{
-        console.log("Frontend saved notes");
+        chrome.notifications.create( 
+          {
+            iconUrl:"./images/TrueNote_logo_128x128.png",
+            title:"True Note",
+            message:response.message,
+            type:"basic"
+          }
+        );
       });
       sendResponse("success");
       return true;
     } else if (request.message === "reset_notes") {
-        chrome.tabs.sendMessage(request.payload.activeTab.id, {
-          message: "reset_notes"
-        }, response =>{
-          console.log("Frontend reset notes");
-        });
+        chrome.notifications.create(
+          request.payload.activeTab.id.toString(),
+          {
+            iconUrl:"./images/TrueNote_logo_128x128.png",
+            title:"True Note",
+            message:"Are you sure you want to reset all your notes",
+            type:"basic",
+            buttons:[
+              {title: "Yes"},
+              {title: "Maybe not"},
+            ]
+          },
+          (notificationId) => {
+            setTimeout(()=>{
+            console.log("Clearing notification " + notificationId);
+              chrome.notifications.clear(notificationId);
+            },8000);
+          }
+        );
         sendResponse("success");
         return true;
       }
+});
+
+chrome.notifications.onButtonClicked.addListener((notificationId, btnIndex)=>{
+  if (btnIndex === 0) {
+    chrome.tabs.sendMessage(parseInt(notificationId), {
+      message: "reset_notes"
+    }, response =>{
+      console.log("Frontend reset notes");
+    });
+  } else {
+    chrome.notifications.clear(notificationId);
+  }
 });
